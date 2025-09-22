@@ -5,8 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="assets/media/images/profile-avatar.png"
+      type="image/x-icon" />
+
     <!-- Title -->
-    <title>Feed Page - Money Boy Social</title>
+    <title>Feed Page - MoneyBoy Social</title>
 
     <!-- Core CSS files -->
     <link rel="stylesheet" href="assets/css/base.css" />
@@ -16,6 +22,194 @@
   </head>
 
   <body>
-    <h1>Money Boy Project Structure Created</h1>
+    <div class="moneyboy-layout-container">
+      <!-- ------------------------------------------------ -->
+      <!-- -------------- Header :: Starts ---------------- -->
+      <!-- ------------------------------------------------ -->
+      <header class="header-main">
+        <div class="container">
+          <div class="header-container">
+            <!-- Logo -->
+            <div class="header-logo">
+              <a href="#">
+                <img
+                  src="assets/media/images/moneyboy-logo.png"
+                  alt="MoneyBoy Social Logo" />
+              </a>
+            </div>
+
+            <!-- Header Right Content -->
+            <div class="header-search-nav-profile-container">
+              <!-- Search Input -->
+              <div class="header-search-input">
+                <div class="label-input">
+                  <!-- Placeholder Icon -->
+                  <div class="input-placeholder-icon">
+                    <svg
+                      class="svg-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none">
+                      <path
+                        d="M20 11C20 15.97 15.97 20 11 20C6.03 20 2 15.97 2 11C2 6.03 6.03 2 11 2"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path
+                        d="M18.9299 20.6898C19.4599 22.2898 20.6699 22.4498 21.5999 21.0498C22.4499 19.7698 21.8899 18.7198 20.3499 18.7198C19.2099 18.7098 18.5699 19.5998 18.9299 20.6898Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path
+                        d="M14 5H20"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path
+                        d="M14 8H17"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <!-- <label for="header-search-input">Search here</label> -->
+                  <input
+                    type="text"
+                    id="header-search-input"
+                    placeholder="Search here" />
+                </div>
+              </div>
+
+              <!-- Navigations -->
+              <div class="header-navigation">
+                <nav>
+                  <ul>
+                    <li>
+                      <a href="#" class="icon-link">
+                        <svg
+                          class="svg-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none">
+                          <path
+                            d="M22 8V13C22 17 20 19 16 19H15.5C15.19 19 14.89 19.15 14.7 19.4L13.2 21.4C12.54 22.28 11.46 22.28 10.8 21.4L9.3 19.4C9.14 19.18 8.77 19 8.5 19H8C4 19 2 18 2 13V8C2 4 4 2 8 2H12"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M15.2 4.62C14.87 3.63 15.26 2.41 16.34 2.07C16.9 1.9 17.6 2.04 18 2.57C18.38 2.02 19.1 1.9 19.66 2.07C20.74 2.4 21.13 3.63 20.8 4.62C20.29 6.19 18.5 7 18 7C17.5 7 15.73 6.2 15.2 4.62Z"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M15.9965 11H16.0054"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M11.9955 11H12.0045"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M7.99451 11H8.00349"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="icon-link">
+                        <svg
+                          class="svg-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none">
+                          <path
+                            d="M19 8C20.6569 8 22 6.65685 22 5C22 3.34315 20.6569 2 19 2C17.3431 2 16 3.34315 16 5C16 6.65685 17.3431 8 19 8Z"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M7 13H12"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M7 17H16"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M14 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15V10"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+
+              <!-- Header Profile Avatar -->
+              <div class="header-profile-avatar">
+                <a href="#">
+                  <div class="profile-avatar">
+                    <img
+                      src="assets/media/images/profile-avatar.png"
+                      alt="LoggedIn User Profile Avatar" />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- ------------------------------------------------ -->
+      <!-- --------------- Header :: Ends ----------------- -->
+      <!-- ------------------------------------------------ -->
+
+      <!-- ################################################ -->
+      <!-- ################################################ -->
+      <!-- ################################################ -->
+      <!-- ################################################ -->
+      <!-- ################################################ -->
+
+      <!-- Temporary Code to Create a Scrollbar -->
+
+      <h3 style="position: fixed; top: 100px; left: 50px"
+        >Temporary Content to create the ScrollBar</h3
+      >
+
+      <div class="container">
+        <div class="moneyboy-main-asides-layout-container">
+          <div class="moneyboy-global-sidebar-wrapper">
+            <img
+              src="assets/media/images/TEMP/sidebar.png"
+              width="333px"
+              alt="" />
+          </div>
+          <div class="moneyboy-page-content-container">
+            <img
+              src="assets/media/images/TEMP/posts.png"
+              width="651px"
+              alt="" />
+            <img
+              src="assets/media/images/TEMP/right-aside.png"
+              width="400px"
+              alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

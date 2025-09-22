@@ -1,37 +1,59 @@
 /* ==========================================================================
-   Base Stylesheet
-   - CSS resets
-   - Global variables (colors, fonts, spacing)
-   - Typography (headings, paragraphs, links)
-   - Default element styling (body, images, lists)
+   Base Stylesheet - professional comments added
+   Purpose:
+     - Provide a minimal, well-documented foundation for the project.
+     - Define design tokens (colors, spacing, radius), a small reset, and
+       basic element defaults so component styles can rely on consistent base behavior.
+   Notes:
+     - Keep this file focused on global defaults only. Component-specific overrides
+       should live in components.css or layout.css to maintain clear separation.
    ========================================================================== */
-/* 1. Root Variables (easy to manage design tokens) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* --------------------------------------------------------------------------
+   1) Root variables (design tokens)
+   - Centralize values that determine the visual identity (type, color, spacing).
+   - Change tokens here to adapt the whole UI theme consistently.
+   -------------------------------------------------------------------------- */
 :root {
-   /* Fonts */
+   /* Typography families */
    --font-family-base: "Inter", Arial, sans-serif;
    --font-family-heading: "Poppins", sans-serif;
-   /* Core color palette  */
+   /* Core color palette
+      - --color-primary: primary brand/action color
+      - --color-secondary: secondary accent color
+      - --color-background: default page background
+      - --color-text, --color-text-light: primary and supporting text colors
+      - --color-border: neutral border/divider color
+   */
    --color-primary: #1a73e8;
    --color-secondary: #ff9800;
    --color-background: #ffffff;
    --color-text: #222222;
    --color-text-light: #555555;
    --color-border: #e0e0e0;
-   /* Border radius scale */
+   /* Corner radius scale
+      - Use semantic sizes (sm/md/lg) for consistent rounding across components.
+   */
    --radius-sm: 4px;
    --radius-md: 8px;
    --radius-lg: 16px;
-   /* Spacing scale */
+   /* Spacing scale (use with margin / padding to keep rhythm consistent) */
    --spacing-xs: 0.25rem;
    --spacing-sm: 0.5rem;
    --spacing-md: 1rem;
    --spacing-lg: 2rem;
-   /* Transition presets */
+   /* Transition presets
+      - Use these for consistent animation timing across the UI. */
    --transition-fast: all 0.2s ease;
    --transition-normal: all 0.3s ease;
 }
 
-/* 2. CSS Reset (normalize basic browser differences) */
+/* --------------------------------------------------------------------------
+   2) CSS Reset
+   - Remove default browser spacing and set box-sizing to border-box to make
+     layout calculations predictable.
+   -------------------------------------------------------------------------- */
 *,
 *::before,
 *::after {
@@ -40,23 +62,33 @@
    box-sizing: border-box;
 }
 
-/* 3. Global Defaults */
+/* --------------------------------------------------------------------------
+   3) Global defaults
+   - Set base font sizing, background, text color and smoothing for better
+     cross-platform rendering.
+   -------------------------------------------------------------------------- */
 html {
    font-size: 16px;
-   /* makes rem units predictable */
+   /* predictable rem calculations */
    scroll-behavior: smooth;
+   /* optional UX improvement for in-page navigation */
 }
 
 body {
    font-family: var(--font-family-base);
-   background-color: var(--color-background);
+   background-color: #F4F4F4;
+   /* page background tone (consider using --color-background) */
    color: var(--color-text);
    line-height: 1.6;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
 }
 
-/* 4. Typography */
+/* --------------------------------------------------------------------------
+   4) Typography
+   - Headings use the dedicated heading font for clear hierarchy.
+   - Keep paragraph defaults light; components can override for emphasis.
+   -------------------------------------------------------------------------- */
 h1,
 h2,
 h3,
@@ -70,20 +102,20 @@ h6 {
 }
 
 p {
-   color: var(--color-text-light);
+   /* Intentionally minimal here. Use --color-text-light on components when needed. */
 }
 
+/* Links
+   - Keep link styling minimal and provide a smooth hover transition. */
 a {
-   color: var(--color-primary);
    text-decoration: none;
    transition: var(--transition-fast);
 }
 
-a:hover {
-   color: darkblue;
-}
-
-/* 5. Images & Media */
+/* --------------------------------------------------------------------------
+   5) Images & media
+   - Make media responsive and remove inline spacing to keep layout stable.
+   -------------------------------------------------------------------------- */
 img,
 video {
    max-width: 100%;
@@ -91,13 +123,20 @@ video {
    display: block;
 }
 
-/* 6. Lists */
+/* --------------------------------------------------------------------------
+   6) Lists
+   - Remove default list styles here; explicit styles should be applied where lists are used.
+   -------------------------------------------------------------------------- */
 ul,
 ol {
    list-style: none;
 }
 
-/* 7. Buttons and Inputs (basic reset) */
+/* --------------------------------------------------------------------------
+   7) Form controls and buttons (base resets)
+   - Normalize appearance and inheritance so controls match the surrounding typography.
+   - Component styles should reintroduce borders, focus states and interactions.
+   -------------------------------------------------------------------------- */
 button,
 input,
 textarea,
@@ -107,17 +146,143 @@ select {
    outline: none;
 }
 
-/* 8. Utility Classes */
+input,
+textarea {
+   min-height: 48px;
+   padding: 0 12px;
+   border-radius: 13px;
+   background: #F9F9F9;
+   color: #716F6F;
+   border: 1.5px solid #EBEBEB;
+   width: 100%;
+   /* useful for form layout components */
+}
+
+/* Shared typography for labels and form placeholders to keep input text consistent */
+label,
+input,
+input::placeholder {
+   font-family: 'Poppins';
+   font-weight: 500;
+   font-size: 15px;
+   letter-spacing: 0;
+   color: #716F6F;
+   transition: var(--transition-fast);
+}
+
+/* --------------------------------------------------------------------------
+   8) Utility classes and small component patterns
+   - Keep these lightweight and generic so multiple components can reuse them.
+   -------------------------------------------------------------------------- */
+/* Layout container used across the app to constrain content width */
 .container {
    max-width: 1440px;
    width: 100%;
    margin: 0 auto;
 }
 
-.hidden {
-   display: none !important;
+/* SVG icon helper
+   - Provide a default stroke color and a transition for subtle hover feedback.
+   - Note: nested selector syntax in this file follows the existing style;
+     ensure build process supports CSS nesting if using production CSS (or convert to flat selectors).
+*/
+.svg-icon {
+   path {
+      transition: var(--transition-fast);
+      stroke: #727272;
+   }
 }
 
-.text-center {
-   text-align: center;
+/* Hover state for icon links to increase contrast */
+.icon-link:hover .svg-icon path,
+.svg-icon:hover path {
+   stroke: #404040;
+}
+
+/* Square icon-link element used in header/navigation */
+.icon-link {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 42px;
+   aspect-ratio: 1/1;
+}
+
+/* Input wrapper pattern used for search and form controls
+   - Keeps placeholder icon and label visually inside the input area.
+   - Uses :has() where supported to drive focus-based styling on the wrapper. */
+.label-input {
+   display: flex;
+   align-items: center;
+   position: relative;
+   background: #F9F9F9;
+   width: 100%;
+
+   /* Hover and focus visual states for the entire wrapper */
+   &:hover,
+   &:has(input:focus) {
+      .input-placeholder-icon {
+
+         .svg-icon path,
+         .svg-icon:hover path {
+            stroke: #404040;
+         }
+      }
+
+      label,
+      input,
+      input::placeholder {
+         color: #404040;
+      }
+
+      input {
+         border-color: #cdcdcd;
+      }
+   }
+
+   /* Stronger focus state for the input element */
+   &:has(input:focus) {
+      input:focus {
+         border-color: #a1a1a1;
+      }
+   }
+
+   .input-placeholder-icon {
+      position: absolute;
+      left: 12px;
+      display: flex;
+
+      .svg-icon path,
+      .svg-icon:hover path {
+         stroke: #727272;
+      }
+   }
+
+   label {
+      position: absolute;
+      left: 46px;
+   }
+
+   input {
+      padding-left: 46px;
+      background-color: transparent;
+      position: relative;
+      z-index: 2;
+   }
+}
+
+/* Profile avatar helper
+   - Constrains avatar size and ensures images use cover to fill the frame.
+   - Border radius chosen for the visual style; change to 50% for fully circular avatars.
+*/
+.profile-avatar {
+   width: 53px;
+   aspect-ratio: 1/1;
+
+   img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 21px;
+   }
 }

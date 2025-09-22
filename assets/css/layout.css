@@ -5,3 +5,28 @@
    - Wrappers and containers
    - Spacing and alignment rules
    ========================================================================== */
+.moneyboy-layout-container {
+   min-height: 100dvh;
+   max-height: 100dvh;
+   overflow: auto;
+}
+
+.moneyboy-main-asides-layout-container {
+   display: grid;
+   grid-template-columns: auto auto;
+   padding-top: 30px;
+   opacity: .1;
+
+   .moneyboy-global-sidebar-wrapper {}
+
+   .moneyboy-page-content-container {
+      display: grid;
+      grid-template-columns: auto auto;
+   }
+
+   img {
+      box-shadow: 0px 6px 4px -4px #08080803, 0px 2px 13.5px 1px #0808080A;
+      border-radius: 32px;
+      overflow: hidden;
+   }
+}

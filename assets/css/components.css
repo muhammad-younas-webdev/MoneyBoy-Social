@@ -1,7 +1,120 @@
 /* ==========================================================================
    Components Stylesheet
-   - Reusable UI elements
-   - Buttons, forms, cards, modals
-   - Navigation bars, dropdowns, alerts
-   - Any independent block of UI
+   Purpose:
+     - Contain reusable UI building blocks (header, nav, cards, forms, etc.).
+     - Keep component-level styles isolated from global/base rules.
+     - Use clear, short comments so future maintainers understand intent quickly.
+   Notes:
+     - This file uses nesting for readability (Sass/PostCSS). Ensure your build
+       pipeline compiles nested rules into standard CSS for production.
    ========================================================================== */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/* Header Component
+   - Sticky top header that provides primary navigation, search and profile access.
+   - Designed to be lightweight and touch-friendly (large tap targets).
+*/
+.header-main {
+   /* Keep header visible on scroll and slightly elevated above page content */
+   position: sticky;
+   z-index: 2;
+   top: 0;
+   /* Visual appearance */
+   background: #FDFDFD;
+   box-shadow: 0px 6px 4px -4px #08080803, 0px 2px 1.5px -4px #0808080A;
+   height: 76px;
+   /* Vertical centering for header children */
+   align-items: center;
+   display: flex;
+
+   /* ---------------------------------------------------------------------
+      Internal header layout
+      - The container holds logo (left) and the right-side group (search, nav, avatar).
+      - Keep spacing rules here so header components remain aligned and consistent.
+      --------------------------------------------------------------------- */
+   .header-container {
+      max-width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      /* Logo area
+         - Simple link wrapper so clicking returns to feed/home.
+         - Fixed image height keeps header rhythm stable across pages.
+      */
+      .header-logo {
+         display: flex;
+
+         a {
+            display: flex;
+
+            img {
+               height: 54px;
+               /* fixed visual size for consistent header height */
+            }
+         }
+      }
+
+      /* Right-side group
+         - Groups search input, action icons and profile avatar for a clear layout.
+         - Use gap to maintain comfortable spacing and meet touch target recommendations.
+      */
+      .header-search-nav-profile-container {
+         display: flex;
+         gap: 18px;
+         align-items: center;
+
+         /* Search input wrapper
+            - Width is constrained here to avoid layout shifting on larger viewports.
+            - For smaller screens, override with a responsive rule in layout.css.
+         */
+         .header-search-input {
+            width: 385px;
+         }
+
+         /* Action icons / navigation
+            - A compact horizontal nav for the main header actions.
+            - Keep each item visually lightweight; svg/icon styles are applied elsewhere.
+         */
+         .header-navigation {
+            display: flex;
+            align-items: center;
+
+            nav {
+               ul {
+                  gap: 18px;
+                  display: flex;
+                  align-items: center;
+
+                  li {
+                     a {}
+                  }
+               }
+            }
+         }
+
+         /* Profile avatar
+            - Small, interactive avatar that links to profile or account menu.
+            - Use subtle transform on hover for a refined micro-interaction.
+            - Use overflow:hidden and border-radius to crop images cleanly.
+         */
+         .header-profile-avatar {
+            transition: var(--transition-fast);
+            border-radius: 21px;
+            overflow: hidden;
+            backface-visibility: hidden;
+
+            &:hover {
+               transform: translateY(-2px);
+               /* micro-lift to communicate interactivity */
+            }
+         }
+      }
+   }
+}
