@@ -264,3 +264,64 @@
 
    .profile-card__stats {}
 }
+
+/* Sidebar Navigations */
+.sidbar-navigation {
+   padding: 25px 15px;
+
+   ul {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      li {
+         a {
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            svg {
+               path {
+                  stroke: #505050;
+               }
+            }
+
+            span {
+               font-family: 'Cal Sans';
+               font-weight: 500;
+               font-size: 24px;
+               line-height: 100%;
+               letter-spacing: 0%;
+               text-transform: capitalize;
+               color: #505050;
+               transition: var(--transition-fast);
+            }
+
+            &:hover {
+               svg {
+                  path {
+                     stroke: #1c1c1c;
+                  }
+               }
+
+               span {
+                  color: #1c1c1c;
+               }
+            }
+
+            &.active {
+               svg {
+                  path {
+                     stroke: #000000;
+                  }
+               }
+
+               span {
+                  color: #000000;
+               }
+            }
+         }
+      }
+   }
+}

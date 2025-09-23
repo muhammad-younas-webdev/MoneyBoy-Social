@@ -14,7 +14,7 @@
 .moneyboy-main-asides-layout-container {
    display: flex;
    gap: 28px;
-   padding-top: 34px;
+   padding-block: 34px;
 
    .moneyboy-global-sidebar-wrapper {
       width: 100%;
@@ -26,6 +26,10 @@
          gap: 20px;
 
          .sidebar-profile-card {}
+
+         .sidebar-post-button {}
+
+         .sidebar-navigation-container {}
       }
    }
 
