@@ -9,6 +9,7 @@
        should live in components.css or layout.css to maintain clear separation.
    ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
 
 /* --------------------------------------------------------------------------
    1) Root variables (design tokens)
@@ -284,5 +285,56 @@ input::placeholder {
       aspect-ratio: 1/1;
       object-fit: cover;
       border-radius: 21px;
+   }
+}
+
+.card {
+   box-shadow: 0px 6px 4px -4px #08080803, 0px 2px 13.5px 1px #0808080A;
+   border-radius: 32px;
+   background-color: white;
+}
+
+.btn-primary {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 20px;
+   padding-block: 24px;
+   gap: 10px;
+   color: white;
+   background: linear-gradient(93.25deg, #E5741F -49.57%, #FECE26 98.1%);
+   box-shadow: 0px 4px 9px 0px #0000000F;
+   position: relative;
+   overflow: hidden;
+   transition: var(--transition-fast);
+
+   &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(93.25deg, #FECE26 -49.57%, #E5741F 98.1%);
+      transition: var(--transition-fast);
+   }
+
+   &:hover {
+      filter: brightness(110%);
+
+      &::before {
+         opacity: 0.5;
+      }
+   }
+
+   span {
+      font-family: "Cal Sans";
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 100%;
+      letter-spacing: 4%;
+      position: relative;
+   }
+
+   svg {
+      position: relative;
    }
 }

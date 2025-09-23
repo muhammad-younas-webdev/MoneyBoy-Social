@@ -12,21 +12,25 @@
 }
 
 .moneyboy-main-asides-layout-container {
-   display: grid;
-   grid-template-columns: auto auto;
-   padding-top: 30px;
-   opacity: .1;
+   display: flex;
+   gap: 28px;
+   padding-top: 34px;
 
-   .moneyboy-global-sidebar-wrapper {}
+   .moneyboy-global-sidebar-wrapper {
+      width: 100%;
+      max-width: 344px;
 
-   .moneyboy-page-content-container {
-      display: grid;
-      grid-template-columns: auto auto;
+      .global-sidebar-container {
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+
+         .sidebar-profile-card {}
+      }
    }
 
-   img {
-      box-shadow: 0px 6px 4px -4px #08080803, 0px 2px 13.5px 1px #0808080A;
-      border-radius: 32px;
-      overflow: hidden;
+   .moneyboy-page-content-container {
+      background-color: rgb(133, 73, 73);
+      width: 100%;
    }
 }
