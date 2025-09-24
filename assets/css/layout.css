@@ -38,7 +38,24 @@
    }
 
    .moneyboy-page-content-container {
-      background-color: rgb(133, 73, 73);
       width: 100%;
+
+      .moneyboy-dynamic-content-layout {
+         width: 100%;
+
+         .moneyboy-2x-1x-layout-container {
+            display: flex;
+            gap: 28px;
+
+            .moneyboy-2x-1x-a-layout {
+               width: 100%;
+            }
+
+            .moneyboy-2x-1x-b-layout {
+               width: 100%;
+               max-width: 400px;
+            }
+         }
+      }
    }
 }

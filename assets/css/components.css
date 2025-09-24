@@ -381,3 +381,12 @@
       }
    }
 }
+
+/*  */
+.moneyboy-feed-page-container {
+   gap: 28px;
+   display: flex;
+   flex-direction: column;
+}
+
+.moneyboy-feed-sidebar-container {}
