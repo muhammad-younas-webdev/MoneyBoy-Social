@@ -31,7 +31,9 @@
 
          .sidebar-navigation-container {}
 
-         .sidebar-footer-card {}
+         .sidebar-footer-card.card {
+            border-radius: 21px;
+         }
       }
    }
 
