@@ -171,18 +171,18 @@
             }
          }
       }
-   }
 
-   &:hover {
-      cursor: pointer;
-      /* transform: translateY(-3px); */
-      filter: brightness(110%);
-      box-shadow: 0px 6px 4px -4px #08080803, 0px 2px 13.5px 1px #0808080A;
+      &:hover {
+         cursor: pointer;
+         /* transform: translateY(-3px); */
+         filter: brightness(110%);
+         box-shadow: 0px 6px 4px -4px #08080803, 0px 2px 13.5px 1px #0808080A;
 
-      .profile-card__main {
-         .profile-card__icon {
-            .profile-card__blur-icon {
-               /* filter: brightness(110%); */
+         .profile-card__main {
+            .profile-card__icon {
+               .profile-card__blur-icon {
+                  /* filter: brightness(110%); */
+               }
             }
          }
       }
