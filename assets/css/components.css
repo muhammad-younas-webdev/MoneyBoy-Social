@@ -389,4 +389,21 @@
    flex-direction: column;
 }
 
-.moneyboy-feed-sidebar-container {}
+.moneyboy-feed-sidebar-container {
+   .featured-profiles-card-container {
+      padding: 17px;
+
+      .featured-profiles-header {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+      }
+
+      .featured-card-opts {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 12px;
+      }
+   }
+}
