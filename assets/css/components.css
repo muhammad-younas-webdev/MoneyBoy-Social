@@ -215,7 +215,7 @@
       justify-content: space-between;
       justify-content: center;
       gap: 20px;
-      padding: 15px 21px;
+      padding: 16px 21px 10px;
 
       .profile-card__stats-item {
          display: flex;
@@ -321,6 +321,62 @@
                   color: #000000;
                }
             }
+         }
+      }
+   }
+}
+
+/* Footer */
+.sidebar-footer {
+   display: flex;
+   flex-direction: column;
+   padding: 15px 15px 18px;
+   gap: 12px;
+
+   nav {
+      ul {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         row-gap: 2px;
+         column-gap: 2px;
+
+         li {
+            a {
+               font-family: 'Poppins';
+               font-weight: 500;
+               font-size: 12px;
+               line-height: 26px;
+               letter-spacing: 3%;
+               color: #505050;
+               padding: 3px 6px;
+               transition: var(--transition-fast);
+
+               &:hover {
+                  color: #000000;
+               }
+            }
+         }
+      }
+   }
+
+   .footer-logos {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+
+      .footer-logo {
+         height: 19px;
+         transition: var(--transition-fast);
+         backface-visibility: hidden;
+
+         img {
+            height: 100%;
+            width: auto;
+         }
+
+         &:hover {
+            transform: translateY(-2px);
          }
       }
    }
