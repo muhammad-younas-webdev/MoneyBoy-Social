@@ -191,9 +191,16 @@
    .profile-card__bg-img {
       position: absolute;
       inset: 0;
-      filter: blur(0.5px) brightness(75%);
 
+      /* filter: blur(0.5px) brightness(75%); */
       &::before {
+         content: '';
+         background: #0000004A;
+         position: absolute;
+         inset: 0;
+      }
+
+      &::after {
          content: '';
          background: #00000063;
          position: absolute;
@@ -521,6 +528,10 @@
 }
 
 .moneyboy-feed-sidebar-container {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+
    .featured-profiles-card-container {
       padding: 17px;
 
@@ -535,6 +546,364 @@
          align-items: center;
          justify-content: center;
          gap: 12px;
+      }
+   }
+}
+
+/* ----------- */
+.moneyboy-network-grow-card {
+   width: 100%;
+   aspect-ratio: 1/1;
+   max-height: 345px;
+   overflow: hidden;
+   border-radius: 32px;
+   box-shadow: 0px 6px 4px -4px #08080803, 0px 2px 1.5px -4px #0808080A;
+   position: relative;
+   display: flex;
+   justify-content: center;
+
+   &::before {
+      content: '';
+      background: #00000033;
+      position: absolute;
+      inset: 0;
+   }
+
+   .bg-img {
+      width: 100%;
+      height: 100%;
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   .text-logo {
+      position: absolute;
+      bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+      gap: 7px;
+
+      h3 {
+         font-family: "Cal Sans";
+         font-weight: 500;
+         font-size: 32px;
+         line-height: 100%;
+         text-align: center;
+         text-transform: capitalize;
+         color: #FFFFFF;
+      }
+
+      img {
+         width: 100%;
+         max-width: 323px;
+      }
+   }
+}
+
+.moneyboy-feed-page-container {
+   .moneyboy-feed-page-cate-buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 10px 14px;
+      gap: 20px;
+      border-radius: 25px;
+
+      .page-content-type-button {
+         padding: 19px 0px;
+         color: #020202;
+         cursor: pointer;
+         font-family: 'Cal Sans';
+         font-weight: 500;
+         font-style: SemiBold;
+         font-size: 20px;
+         line-height: 100%;
+         letter-spacing: .5px;
+         text-transform: capitalize;
+         border-radius: 10px;
+         transition: var(--transition-fast);
+
+         &:hover {
+            background-color: #0104050d;
+            border-radius: 19px;
+         }
+
+         &.active {
+            border-radius: 19px;
+            background-color: #010405;
+            color: #FECE26;
+         }
+      }
+   }
+}
+
+/* Posts */
+.moneyboy-posts-wrapper {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+
+   .moneyboy-post__container {
+      padding: 17px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .moneyboy-post__header {
+         display: flex;
+         align-items: center;
+
+         /* ------------ */
+         /* ------------ */
+         /* ------------ */
+         /* ------------ */
+         /* ------------ */
+         /* ------------ */
+         /* ------------ */
+         /* ------------ */
+         /* ------------ */
+         /* ------------ */
+         /* ------------ */
+         .profile-card {
+            width: 100%;
+            padding: 0px;
+
+            &.featured-profile-card {
+               .profile-card__main {
+                  .profile-card__avatar-settings {
+                     .profile-card__avatar {
+                        img {}
+                     }
+                  }
+
+                  .profile-card__info {
+                     .profile-card__name-badge {
+                        .profile-card__name {}
+
+                        .profile-card__badge {
+                           img {}
+                        }
+                     }
+
+                     .profile-card__username {}
+                  }
+               }
+
+               &:hover {
+                  .profile-card__main {
+                     .profile-card__icon {
+                        .profile-card__blur-icon {}
+                     }
+                  }
+               }
+            }
+
+            .profile-card__bg-img {
+               &::before {}
+
+               &::after {}
+
+               img {}
+
+               &~* {}
+
+               img {}
+            }
+
+            .profile-card__main {
+               gap: 16px;
+
+               .profile-card__avatar-settings {
+                  .profile-card__avatar {
+                     width: 53px;
+                     border-radius: 21px;
+
+                     img {}
+                  }
+
+                  .profile-card__settings {
+                     svg {}
+                  }
+               }
+
+               .profile-card__info {
+                  .profile-card__name-badge {
+                     .profile-card__name {
+                        font-size: 20px;
+                        line-height: 100%;
+                        letter-spacing: 0%;
+                     }
+
+                     .profile-card__badge {
+                        img {}
+                     }
+                  }
+
+                  .profile-card__username {
+                     font-size: 16px;
+                  }
+               }
+
+               .profile-card__icon {
+                  .profile-card__blur-icon {
+                     &:hover {}
+                  }
+               }
+            }
+
+            .profile-card__stats {
+               .profile-card__stats-item {
+                  &:hover {
+
+                     .profile-card__stats-num,
+                     .profile-card__stats-label span {}
+                  }
+
+                  .profile-card__stats-num {}
+
+                  .profile-card__stats-label {
+                     svg {}
+
+                     span {}
+                  }
+               }
+            }
+
+            .profile-card__desc {
+               p {}
+            }
+         }
+
+         /* ------------ */
+         /* ------------ */
+         /* ------------ */
+         /* ------------ */
+         /* ------------ */
+         /* ------------ */
+         /* ------------ */
+         /* ------------ */
+         /* ------------ */
+         /* ------------ */
+         /* ------------ */
+         /* ------------ */
+         /* ------------ */
+         .moneyboy-post__upload-more-info {
+            display: flex;
+            min-width: max-content;
+            align-items: center;
+            gap: 11px;
+
+            .moneyboy-post__upload-time {
+               font-family: 'Poppins';
+               font-weight: 500;
+               font-style: Medium;
+               font-size: 15px;
+               line-height: 100%;
+               letter-spacing: 0%;
+               color: #505050;
+            }
+
+            .moenyboy-post__more-opt-btn {
+               display: flex;
+               width: 24px;
+               aspect-ratio: 1/1;
+               align-items: center;
+               justify-content: center;
+               cursor: pointer;
+            }
+         }
+      }
+
+      .moneyboy-post__desc {
+         font-family: 'Poppins';
+         font-weight: 400;
+         font-style: Medium;
+         font-size: 18px;
+         line-height: 26px;
+         letter-spacing: 3%;
+         color: #505050;
+
+         span {
+            color: #E5741F;
+            cursor: pointer;
+            transition: var(--transition-fast);
+
+            &:hover {
+               color: #ff6f00;
+            }
+         }
+      }
+
+      .moneyboy-post__media {
+         aspect-ratio: 617 / 415;
+         overflow: hidden;
+         box-shadow: 0px 6px 4px -4px #08080803, 0px 2px 1.5px -4px #0808080A;
+         border-radius: 32px;
+         position: relative;
+
+         .moneyboy-post__img {
+            img {}
+         }
+
+         .moneyboy-post__actions {
+            position: absolute;
+            border: 1px solid #ffffff33;
+            backdrop-filter: blur(25px);
+            right: 20px;
+            left: 20px;
+            padding: 26px 23px 24px;
+            bottom: 29px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 20px;
+
+            ul {
+               display: flex;
+               align-items: center;
+               gap: 20px;
+
+               li {
+                  a {
+                     display: flex;
+                     align-items: center;
+                     gap: 10px;
+
+                     svg {
+                        transition: var(--transition-fast);
+                     }
+
+                     span {
+                        transition: var(--transition-fast);
+                        font-family: 'Poppins';
+                        font-weight: 500;
+                        font-style: SemiBold;
+                        font-size: 14px;
+                        line-height: 26px;
+                        letter-spacing: 3%;
+                        color: white;
+                     }
+
+                     &:hover {
+                        svg {
+                           path {
+                              stroke: #dedede;
+                           }
+                        }
+
+                        span {
+                           color: #dedede;
+                        }
+                     }
+                  }
+               }
+            }
+         }
       }
    }
 }
