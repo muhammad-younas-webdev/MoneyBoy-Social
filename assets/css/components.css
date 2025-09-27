@@ -87,6 +87,7 @@
 
                input {
                   border-color: #c2c2c2;
+                  border-color: #000000;
                   box-shadow: 0px 6px 4px -4px #08080814, 0px 2px 13.5px 1px #08080818;
                }
 
@@ -106,7 +107,7 @@
 
             nav {
                ul {
-                  gap: 18px;
+                  gap: 10px;
                   display: flex;
                   align-items: center;
 
@@ -114,18 +115,39 @@
                      display: flex;
                      justify-content: center;
                      align-items: center;
-                     /* a {
+
+                     a {
+                        width: 50px;
+                        aspect-ratio: 1/1;
+                        display: grid;
+                        place-items: center;
+                        border-radius: 100%;
+                        backface-visibility: hidden;
+                        transition: var(--transition-fast);
+                        will-change: transform;
+
                         svg {
+                           backface-visibility: hidden;
                            transition: var(--transition-fast);
                            display: block;
                         }
 
-                        &:hover {
+                        &:hover,
+                        &.active {
+                           background: var(--color-text-active);
+                           box-shadow: 0px 2px 3px -1px #000000;
+
                            svg {
-                              transform: scale(1.15);
+                              path {
+                                 stroke: var(--color-secondary);
+                              }
                            }
                         }
-                     } */
+
+                        &:active {
+                           transform: scale(.95);
+                        }
+                     }
                   }
                }
             }
@@ -143,12 +165,12 @@
             backface-visibility: hidden;
 
             &:hover {
-               transform: translateY(-2px);
-               box-shadow: 0px 6px 4px -4px #08080803, 0px 2px 1.5px -4px #0808080A, 0px 4px 4px 0px #00000017;
-               box-shadow: 0px 6px 4px -4px #0808082c, 0px 2px 13.5px 1px #08080827;
+               /* transform: translateY(-2px); */
+               box-shadow: 0px 0px 4px 4px #fecc269a;
 
                &:active {
                   transform: translateY(-2px) scale(.95);
+                  transform: translateY(0px) scale(.95);
                }
             }
          }
@@ -373,6 +395,7 @@
             transition: var(--transition-fast);
             cursor: pointer;
             backface-visibility: hidden;
+            will-change: transform;
 
             &:active {
                transform: scale(.85);
@@ -481,12 +504,13 @@
                   display: flex;
                   align-items: center;
                   justify-content: center;
+                  transition: var(--transition-fast);
 
-                  &.active_svg_icon {
+                  /* &.active_svg_icon {
                      display: none;
-                  }
-
+                     } */
                   path {
+                     transition: var(--transition-fast);
                      stroke: var(--color-text-active);
                   }
                }
@@ -502,13 +526,17 @@
                }
             }
 
+            &.active,
             &:hover {
                background: var(--light-bg);
+               background: var(--btn-gradient);
 
                div {
                   svg {
                      path {
-                        stroke: #1c1c1c;
+                        /* stroke: #ffffff; */
+                        stroke: #f4aa23;
+                        fill: #1c1c1c;
                      }
                   }
 
@@ -519,17 +547,16 @@
             }
 
             &.active {
-               background: var(--btn-gradient);
+               /* background: var(--btn-gradient); */
                box-shadow: 0px 4px 9px 0px #0000000F;
 
                div {
                   svg {
-                     display: none;
 
-                     &.active_svg_icon {
+                     /* display: none; */
+                     /* &.active_svg_icon {
                         display: block;
-                     }
-
+                     } */
                      path {
                         /* stroke: var(--color-text-active); */
                      }
@@ -723,16 +750,11 @@
          line-height: 100%;
          letter-spacing: .5px;
          text-transform: capitalize;
-         border-radius: 10px;
          transition: var(--transition-fast);
+         border-radius: 19px;
 
-         &:hover {
-            background: var(--light-bg);
-            border-radius: 19px;
-         }
-
+         &:hover,
          &.active {
-            border-radius: 19px;
             background-color: #010405;
             color: #FECE26;
          }
@@ -752,6 +774,20 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+
+      &:hover {
+         box-shadow: 0px 6px 4px -4px #0808082e, 0px 2px 13.5px 1px #08080836;
+
+         .moneyboy-post__media {
+            img {
+               transform: scale(1.035);
+            }
+
+            .moneyboy-post__actions {
+               backdrop-filter: blur(25px);
+            }
+         }
+      }
 
       .moneyboy-post__header {
          display: flex;
@@ -947,10 +983,9 @@
          position: relative;
 
          &:hover {
-            .moneyboy-post__actions {
-               transform: scale(1.035);
+            /* .moneyboy-post__actions {
                backdrop-filter: blur(25px);
-            }
+            } */
          }
 
          .moneyboy-post__img {
@@ -958,6 +993,7 @@
             height: 100%;
 
             img {
+               transition: var(--transition-fast);
                width: 100%;
                height: 100%;
                object-fit: cover;
@@ -995,6 +1031,7 @@
 
                      svg {
                         transition: var(--transition-fast);
+                        transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                      }
 
                      span {
@@ -1015,19 +1052,113 @@
                      }
 
                      &:hover {
-                        filter: brightness(200%);
+                        /* filter: brightness(200%); */
                         opacity: 1;
 
                         svg {
                            transform: scale(1.15);
 
                            path {
-                              /* stroke: #dedede; */
+                              /* stroke: red; */
                            }
                         }
 
                         span {
                            /* color: #dedede; */
+                        }
+                     }
+                  }
+               }
+
+               &:nth-child(1) {
+                  li {
+                     &:nth-child(1) {
+                        a {
+                           svg {}
+
+                           span {}
+
+                           &:active {
+                              svg {}
+                           }
+
+                           &:hover {
+                              svg {
+                                 path {
+                                    &:nth-child(1) {
+                                       stroke: var(--color-primary);
+                                       fill: var(--color-primary);
+                                    }
+
+                                    &:nth-child(2) {
+                                       stroke: var(--color-primary);
+                                    }
+
+                                    &:nth-child(3),
+                                    &:nth-child(4),
+                                    &:nth-child(5) {
+                                       /* stroke: #ffffff; */
+                                    }
+                                 }
+                              }
+
+                              span {
+                                 /* color: #dedede; */
+                              }
+                           }
+                        }
+                     }
+
+                     &:nth-child(2) {
+                        a {
+                           svg {}
+
+                           span {}
+
+                           &:active {
+                              svg {}
+                           }
+
+                           &:hover {
+                              svg {
+                                 path {
+                                    /* stroke: red; */
+                                    stroke: #f6305d;
+                                    fill: #f6305d;
+                                 }
+                              }
+
+                              span {
+                                 /* color: #dedede; */
+                              }
+                           }
+                        }
+                     }
+
+                     &:nth-child(3) {
+                        a {
+                           svg {}
+
+                           span {}
+
+                           &:active {
+                              svg {}
+                           }
+
+                           &:hover {
+                              svg {
+                                 path {
+                                    &:nth-child(1) {
+                                       fill: #46a0e3;
+                                       stroke: #46a0e3;
+                                    }
+                                 }
+                              }
+
+                              span {
+                                 /* color: #dedede; */
+                              }
+                           }
                         }
                      }
                   }

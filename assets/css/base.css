@@ -29,7 +29,8 @@
    --color-text-light: #555555;
    --color-border: #e0e0e0; */
    /*  */
-   --light-bg: #0f14191a;
+   --color-primary: #f5ad24;
+   --color-secondary: #FECE26;
    --light-bg: #1c222911;
    --color-text: #020202;
    --color-text-active: #000000;
@@ -392,22 +393,14 @@ input::placeholder {
    overflow: hidden;
    transition: var(--transition-fast);
 
+   /* 
    &::before {
       content: '';
       position: absolute;
       inset: 0;
       background: linear-gradient(93.25deg, #FECE26 -49.57%, #E5741F 98.1%);
       transition: var(--transition-fast);
-   }
-
-   &:hover {
-      filter: brightness(110%);
-
-      &::before {
-         opacity: 0.5;
-      }
-   }
-
+   } */
    span {
       font-family: var(--font-family-heading);
       font-weight: 500;
@@ -415,9 +408,30 @@ input::placeholder {
       line-height: 100%;
       letter-spacing: 4%;
       position: relative;
+      transition: var(--transition-fast);
    }
 
    svg {
       position: relative;
+      transition: var(--transition-fast);
+   }
+
+   &:hover {
+      background: linear-gradient(93.25deg, var(--color-text-active) -49.57%, var(--color-text-active) 98.1%);
+
+      /* filter: brightness(110%);
+
+      &::before {
+         opacity: 0.5;
+      } */
+      span {
+         color: var(--color-secondary);
+      }
+
+      svg {
+         path {
+            stroke: var(--color-secondary);
+         }
+      }
    }
 }
