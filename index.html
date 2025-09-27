@@ -8,7 +8,7 @@
     <!-- Favicon -->
     <link
       rel="shortcut icon"
-      href="assets/media/images/favicon.ico"
+      href="assets/media/images/logo/favicon.ico"
       type="image/x-icon" />
 
     <!-- Title -->
@@ -26,6 +26,7 @@
       <!-- ------------------------------------------------ -->
       <!-- -------------- Header :: Starts ---------------- -->
       <!-- ------------------------------------------------ -->
+
       <header class="header-main">
         <div class="container">
           <div class="header-container">
@@ -33,7 +34,7 @@
             <div class="header-logo">
               <a href="#">
                 <img
-                  src="assets/media/images/moneyboy-logo.png"
+                  src="assets/media/images/logo/moneyboy-logo.png"
                   alt="MoneyBoy Social Logo" />
               </a>
             </div>
@@ -87,7 +88,7 @@
                 <nav>
                   <ul>
                     <li>
-                      <a href="#" class="icon-link">
+                      <a href="#" class="icon-link hover-scale-icon">
                         <svg
                           class="svg-icon"
                           xmlns="http://www.w3.org/2000/svg"
@@ -125,7 +126,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="#" class="icon-link">
+                      <a href="#" class="icon-link hover-scale-icon">
                         <svg
                           class="svg-icon"
                           xmlns="http://www.w3.org/2000/svg"
@@ -165,7 +166,7 @@
                 <a href="#">
                   <div class="profile-avatar">
                     <img
-                      src="assets/media/images/profile-avatar.png"
+                      src="assets/media/images/profile-avatars/profile-avatar-1.png"
                       alt="LoggedIn User Profile Avatar" />
                   </div>
                 </a>
@@ -174,6 +175,7 @@
           </div>
         </div>
       </header>
+
       <!-- ------------------------------------------------ -->
       <!-- --------------- Header :: Ends ----------------- -->
       <!-- ------------------------------------------------ -->
@@ -184,12 +186,15 @@
       <!-- ################################################ -->
       <!-- ################################################ -->
 
-      <!-- Temporary Code to Create a Scrollbar -->
-
       <div class="container">
         <div class="moneyboy-main-asides-layout-container">
+          <!-- ------------------------------------------------- -->
+          <!-- -------------- SideBar :: Starts ---------------- -->
+          <!-- ------------------------------------------------- -->
+          <!-- Left Side Bar -->
           <div class="moneyboy-global-sidebar-wrapper">
             <aside class="global-sidebar-container">
+              <!-- ############ -->
               <!-- Profile Card -->
               <div class="sidebar-profile-card card">
                 <div class="profile-card">
@@ -197,10 +202,10 @@
                     <div class="profile-card__avatar-settings">
                       <div class="profile-card__avatar">
                         <img
-                          src="assets/media/images/profile-avatar.png"
+                          src="assets/media/images/profile-avatars/profile-avatar-1.png"
                           alt="MoneyBoy Social Profile Avatar" />
                       </div>
-                      <div class="profile-card__settings">
+                      <div class="profile-card__settings active-down-effect-2x">
                         <svg
                           class="svg-icon"
                           xmlns="http://www.w3.org/2000/svg"
@@ -228,7 +233,7 @@
                         <div class="profile-card__name"> Corey Bergson </div>
                         <div class="profile-card__badge">
                           <img
-                            src="assets/media/images/profile-badge.png"
+                            src="assets/media/images/logo/profile-badge.png"
                             alt="MoneyBoy Social Profile Badge" />
                         </div>
                       </div>
@@ -287,8 +292,10 @@
                   </div>
                 </div>
               </div>
+
+              <!-- ################## -->
               <!-- Create Post Button -->
-              <div class="sidebar-post-button">
+              <div class="sidebar-post-button card active-down-effect">
                 <a href="#" class="btn-primary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -312,235 +319,252 @@
                   <span>Create a Post</span>
                 </a>
               </div>
+
+              <!-- ########## -->
               <!-- Navigation -->
               <div class="sidebar-navigation-container card">
                 <nav class="sidbar-navigation">
                   <ul>
                     <li>
-                      <a href="#" class="active">
-                        <!-- <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="32"
-                          height="32"
-                          viewBox="0 0 32 32"
-                          fill="none">
-                          <path
-                            d="M13.4266 3.76005L4.18661 11.16C3.14661 11.9867 2.47995 13.7334 2.70661 15.0401L4.47995 25.6534C4.79995 27.5467 6.61327 29.08 8.53327 29.08H23.4666C25.3733 29.08 27.1999 27.5334 27.5199 25.6534L29.2933 15.0401C29.5066 13.7334 28.84 11.9867 27.8133 11.16L18.5733 3.77339C17.1466 2.62673 14.84 2.62671 13.4266 3.76005Z"
-                            stroke="#444444"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round" />
-                          <path
-                            d="M16.0001 20.6667C17.841 20.6667 19.3334 19.1743 19.3334 17.3333C19.3334 15.4924 17.841 14 16.0001 14C14.1591 14 12.6667 15.4924 12.6667 17.3333C12.6667 19.1743 14.1591 20.6667 16.0001 20.6667Z"
-                            stroke="#444444"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        </svg> -->
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="32"
-                          height="32"
-                          viewBox="0 0 32 32"
-                          fill="none">
-                          <path
-                            opacity="0.4"
-                            d="M13.4267 3.76001L4.18668 11.16C3.14668 11.9867 2.48001 13.7333 2.70667 15.04L4.48001 25.6533C4.80001 27.5467 6.61333 29.08 8.53333 29.08H23.4667C25.3734 29.08 27.2 27.5333 27.52 25.6533L29.2933 15.04C29.5067 13.7333 28.84 11.9867 27.8133 11.16L18.5733 3.77331C17.1467 2.62664 14.84 2.62667 13.4267 3.76001Z"
-                            fill="black" />
-                          <path
-                            d="M16 20.6667C17.8409 20.6667 19.3333 19.1743 19.3333 17.3333C19.3333 15.4924 17.8409 14 16 14C14.159 14 12.6667 15.4924 12.6667 17.3333C12.6667 19.1743 14.159 20.6667 16 20.6667Z"
-                            fill="black" />
-                        </svg>
-                        <span> Feed </span>
+                      <a href="#" class="active-down-effect active">
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            fill="none">
+                            <path
+                              d="M13.4266 3.76005L4.18661 11.16C3.14661 11.9867 2.47995 13.7334 2.70661 15.0401L4.47995 25.6534C4.79995 27.5467 6.61327 29.08 8.53327 29.08H23.4666C25.3733 29.08 27.1999 27.5334 27.5199 25.6534L29.2933 15.0401C29.5066 13.7334 28.84 11.9867 27.8133 11.16L18.5733 3.77339C17.1466 2.62673 14.84 2.62671 13.4266 3.76005Z"
+                              stroke="#444444"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path
+                              d="M16.0001 20.6667C17.841 20.6667 19.3334 19.1743 19.3334 17.3333C19.3334 15.4924 17.841 14 16.0001 14C14.1591 14 12.6667 15.4924 12.6667 17.3333C12.6667 19.1743 14.1591 20.6667 16.0001 20.6667Z"
+                              stroke="#444444"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+
+                          <svg
+                            class="active_svg_icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            fill="none">
+                            <path
+                              d="M25.8133 9.15999L16.5733 1.77333C15.1467 0.626659 12.84 0.626659 11.4267 1.75999L2.18667 9.15999C1.14667 9.98666 0.480008 11.7333 0.706674 13.04L2.48001 23.6533C2.80001 25.5467 4.61334 27.08 6.53334 27.08H21.4667C23.3733 27.08 25.2 25.5333 25.52 23.6533L27.2933 13.04C27.5067 11.7333 26.84 9.98666 25.8133 9.15999ZM14 18.6667C12.16 18.6667 10.6667 17.1733 10.6667 15.3333C10.6667 13.4933 12.16 12 14 12C15.84 12 17.3333 13.4933 17.3333 15.3333C17.3333 17.1733 15.84 18.6667 14 18.6667Z"
+                              fill="black" />
+                          </svg>
+
+                          <span> Feed </span>
+                        </div>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="32"
-                          height="32"
-                          viewBox="0 0 32 32"
-                          fill="none">
-                          <path
-                            d="M23.7333 2.79998L10.4933 6.11998C8.55999 6.59998 6.59999 8.55998 6.11999 10.4933L2.79999 23.7333C1.79999 27.7333 4.25332 30.2 8.26666 29.2L21.5067 25.8933C23.4267 25.4133 25.4 23.44 25.88 21.52L29.2 8.26665C30.2 4.26665 27.7333 1.79998 23.7333 2.79998Z"
-                            stroke="#505050"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round" />
-                          <path
-                            d="M16 20.6666C18.5773 20.6666 20.6667 18.5773 20.6667 16C20.6667 13.4227 18.5773 11.3333 16 11.3333C13.4227 11.3333 11.3333 13.4227 11.3333 16C11.3333 18.5773 13.4227 20.6666 16 20.6666Z"
-                            stroke="#505050"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        </svg>
-                        <span> Discover </span>
+                      <a href="#" class="active-down-effect">
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            fill="none">
+                            <path
+                              d="M23.7333 2.79998L10.4933 6.11998C8.55999 6.59998 6.59999 8.55998 6.11999 10.4933L2.79999 23.7333C1.79999 27.7333 4.25332 30.2 8.26666 29.2L21.5067 25.8933C23.4267 25.4133 25.4 23.44 25.88 21.52L29.2 8.26665C30.2 4.26665 27.7333 1.79998 23.7333 2.79998Z"
+                              stroke="#505050"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path
+                              d="M16 20.6666C18.5773 20.6666 20.6667 18.5773 20.6667 16C20.6667 13.4227 18.5773 11.3333 16 11.3333C13.4227 11.3333 11.3333 13.4227 11.3333 16C11.3333 18.5773 13.4227 20.6666 16 20.6666Z"
+                              stroke="#505050"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                          <span> Discover </span>
+                        </div>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="32"
-                          height="32"
-                          viewBox="0 0 32 32"
-                          fill="none">
-                          <path
-                            d="M16.8267 27.7467C16.3733 27.9067 15.6267 27.9067 15.1733 27.7467C11.3067 26.4267 2.66666 20.92 2.66666 11.5867C2.66666 7.46669 5.98666 4.13336 10.08 4.13336C12.5067 4.13336 14.6533 5.3067 16 7.12003C17.3467 5.3067 19.5067 4.13336 21.92 4.13336C26.0133 4.13336 29.3333 7.46669 29.3333 11.5867C29.3333 20.92 20.6933 26.4267 16.8267 27.7467Z"
-                            stroke="#505050"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        </svg>
-                        <span> Likes </span>
+                      <a href="#" class="active-down-effect">
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            fill="none">
+                            <path
+                              d="M16.8267 27.7467C16.3733 27.9067 15.6267 27.9067 15.1733 27.7467C11.3067 26.4267 2.66666 20.92 2.66666 11.5867C2.66666 7.46669 5.98666 4.13336 10.08 4.13336C12.5067 4.13336 14.6533 5.3067 16 7.12003C17.3467 5.3067 19.5067 4.13336 21.92 4.13336C26.0133 4.13336 29.3333 7.46669 29.3333 11.5867C29.3333 20.92 20.6933 26.4267 16.8267 27.7467Z"
+                              stroke="#505050"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                          <span> Likes </span>
+                        </div>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="32"
-                          height="32"
-                          viewBox="0 0 32 32"
-                          fill="none">
-                          <path
-                            d="M12.3333 12.0667C14.7067 12.9334 17.2933 12.9334 19.6667 12.0667"
-                            stroke="#505050"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round" />
-                          <path
-                            d="M22.4266 2.66669H9.57327C6.73327 2.66669 4.42661 4.98669 4.42661 7.81335V26.6C4.42661 29 6.14661 30.0134 8.25327 28.8534L14.7599 25.24C15.4533 24.8534 16.5733 24.8534 17.2533 25.24L23.7599 28.8534C25.8666 30.0267 27.5866 29.0134 27.5866 26.6V7.81335C27.5733 4.98669 25.2666 2.66669 22.4266 2.66669Z"
-                            stroke="#505050"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round" />
-                          <path
-                            d="M22.4266 2.66669H9.57327C6.73327 2.66669 4.42661 4.98669 4.42661 7.81335V26.6C4.42661 29 6.14661 30.0134 8.25327 28.8534L14.7599 25.24C15.4533 24.8534 16.5733 24.8534 17.2533 25.24L23.7599 28.8534C25.8666 30.0267 27.5866 29.0134 27.5866 26.6V7.81335C27.5733 4.98669 25.2666 2.66669 22.4266 2.66669Z"
-                            stroke="#505050"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        </svg>
-                        <span> Wishlist </span>
+                      <a href="#" class="active-down-effect">
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            fill="none">
+                            <path
+                              d="M12.3333 12.0667C14.7067 12.9334 17.2933 12.9334 19.6667 12.0667"
+                              stroke="#505050"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path
+                              d="M22.4266 2.66669H9.57327C6.73327 2.66669 4.42661 4.98669 4.42661 7.81335V26.6C4.42661 29 6.14661 30.0134 8.25327 28.8534L14.7599 25.24C15.4533 24.8534 16.5733 24.8534 17.2533 25.24L23.7599 28.8534C25.8666 30.0267 27.5866 29.0134 27.5866 26.6V7.81335C27.5733 4.98669 25.2666 2.66669 22.4266 2.66669Z"
+                              stroke="#505050"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path
+                              d="M22.4266 2.66669H9.57327C6.73327 2.66669 4.42661 4.98669 4.42661 7.81335V26.6C4.42661 29 6.14661 30.0134 8.25327 28.8534L14.7599 25.24C15.4533 24.8534 16.5733 24.8534 17.2533 25.24L23.7599 28.8534C25.8666 30.0267 27.5866 29.0134 27.5866 26.6V7.81335C27.5733 4.98669 25.2666 2.66669 22.4266 2.66669Z"
+                              stroke="#505050"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                          <span> Wishlist </span>
+                        </div>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="32"
-                          height="32"
-                          viewBox="0 0 32 32"
-                          fill="none">
-                          <path
-                            d="M29.3333 20V12C29.3333 5.33335 26.6667 2.66669 20 2.66669H12C5.33332 2.66669 2.66666 5.33335 2.66666 12V20C2.66666 26.6667 5.33332 29.3334 12 29.3334H20C26.6667 29.3334 29.3333 26.6667 29.3333 20Z"
-                            stroke="#505050"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round" />
-                          <path
-                            d="M3.35999 9.47998H28.64"
-                            stroke="#505050"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round" />
-                          <path
-                            d="M11.36 2.81335V9.29335"
-                            stroke="#505050"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round" />
-                          <path
-                            d="M20.64 2.81335V8.69336"
-                            stroke="#505050"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round" />
-                          <path
-                            d="M13 19.2667V17.6667C13 15.6133 14.4533 14.7733 16.2267 15.8L17.6133 16.6L19 17.4C20.7733 18.4267 20.7733 20.1067 19 21.1333L17.6133 21.9333L16.2267 22.7333C14.4533 23.76 13 22.92 13 20.8667V19.2667V19.2667Z"
-                            stroke="#505050"
-                            stroke-width="2"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        </svg>
-                        <span> Subscriptions </span>
+                      <a href="#" class="active-down-effect">
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            fill="none">
+                            <path
+                              d="M29.3333 20V12C29.3333 5.33335 26.6667 2.66669 20 2.66669H12C5.33332 2.66669 2.66666 5.33335 2.66666 12V20C2.66666 26.6667 5.33332 29.3334 12 29.3334H20C26.6667 29.3334 29.3333 26.6667 29.3333 20Z"
+                              stroke="#505050"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path
+                              d="M3.35999 9.47998H28.64"
+                              stroke="#505050"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path
+                              d="M11.36 2.81335V9.29335"
+                              stroke="#505050"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path
+                              d="M20.64 2.81335V8.69336"
+                              stroke="#505050"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path
+                              d="M13 19.2667V17.6667C13 15.6133 14.4533 14.7733 16.2267 15.8L17.6133 16.6L19 17.4C20.7733 18.4267 20.7733 20.1067 19 21.1333L17.6133 21.9333L16.2267 22.7333C14.4533 23.76 13 22.92 13 20.8667V19.2667V19.2667Z"
+                              stroke="#505050"
+                              stroke-width="2"
+                              stroke-miterlimit="10"
+                              stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                          <span> Subscriptions </span>
+                        </div>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="32"
-                          height="32"
-                          viewBox="0 0 32 32"
-                          fill="none">
-                          <path
-                            d="M20.7867 16.3467C24.5643 16.3467 27.6267 13.2843 27.6267 9.50669C27.6267 5.72907 24.5643 2.66669 20.7867 2.66669C17.009 2.66669 13.9467 5.72907 13.9467 9.50669C13.9467 13.2843 17.009 16.3467 20.7867 16.3467Z"
-                            stroke="#505050"
-                            stroke-width="2"
-                            stroke-miterlimit="10" />
-                          <path
-                            d="M8.47997 25.92C10.748 25.92 12.5867 24.0814 12.5867 21.8133C12.5867 19.5453 10.748 17.7067 8.47997 17.7067C6.21192 17.7067 4.37332 19.5453 4.37332 21.8133C4.37332 24.0814 6.21192 25.92 8.47997 25.92Z"
-                            stroke="#505050"
-                            stroke-width="2"
-                            stroke-miterlimit="10" />
-                          <path
-                            d="M22.16 29.3333C24.0451 29.3333 25.5733 27.8051 25.5733 25.92C25.5733 24.0349 24.0451 22.5067 22.16 22.5067C20.2749 22.5067 18.7467 24.0349 18.7467 25.92C18.7467 27.8051 20.2749 29.3333 22.16 29.3333Z"
-                            stroke="#505050"
-                            stroke-width="2"
-                            stroke-miterlimit="10" />
-                        </svg>
-                        <span> Purchased Media </span>
+                      <a href="#" class="active-down-effect">
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            fill="none">
+                            <path
+                              d="M20.7867 16.3467C24.5643 16.3467 27.6267 13.2843 27.6267 9.50669C27.6267 5.72907 24.5643 2.66669 20.7867 2.66669C17.009 2.66669 13.9467 5.72907 13.9467 9.50669C13.9467 13.2843 17.009 16.3467 20.7867 16.3467Z"
+                              stroke="#505050"
+                              stroke-width="2"
+                              stroke-miterlimit="10" />
+                            <path
+                              d="M8.47997 25.92C10.748 25.92 12.5867 24.0814 12.5867 21.8133C12.5867 19.5453 10.748 17.7067 8.47997 17.7067C6.21192 17.7067 4.37332 19.5453 4.37332 21.8133C4.37332 24.0814 6.21192 25.92 8.47997 25.92Z"
+                              stroke="#505050"
+                              stroke-width="2"
+                              stroke-miterlimit="10" />
+                            <path
+                              d="M22.16 29.3333C24.0451 29.3333 25.5733 27.8051 25.5733 25.92C25.5733 24.0349 24.0451 22.5067 22.16 22.5067C20.2749 22.5067 18.7467 24.0349 18.7467 25.92C18.7467 27.8051 20.2749 29.3333 22.16 29.3333Z"
+                              stroke="#505050"
+                              stroke-width="2"
+                              stroke-miterlimit="10" />
+                          </svg>
+                          <span> Purchased Media </span>
+                        </div>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="32"
-                          height="32"
-                          viewBox="0 0 32 32"
-                          fill="none">
-                          <path
-                            d="M4.01334 14.96V20.9467C4.01334 26.9334 6.41334 29.3334 12.4 29.3334H19.5867C25.5733 29.3334 27.9733 26.9334 27.9733 20.9467V14.96"
-                            stroke="#505050"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round" />
-                          <path
-                            d="M16 16C18.44 16 20.24 14.0134 20 11.5734L19.12 2.66669H12.8933L12 11.5734C11.76 14.0134 13.56 16 16 16Z"
-                            stroke="#505050"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round" />
-                          <path
-                            d="M24.4133 16C27.1067 16 29.08 13.8134 28.8133 11.1334L28.44 7.46669C27.96 4.00002 26.6267 2.66669 23.1333 2.66669H19.0667L20 12.0134C20.2267 14.2134 22.2133 16 24.4133 16Z"
-                            stroke="#505050"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round" />
-                          <path
-                            d="M7.52 16C9.72 16 11.7067 14.2134 11.92 12.0134L12.2133 9.06669L12.8533 2.66669H8.78666C5.29333 2.66669 3.96 4.00002 3.48 7.46669L3.12 11.1334C2.85333 13.8134 4.82666 16 7.52 16Z"
-                            stroke="#505050"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round" />
-                          <path
-                            d="M16 22.6667C13.7733 22.6667 12.6667 23.7734 12.6667 26V29.3334H19.3333V26C19.3333 23.7734 18.2267 22.6667 16 22.6667Z"
-                            stroke="#505050"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        </svg>
-                        <span> Store </span>
+                      <a href="#" class="active-down-effect">
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            fill="none">
+                            <path
+                              d="M4.01334 14.96V20.9467C4.01334 26.9334 6.41334 29.3334 12.4 29.3334H19.5867C25.5733 29.3334 27.9733 26.9334 27.9733 20.9467V14.96"
+                              stroke="#505050"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path
+                              d="M16 16C18.44 16 20.24 14.0134 20 11.5734L19.12 2.66669H12.8933L12 11.5734C11.76 14.0134 13.56 16 16 16Z"
+                              stroke="#505050"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path
+                              d="M24.4133 16C27.1067 16 29.08 13.8134 28.8133 11.1334L28.44 7.46669C27.96 4.00002 26.6267 2.66669 23.1333 2.66669H19.0667L20 12.0134C20.2267 14.2134 22.2133 16 24.4133 16Z"
+                              stroke="#505050"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path
+                              d="M7.52 16C9.72 16 11.7067 14.2134 11.92 12.0134L12.2133 9.06669L12.8533 2.66669H8.78666C5.29333 2.66669 3.96 4.00002 3.48 7.46669L3.12 11.1334C2.85333 13.8134 4.82666 16 7.52 16Z"
+                              stroke="#505050"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path
+                              d="M16 22.6667C13.7733 22.6667 12.6667 23.7734 12.6667 26V29.3334H19.3333V26C19.3333 23.7734 18.2267 22.6667 16 22.6667Z"
+                              stroke="#505050"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                          <span> Store </span>
+                        </div>
                       </a>
                     </li>
                   </ul>
                 </nav>
               </div>
+
+              <!-- ###### -->
               <!-- Footer -->
               <div class="sidebar-footer-card card">
                 <footer class="sidebar-footer">
@@ -590,25 +614,47 @@
               </div>
             </aside>
           </div>
+
+          <!-- ---------------------------------------------- -->
+          <!-- -------------- SideBar :: End ---------------- -->
+          <!-- ---------------------------------------------- -->
+
+          <!-- ################################################ -->
+          <!-- ################################################ -->
+          <!-- ################################################ -->
+          <!-- ################################################ -->
+          <!-- ################################################ -->
+
+          <!-- Main Page Content  -->
+
+          <!-- ----------------------------------------------------------- -->
+          <!-- -------------- Main Page Content :: Starts ---------------- -->
+          <!-- ----------------------------------------------------------- -->
+
           <div class="moneyboy-page-content-container">
             <main class="moneyboy-dynamic-content-layout">
               <div class="moneyboy-2x-1x-layout-container">
                 <!-- Main Feed Layout -->
                 <div class="moneyboy-2x-1x-a-layout">
                   <div class="moneyboy-feed-page-container">
+                    <!-- #################### -->
                     <!-- Content Type Buttons -->
                     <div class="moneyboy-feed-page-cate-buttons card">
-                      <button class="page-content-type-button active">
+                      <button
+                        class="page-content-type-button active active-down-effect">
                         Feed
                       </button>
-                      <button class="page-content-type-button">
+                      <button
+                        class="page-content-type-button active-down-effect">
                         Following
                       </button>
-                      <button class="page-content-type-button">
+                      <button
+                        class="page-content-type-button active-down-effect">
                         Popular
                       </button>
                     </div>
 
+                    <!-- ############ -->
                     <!-- Post Wrapper -->
                     <div class="moneyboy-posts-wrapper">
                       <!-- Post -->
@@ -616,12 +662,12 @@
                         <!-- Post Header -->
                         <div class="moneyboy-post__header">
                           <!--  -->
-                          <div class="profile-card">
+                          <a href="#" class="profile-card">
                             <div class="profile-card__main">
                               <div class="profile-card__avatar-settings">
                                 <div class="profile-card__avatar">
                                   <img
-                                    src="assets/media/images/profile-avatar.png"
+                                    src="assets/media/images/profile-avatars/profile-avatar-1.png"
                                     alt="MoneyBoy Social Profile Avatar" />
                                 </div>
                               </div>
@@ -632,7 +678,7 @@
                                   </div>
                                   <div class="profile-card__badge">
                                     <img
-                                      src="assets/media/images/profile-badge.png"
+                                      src="assets/media/images/logo/profile-badge.png"
                                       alt="MoneyBoy Social Profile Badge" />
                                   </div>
                                 </div>
@@ -641,13 +687,15 @@
                                 >
                               </div>
                             </div>
-                          </div>
+                          </a>
                           <div class="moneyboy-post__upload-more-info">
                             <div class="moneyboy-post__upload-time">
                               1 Hour ago
                             </div>
 
-                            <div class="moenyboy-post__more-opt-btn">
+                            <div
+                              class="moenyboy-post__more-opt-btn hover-scale-icon"
+                              tabindex="0">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="24"
@@ -675,14 +723,15 @@
                         <div class="moneyboy-post__desc">
                           <p>
                             Today, I experienced the most blissful ride outside.
-                            The air is fresh and It ... <span>more</span>
+                            The air is fresh and It ...
+                            <span class="active-down-effect-2x">more</span>
                           </p>
                         </div>
                         <!-- Post Media -->
                         <div class="moneyboy-post__media">
                           <div class="moneyboy-post__img">
                             <img
-                              src="assets/media/images/post-img.png"
+                              src="assets/media/images/post-images/post-img-1.png"
                               alt="MoneyBoy Post Image" />
                           </div>
                           <div class="moneyboy-post__actions">
@@ -843,38 +892,40 @@
                         <!-- Post Header -->
                         <div class="moneyboy-post__header">
                           <!--  -->
-                          <div class="profile-card">
+                          <a href="#" class="profile-card">
                             <div class="profile-card__main">
                               <div class="profile-card__avatar-settings">
                                 <div class="profile-card__avatar">
                                   <img
-                                    src="assets/media/images/profile-avatar.png"
+                                    src="assets/media/images/profile-avatars/profile-avatar-4.jpg"
                                     alt="MoneyBoy Social Profile Avatar" />
                                 </div>
                               </div>
                               <div class="profile-card__info">
                                 <div class="profile-card__name-badge">
                                   <div class="profile-card__name">
-                                    Corey Bergson
+                                    Lincoln Westervelt
                                   </div>
                                   <div class="profile-card__badge">
                                     <img
-                                      src="assets/media/images/profile-badge.png"
+                                      src="assets/media/images/logo/profile-badge.png"
                                       alt="MoneyBoy Social Profile Badge" />
                                   </div>
                                 </div>
                                 <div class="profile-card__username"
-                                  >@coreybergson</div
+                                  >@lincolnwestervelt</div
                                 >
                               </div>
                             </div>
-                          </div>
+                          </a>
                           <div class="moneyboy-post__upload-more-info">
                             <div class="moneyboy-post__upload-time">
                               1 Hour ago
                             </div>
 
-                            <div class="moenyboy-post__more-opt-btn">
+                            <div
+                              class="moenyboy-post__more-opt-btn hover-scale-icon"
+                              tabindex="0">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="24"
@@ -902,14 +953,15 @@
                         <div class="moneyboy-post__desc">
                           <p>
                             Today, I experienced the most blissful ride outside.
-                            The air is fresh and It ... <span>more</span>
+                            The air is fresh and It ...
+                            <span class="active-down-effect-2x">more</span>
                           </p>
                         </div>
                         <!-- Post Media -->
                         <div class="moneyboy-post__media">
                           <div class="moneyboy-post__img">
                             <img
-                              src="assets/media/images/post-img.png"
+                              src="assets/media/images/post-images/post-img-2.png"
                               alt="MoneyBoy Post Image" />
                           </div>
                           <div class="moneyboy-post__actions">
@@ -1070,38 +1122,40 @@
                         <!-- Post Header -->
                         <div class="moneyboy-post__header">
                           <!--  -->
-                          <div class="profile-card">
+                          <a href="#" class="profile-card">
                             <div class="profile-card__main">
                               <div class="profile-card__avatar-settings">
                                 <div class="profile-card__avatar">
                                   <img
-                                    src="assets/media/images/profile-avatar.png"
+                                    src="assets/media/images/profile-avatars/profile-avatar-2.jpg"
                                     alt="MoneyBoy Social Profile Avatar" />
                                 </div>
                               </div>
                               <div class="profile-card__info">
                                 <div class="profile-card__name-badge">
                                   <div class="profile-card__name">
-                                    Corey Bergson
+                                    Marcus Botosh
                                   </div>
                                   <div class="profile-card__badge">
                                     <img
-                                      src="assets/media/images/profile-badge.png"
+                                      src="assets/media/images/logo/profile-badge.png"
                                       alt="MoneyBoy Social Profile Badge" />
                                   </div>
                                 </div>
                                 <div class="profile-card__username"
-                                  >@coreybergson</div
+                                  >@marcusbotosh</div
                                 >
                               </div>
                             </div>
-                          </div>
+                          </a>
                           <div class="moneyboy-post__upload-more-info">
                             <div class="moneyboy-post__upload-time">
                               1 Hour ago
                             </div>
 
-                            <div class="moenyboy-post__more-opt-btn">
+                            <div
+                              class="moenyboy-post__more-opt-btn hover-scale-icon"
+                              tabindex="0">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="24"
@@ -1129,14 +1183,15 @@
                         <div class="moneyboy-post__desc">
                           <p>
                             Today, I experienced the most blissful ride outside.
-                            The air is fresh and It ... <span>more</span>
+                            The air is fresh and It ...
+                            <span class="active-down-effect-2x">more</span>
                           </p>
                         </div>
                         <!-- Post Media -->
                         <div class="moneyboy-post__media">
                           <div class="moneyboy-post__img">
                             <img
-                              src="assets/media/images/post-img.png"
+                              src="assets/media/images/post-images/post-img-3.png"
                               alt="MoneyBoy Post Image" />
                           </div>
                           <div class="moneyboy-post__actions">
@@ -1299,6 +1354,7 @@
                 <!-- Right Side Content Wrapper -->
                 <div class="moneyboy-2x-1x-b-layout">
                   <div class="moneyboy-feed-sidebar-container">
+                    <!-- ################# -->
                     <!-- Featured Profiles -->
                     <div class="featured-profiles-card-container card">
                       <div class="featured-profiles-header">
@@ -1306,7 +1362,7 @@
                           <h3 class="card-heading">Featured Moneyboys</h3>
                         </div>
                         <div class="featured-card-opts">
-                          <button class="icon-btn">
+                          <button class="icon-btn hover-scale-icon">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="24"
@@ -1321,7 +1377,7 @@
                                 stroke-linejoin="round" />
                             </svg>
                           </button>
-                          <button class="icon-btn">
+                          <button class="icon-btn hover-scale-icon">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="24"
@@ -1343,7 +1399,7 @@
                                 stroke-linejoin="round" />
                             </svg>
                           </button>
-                          <button class="icon-btn">
+                          <button class="icon-btn hover-scale-icon">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="24"
@@ -1375,14 +1431,14 @@
                             <div class="profile-card featured-profile-card">
                               <div class="profile-card__bg-img">
                                 <img
-                                  src="assets/media/images/featured-profile-bg-img.png"
+                                  src="assets/media/images/profile-banners/profile-banner-7.png"
                                   alt="Featured Profile Background Image" />
                               </div>
                               <div class="profile-card__main">
                                 <div class="profile-card__avatar-settings">
                                   <div class="profile-card__avatar">
                                     <img
-                                      src="assets/media/images/profile-avatar.png"
+                                      src="assets/media/images/profile-avatars/profile-avatar-6.jpg"
                                       alt="MoneyBoy Social Profile Avatar" />
                                   </div>
                                 </div>
@@ -1393,7 +1449,7 @@
                                     </div>
                                     <div class="profile-card__badge">
                                       <img
-                                        src="assets/media/images/profile-badge.png"
+                                        src="assets/media/images/logo/profile-badge.png"
                                         alt="MoneyBoy Social Profile Badge" />
                                     </div>
                                   </div>
@@ -1435,30 +1491,30 @@
                             <div class="profile-card featured-profile-card">
                               <div class="profile-card__bg-img">
                                 <img
-                                  src="assets/media/images/featured-profile-bg-img.png"
+                                  src="assets/media/images/profile-banners/profile-banner-4.jpg"
                                   alt="Featured Profile Background Image" />
                               </div>
                               <div class="profile-card__main">
                                 <div class="profile-card__avatar-settings">
                                   <div class="profile-card__avatar">
                                     <img
-                                      src="assets/media/images/profile-avatar.png"
+                                      src="assets/media/images/profile-avatars/profile-avatar-5.jpg"
                                       alt="MoneyBoy Social Profile Avatar" />
                                   </div>
                                 </div>
                                 <div class="profile-card__info">
                                   <div class="profile-card__name-badge">
                                     <div class="profile-card__name">
-                                      Zain Schleifer
+                                      Gustavo Stanton
                                     </div>
                                     <div class="profile-card__badge">
                                       <img
-                                        src="assets/media/images/profile-badge.png"
+                                        src="assets/media/images/logo/profile-badge.png"
                                         alt="MoneyBoy Social Profile Badge" />
                                     </div>
                                   </div>
                                   <div class="profile-card__username"
-                                    >@coreybergson</div
+                                    >@gustavostanton</div
                                   >
                                 </div>
                                 <div class="profile-card__icon">
@@ -1495,30 +1551,30 @@
                             <div class="profile-card featured-profile-card">
                               <div class="profile-card__bg-img">
                                 <img
-                                  src="assets/media/images/featured-profile-bg-img.png"
+                                  src="assets/media/images/profile-banners/profile-banner-3.jpg"
                                   alt="Featured Profile Background Image" />
                               </div>
                               <div class="profile-card__main">
                                 <div class="profile-card__avatar-settings">
                                   <div class="profile-card__avatar">
                                     <img
-                                      src="assets/media/images/profile-avatar.png"
+                                      src="assets/media/images/profile-avatars/profile-avatar-3.jpg"
                                       alt="MoneyBoy Social Profile Avatar" />
                                   </div>
                                 </div>
                                 <div class="profile-card__info">
                                   <div class="profile-card__name-badge">
                                     <div class="profile-card__name">
-                                      Zain Schleifer
+                                      Emerson Bator
                                     </div>
                                     <div class="profile-card__badge">
                                       <img
-                                        src="assets/media/images/profile-badge.png"
+                                        src="assets/media/images/logo/profile-badge.png"
                                         alt="MoneyBoy Social Profile Badge" />
                                     </div>
                                   </div>
                                   <div class="profile-card__username"
-                                    >@coreybergson</div
+                                    >@emersonbator</div
                                   >
                                 </div>
                                 <div class="profile-card__icon">
@@ -1555,30 +1611,30 @@
                             <div class="profile-card featured-profile-card">
                               <div class="profile-card__bg-img">
                                 <img
-                                  src="assets/media/images/featured-profile-bg-img.png"
+                                  src="assets/media/images/profile-banners/profile-banner-2.jpg"
                                   alt="Featured Profile Background Image" />
                               </div>
                               <div class="profile-card__main">
                                 <div class="profile-card__avatar-settings">
                                   <div class="profile-card__avatar">
                                     <img
-                                      src="assets/media/images/profile-avatar.png"
+                                      src="assets/media/images/profile-avatars/profile-avatar-7.jpg"
                                       alt="MoneyBoy Social Profile Avatar" />
                                   </div>
                                 </div>
                                 <div class="profile-card__info">
                                   <div class="profile-card__name-badge">
                                     <div class="profile-card__name">
-                                      Zain Schleifer
+                                      Omar Dokidis
                                     </div>
                                     <div class="profile-card__badge">
                                       <img
-                                        src="assets/media/images/profile-badge.png"
+                                        src="assets/media/images/logo/profile-badge.png"
                                         alt="MoneyBoy Social Profile Badge" />
                                     </div>
                                   </div>
                                   <div class="profile-card__username"
-                                    >@coreybergson</div
+                                    >@omardokidis</div
                                   >
                                 </div>
                                 <div class="profile-card__icon">
@@ -1615,30 +1671,30 @@
                             <div class="profile-card featured-profile-card">
                               <div class="profile-card__bg-img">
                                 <img
-                                  src="assets/media/images/featured-profile-bg-img.png"
+                                  src="assets/media/images/profile-banners/profile-banner-1.jpg"
                                   alt="Featured Profile Background Image" />
                               </div>
                               <div class="profile-card__main">
                                 <div class="profile-card__avatar-settings">
                                   <div class="profile-card__avatar">
                                     <img
-                                      src="assets/media/images/profile-avatar.png"
+                                      src="assets/media/images/profile-avatars/profile-avatar-2.jpg"
                                       alt="MoneyBoy Social Profile Avatar" />
                                   </div>
                                 </div>
                                 <div class="profile-card__info">
                                   <div class="profile-card__name-badge">
                                     <div class="profile-card__name">
-                                      Zain Schleifer
+                                      Wilson Septimus
                                     </div>
                                     <div class="profile-card__badge">
                                       <img
-                                        src="assets/media/images/profile-badge.png"
+                                        src="assets/media/images/logo/profile-badge.png"
                                         alt="MoneyBoy Social Profile Badge" />
                                     </div>
                                   </div>
                                   <div class="profile-card__username"
-                                    >@coreybergson</div
+                                    >@wilsonseptimus</div
                                   >
                                 </div>
                                 <div class="profile-card__icon">
@@ -1675,30 +1731,30 @@
                             <div class="profile-card featured-profile-card">
                               <div class="profile-card__bg-img">
                                 <img
-                                  src="assets/media/images/featured-profile-bg-img.png"
+                                  src="assets/media/images/profile-banners/profile-banner-5.jpg"
                                   alt="Featured Profile Background Image" />
                               </div>
                               <div class="profile-card__main">
                                 <div class="profile-card__avatar-settings">
                                   <div class="profile-card__avatar">
                                     <img
-                                      src="assets/media/images/profile-avatar.png"
+                                      src="assets/media/images/profile-avatars/profile-avatar-8.jpg"
                                       alt="MoneyBoy Social Profile Avatar" />
                                   </div>
                                 </div>
                                 <div class="profile-card__info">
                                   <div class="profile-card__name-badge">
                                     <div class="profile-card__name">
-                                      Zain Schleifer
+                                      Ruben Kenter
                                     </div>
                                     <div class="profile-card__badge">
                                       <img
-                                        src="assets/media/images/profile-badge.png"
+                                        src="assets/media/images/logo/profile-badge.png"
                                         alt="MoneyBoy Social Profile Badge" />
                                     </div>
                                   </div>
                                   <div class="profile-card__username"
-                                    >@coreybergson</div
+                                    >@rubenkenter</div
                                   >
                                 </div>
                                 <div class="profile-card__icon">
@@ -1732,8 +1788,9 @@
                       </div>
                     </div>
 
+                    <!-- ######################## -->
                     <!-- Grow Network Banner Card -->
-                    <a href="#" class="moneyboy-network-grow-card">
+                    <a href="#" class="moneyboy-network-grow-card card">
                       <div class="bg-img">
                         <img
                           src="assets/media/images/grow-network-bg-image.png"
@@ -1742,7 +1799,7 @@
                       <div class="text-logo">
                         <h3>Network</h3>
                         <img
-                          src="assets/media/images/moneyboy-logo.png"
+                          src="assets/media/images/logo/moneyboy-logo.png"
                           alt="MoneyBoy Social Logo" />
                       </div>
                     </a>
@@ -1751,6 +1808,10 @@
               </div>
             </main>
           </div>
+
+          <!-- --------------------------------------------------------- -->
+          <!-- -------------- Main Page Content :: Ends ---------------- -->
+          <!-- --------------------------------------------------------- -->
         </div>
       </div>
     </div>
