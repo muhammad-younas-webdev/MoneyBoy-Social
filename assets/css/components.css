@@ -637,7 +637,7 @@
 
 /*  */
 .moneyboy-feed-page-container {
-   gap: 28px;
+   gap: 20px;
    display: flex;
    flex-direction: column;
 }
