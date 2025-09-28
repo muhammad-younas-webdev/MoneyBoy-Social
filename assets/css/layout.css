@@ -9,51 +9,78 @@
    min-height: 100dvh;
    max-height: 100dvh;
    overflow: auto;
-}
+   --header-height: 76px;
 
-.moneyboy-main-asides-layout-container {
-   display: flex;
-   gap: 28px;
-   padding-block: 34px;
-
-   .moneyboy-global-sidebar-wrapper {
-      width: 100%;
-      max-width: 344px;
-
-      .global-sidebar-container {
-         display: flex;
-         flex-direction: column;
-         gap: 20px;
-
-         .sidebar-profile-card {}
-
-         .sidebar-post-button {}
-
-         .sidebar-navigation-container {}
-
-         .sidebar-footer-card.card {
-            border-radius: 21px;
-         }
-      }
+   .header-main {
+      /* Keep header visible on scroll and slightly elevated above page content */
+      position: sticky;
+      z-index: 5;
+      top: 0;
+      height: var(--header-height);
    }
 
-   .moneyboy-page-content-container {
-      width: 100%;
+   .moneyboy-main-asides-layout-container {
+      display: flex;
+      gap: 28px;
+      gap: 18px;
+      gap: 12px;
 
-      .moneyboy-dynamic-content-layout {
+      .moneyboy-global-sidebar-wrapper {
+         width: 100%;
+         max-width: 344px;
+         max-width: 360px;
+         position: sticky;
+         top: calc(var(--header-height) + 24px);
+         max-height: calc(100vh - calc(var(--header-height) + 48px));
+         overflow: auto;
+         /* padding-block: 34px; */
+         padding: 10px;
+         padding-right: 5px;
+         scrollbar-width: thin;
+         scrollbar-color: #aaaaaa3c transparent;
+         border-radius: 32px;
+         margin-left: -10px;
+
+         &:hover {
+            scrollbar-color: #aaaaaa transparent;
+         }
+
+         .global-sidebar-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .sidebar-profile-card {}
+
+            .sidebar-post-button {}
+
+            .sidebar-navigation-container {}
+
+            .sidebar-footer-card.card {
+               border-radius: 21px;
+            }
+         }
+      }
+
+      .moneyboy-page-content-container {
+         padding-block: 34px;
          width: 100%;
 
-         .moneyboy-2x-1x-layout-container {
-            display: flex;
-            gap: 28px;
+         .moneyboy-dynamic-content-layout {
+            width: 100%;
 
-            .moneyboy-2x-1x-a-layout {
-               width: 100%;
-            }
+            .moneyboy-2x-1x-layout-container {
+               display: flex;
+               gap: 28px;
 
-            .moneyboy-2x-1x-b-layout {
-               width: 100%;
-               max-width: 400px;
+               .moneyboy-2x-1x-a-layout {
+                  width: 100%;
+               }
+
+               .moneyboy-2x-1x-b-layout {
+                  width: 100%;
+                  max-width: 400px;
+               }
             }
          }
       }

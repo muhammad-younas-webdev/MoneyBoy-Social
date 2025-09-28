@@ -34,6 +34,8 @@
    --light-bg: #1c222911;
    --color-text: #020202;
    --color-text-active: #000000;
+   /* Icon Colors */
+   --like-color: #f6305d;
    /* Corner radius scale
       - Use semantic sizes (sm/md/lg) for consistent rounding across components.
    */
@@ -86,6 +88,44 @@ body {
    line-height: 1.6;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animations */
+/* @keyframes heartLikedPopUpAnimation {
+   0% {
+      transform: scale(1);
+   }
+
+   50% {
+      transform: scale(1.5);
+   }
+
+   100% {
+      transform: scale(1);
+   }
+} */
+/* Add the animation */
+/* Animations */
+@keyframes heartLikedPopUpAnimation {
+   0% {
+      transform: scale(1);
+   }
+
+   40% {
+      transform: scale(1.4);
+   }
+
+   60% {
+      transform: scale(0.9);
+   }
+
+   80% {
+      transform: scale(1.2);
+   }
+
+   100% {
+      transform: scale(1);
+   }
 }
 
 /* --------------------------------------------------------------------------

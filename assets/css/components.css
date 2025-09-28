@@ -21,14 +21,9 @@
    - Designed to be lightweight and touch-friendly (large tap targets).
 */
 .header-main {
-   /* Keep header visible on scroll and slightly elevated above page content */
-   position: sticky;
-   z-index: 5;
-   top: 0;
    /* Visual appearance */
    background: #FDFDFD;
    box-shadow: 0px 6px 4px -4px #08080803, 0px 2px 1.5px -4px #0808080A;
-   height: 76px;
    align-items: center;
    display: flex;
 
@@ -301,7 +296,6 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      user-select: none;
 
       .profile-card__avatar-settings {
          position: relative;
@@ -396,6 +390,7 @@
             cursor: pointer;
             backface-visibility: hidden;
             will-change: transform;
+            user-select: none;
 
             &:active {
                transform: scale(.85);
@@ -403,6 +398,20 @@
 
             &:hover {
                filter: brightness(125%);
+            }
+
+            &.like-button {
+               &.liked {
+                  svg {
+                     /* animation: heartLikedPopUpAnimation .3s ease; */
+                     animation: heartLikedPopUpAnimation 0.45s ease-out;
+
+                     path {
+                        fill: var(--like-color);
+                        stroke: var(--like-color);
+                     }
+                  }
+               }
             }
          }
       }
@@ -533,6 +542,12 @@
 
                div {
                   svg {
+                     &.wishlist-icon {
+                        path:nth-child(3) {
+                           stroke: #f4aa23;
+                        }
+                     }
+
                      path {
                         /* stroke: #ffffff; */
                         stroke: #f4aa23;
@@ -643,10 +658,6 @@
 }
 
 .moneyboy-feed-sidebar-container {
-   display: flex;
-   flex-direction: column;
-   gap: 20px;
-
    .featured-profiles-card-container {
       padding: 17px;
 
@@ -663,70 +674,80 @@
          gap: 12px;
       }
    }
+
+   .moneyboy-network-grow-card-wrapper {
+      margin-top: 20px;
+   }
 }
 
 /* ----------- */
-.moneyboy-network-grow-card {
-   width: 100%;
-   aspect-ratio: 1/1;
-   max-height: 345px;
-   overflow: hidden;
-   border-radius: 32px;
-   box-shadow: 0px 6px 4px -4px #08080803, 0px 2px 1.5px -4px #0808080A;
-   position: relative;
-   display: flex;
-   justify-content: center;
+.moneyboy-network-grow-card-wrapper {
+   position: sticky;
+   top: calc(var(--header-height) + 34px);
+   align-self: flex-start;
 
-   &:hover {
-      .bg-img {
-         transform: scale(1.1);
-      }
-   }
-
-   &::before {
-      content: '';
-      background: #00000033;
-      position: absolute;
-      inset: 0;
-      z-index: 2;
-   }
-
-   .bg-img {
-      transition: var(--transition-fast);
-      transition: all 5s ease;
+   .moneyboy-network-grow-card {
       width: 100%;
-      height: 100%;
+      aspect-ratio: 1/1;
+      max-height: 345px;
+      overflow: hidden;
+      border-radius: 32px;
+      box-shadow: 0px 6px 4px -4px #08080803, 0px 2px 1.5px -4px #0808080A;
+      position: relative;
+      display: flex;
+      justify-content: center;
 
-      img {
+      &:hover {
+         .bg-img {
+            transform: scale(1.1);
+         }
+      }
+
+      &::before {
+         content: '';
+         background: #00000033;
+         position: absolute;
+         inset: 0;
+         z-index: 2;
+      }
+
+      .bg-img {
+         transition: var(--transition-fast);
+         transition: all 5s ease;
          width: 100%;
          height: 100%;
-         object-fit: cover;
-      }
-   }
 
-   .text-logo {
-      position: absolute;
-      bottom: 50px;
-      display: flex;
-      flex-direction: column;
-      justify-items: center;
-      align-items: center;
-      gap: 7px;
-      z-index: 3;
-
-      h3 {
-         font-family: var(--font-family-heading);
-         font-weight: 500;
-         font-size: 32px;
-         line-height: 100%;
-         text-align: center;
-         text-transform: capitalize;
-         color: #FFFFFF;
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
       }
 
-      img {
-         width: 100%;
-         max-width: 323px;
+      .text-logo {
+         position: absolute;
+         bottom: 50px;
+         display: flex;
+         flex-direction: column;
+         justify-items: center;
+         align-items: center;
+         gap: 7px;
+         z-index: 3;
+
+         h3 {
+            font-family: var(--font-family-heading);
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 100%;
+            text-align: center;
+            text-transform: capitalize;
+            color: #FFFFFF;
+         }
+
+         img {
+            width: 100%;
+            max-width: 323px;
+         }
       }
    }
 }
@@ -767,7 +788,6 @@
    display: flex;
    flex-direction: column;
    gap: 20px;
-   user-select: none;
 
    .moneyboy-post__container {
       padding: 17px;
@@ -792,6 +812,7 @@
       .moneyboy-post__header {
          display: flex;
          align-items: center;
+         justify-content: space-between;
 
          /* ------------ */
          /* ------------ */
@@ -807,6 +828,7 @@
          .profile-card {
             width: 100%;
             padding: 0px;
+            max-width: max-content;
 
             &.featured-profile-card {
                .profile-card__main {
@@ -950,6 +972,7 @@
                align-items: center;
                justify-content: center;
                cursor: pointer;
+               user-select: none;
             }
          }
       }
@@ -968,6 +991,7 @@
             color: #E5741F;
             cursor: pointer;
             transition: var(--transition-fast);
+            user-select: none;
 
             &:hover {
                color: #ff6f00;
@@ -1123,13 +1147,27 @@
                               svg {
                                  path {
                                     /* stroke: red; */
-                                    stroke: #f6305d;
-                                    fill: #f6305d;
+                                    stroke: var(--like-color);
+                                    fill: var(--like-color);
                                  }
                               }
 
                               span {
                                  /* color: #dedede; */
+                              }
+                           }
+
+                           &.post-like-btn {
+                              &.liked {
+                                 svg {
+                                    /* animation: heartLikedPopUpAnimation .3s ease; */
+                                    animation: heartLikedPopUpAnimation 0.45s ease-out;
+
+                                    path {
+                                       fill: var(--like-color);
+                                       stroke: var(--like-color);
+                                    }
+                                 }
                               }
                            }
                         }
