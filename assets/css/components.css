@@ -235,6 +235,10 @@
                font-size: 16px;
                line-height: 100%;
                letter-spacing: 0%;
+
+               &:hover {
+                  color: white;
+               }
             }
          }
       }
@@ -363,12 +367,14 @@
          .profile-card__username {
             font-family: var(--font-family-base);
             font-weight: 600;
-            font-style: SemiBold;
             font-size: 16px;
-            leading-trim: NONE;
             line-height: 100%;
-            letter-spacing: 0%;
             color: #505050;
+            transition: var(--transition-fast);
+
+            &:hover {
+               color: #000000;
+            }
          }
       }
 
@@ -619,9 +625,12 @@
                color: #505050;
                padding: 3px 6px;
                transition: var(--transition-fast);
+               text-underline-offset: 2px;
 
+               &:focus,
                &:hover {
                   color: var(--color-text-active);
+                  text-decoration: underline;
                }
             }
          }
@@ -658,6 +667,8 @@
 }
 
 .moneyboy-feed-sidebar-container {
+   display: inline;
+
    .featured-profiles-card-container {
       padding: 17px;
 
@@ -758,6 +769,7 @@
       grid-template-columns: 1fr 1fr 1fr;
       padding: 10px 14px;
       gap: 20px;
+      gap: 12px;
       border-radius: 25px;
 
       .page-content-type-button {
