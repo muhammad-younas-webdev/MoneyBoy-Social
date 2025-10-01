@@ -57,6 +57,8 @@
    /* Layouts */
    --sidebar-width: 345px;
    --right-aside-width: 400px;
+   /* Box Shadows */
+   --card-shadow: 0px 6px 4px -4px #08080803, 0px 2px 13.5px 1px #0808080A;
 }
 
 /* --------------------------------------------------------------------------
@@ -87,7 +89,6 @@ html {
 body {
    font-family: var(--font-family-base);
    background-color: #F4F4F4;
-   /* page background tone (consider using --color-background) */
    color: var(--color-text);
    line-height: 1.6;
    -webkit-font-smoothing: antialiased;
@@ -222,7 +223,7 @@ input::placeholder {
 */
 /* Card Title */
 .card {
-   box-shadow: 0px 6px 4px -4px #08080803, 0px 2px 13.5px 1px #0808080A;
+   box-shadow: var(--card-shadow);
    border-radius: 32px;
    transition: var(--transition-normal);
    background-color: white;

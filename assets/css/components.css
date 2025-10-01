@@ -16,32 +16,18 @@
 /*  */
 /*  */
 /*  */
-/* Header Component
-   - Sticky top header that provides primary navigation, search and profile access.
-   - Designed to be lightweight and touch-friendly (large tap targets).
-*/
 .header-main {
-   /* Visual appearance */
    background: #FDFDFD;
    box-shadow: 0px 6px 4px -4px #08080803, 0px 2px 1.5px -4px #0808080A;
    align-items: center;
    display: flex;
 
-   /* ---------------------------------------------------------------------
-      Internal header layout
-      - The container holds logo (left) and the right-side group (search, nav, avatar).
-      - Keep spacing rules here so header components remain aligned and consistent.
-      --------------------------------------------------------------------- */
    .header-container {
       max-width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
 
-      /* Logo area
-         - Simple link wrapper so clicking returns to feed/home.
-         - Fixed image height keeps header rhythm stable across pages.
-      */
       .header-logo {
          display: flex;
 
@@ -50,24 +36,15 @@
 
             img {
                height: 54px;
-               /* fixed visual size for consistent header height */
             }
          }
       }
 
-      /* Right-side group
-         - Groups search input, action icons and profile avatar for a clear layout.
-         - Use gap to maintain comfortable spacing and meet touch target recommendations.
-      */
       .header-search-nav-profile-container {
          display: flex;
          gap: 18px;
          align-items: center;
 
-         /* Search input wrapper
-            - Width is constrained here to avoid layout shifting on larger viewports.
-            - For smaller screens, override with a responsive rule in layout.css.
-         */
          .header-search-input {
             width: 385px;
             transition: var(--transition-fast);
@@ -92,10 +69,6 @@
             }
          }
 
-         /* Action icons / navigation
-            - A compact horizontal nav for the main header actions.
-            - Keep each item visually lightweight; svg/icon styles are applied elsewhere.
-         */
          .header-navigation {
             display: flex;
             align-items: center;
@@ -148,11 +121,6 @@
             }
          }
 
-         /* Profile avatar
-            - Small, interactive avatar that links to profile or account menu.
-            - Use subtle transform on hover for a refined micro-interaction.
-            - Use overflow:hidden and border-radius to crop images cleanly.
-         */
          .header-profile-avatar {
             transition: var(--transition-fast);
             border-radius: 21px;
@@ -160,7 +128,6 @@
             backface-visibility: hidden;
 
             &:hover {
-               /* transform: translateY(-2px); */
                box-shadow: 0px 0px 4px 4px #fecc269a;
 
                &:active {
@@ -245,16 +212,13 @@
 
       &:hover {
          cursor: pointer;
-         /* transform: translateY(-3px); */
          filter: brightness(110%);
-         box-shadow: 0px 6px 4px -4px #08080803, 0px 2px 13.5px 1px #0808080A;
+         box-shadow: var(--card-shadow);
          transform: scale(1.025);
 
          .profile-card__main {
             .profile-card__icon {
-               .profile-card__blur-icon {
-                  /* filter: brightness(110%); */
-               }
+               .profile-card__blur-icon {}
             }
          }
       }
@@ -264,7 +228,6 @@
       position: absolute;
       inset: 0;
 
-      /* filter: blur(0.5px) brightness(75%); */
       &::before {
          content: '';
          background: #0000004A;
@@ -409,7 +372,6 @@
             &.like-button {
                &.liked {
                   svg {
-                     /* animation: heartLikedPopUpAnimation .3s ease; */
                      animation: heartLikedPopUpAnimation 0.45s ease-out;
 
                      path {
@@ -535,9 +497,6 @@
                   justify-content: center;
                   transition: var(--transition-fast);
 
-                  /* &.active_svg_icon {
-                     display: none;
-                     } */
                   path {
                      transition: var(--transition-fast);
                      stroke: var(--color-text-active);
@@ -569,7 +528,6 @@
                      }
 
                      path {
-                        /* stroke: #ffffff; */
                         stroke: #f4aa23;
                         fill: #1c1c1c;
                      }
@@ -582,24 +540,14 @@
             }
 
             &.active {
-               /* background: var(--btn-gradient); */
                box-shadow: 0px 4px 9px 0px #0000000F;
 
                div {
                   svg {
-
-                     /* display: none; */
-                     /* &.active_svg_icon {
-                        display: block;
-                     } */
-                     path {
-                        /* stroke: var(--color-text-active); */
-                     }
+                     path {}
                   }
 
-                  span {
-                     /* color: var(--color-text-active); */
-                  }
+                  span {}
                }
             }
          }
@@ -614,7 +562,7 @@
    padding-top: 20px;
 }
 
-/* Footer */
+/* Sidebar Footer */
 .sidebar-footer {
    display: flex;
    flex-direction: column;
@@ -673,13 +621,6 @@
    }
 }
 
-/*  */
-.moneyboy-feed-page-container {
-   display: flex;
-   flex-direction: column;
-   gap: var(--spacing-md);
-}
-
 .moneyboy-feed-sidebar-container {
    display: inline;
 
@@ -705,10 +646,10 @@
    }
 }
 
-/* ----------- */
+/* Grow Network Card (Right Aside Card) */
 .moneyboy-network-grow-card-wrapper {
    position: sticky;
-   top: calc(var(--header-height) + 34px);
+   top: calc(var(--header-height) + var(--spacing-md));
    align-self: flex-start;
 
    .moneyboy-network-grow-card {
@@ -777,6 +718,7 @@
    }
 }
 
+/* Feed Page Container */
 .moneyboy-feed-page-container {
    .moneyboy-feed-page-cate-buttons {
       display: grid;
@@ -786,7 +728,6 @@
       gap: 12px;
       border-radius: 25px;
       transition: var(--transition-normal);
-      /* ---------- */
       position: sticky;
       top: var(--header-height);
       z-index: 2;
@@ -798,7 +739,7 @@
          border-radius: 0 0 25px 25px;
       }
 
-      /* ---------- */
+      /* Feed Page Post type Navigation Buttons */
       .page-content-type-button {
          padding: 19px 0px;
          color: #020202;
@@ -822,7 +763,7 @@
    }
 }
 
-/* Posts */
+/* Post Cards*/
 .moneyboy-posts-wrapper {
    display: flex;
    flex-direction: column;
@@ -853,17 +794,6 @@
          align-items: center;
          justify-content: space-between;
 
-         /* ------------ */
-         /* ------------ */
-         /* ------------ */
-         /* ------------ */
-         /* ------------ */
-         /* ------------ */
-         /* ------------ */
-         /* ------------ */
-         /* ------------ */
-         /* ------------ */
-         /* ------------ */
          .profile-card {
             width: 100%;
             padding: 0px;
@@ -975,19 +905,6 @@
             }
          }
 
-         /* ------------ */
-         /* ------------ */
-         /* ------------ */
-         /* ------------ */
-         /* ------------ */
-         /* ------------ */
-         /* ------------ */
-         /* ------------ */
-         /* ------------ */
-         /* ------------ */
-         /* ------------ */
-         /* ------------ */
-         /* ------------ */
          .moneyboy-post__upload-more-info {
             display: flex;
             min-width: max-content;
@@ -1015,7 +932,6 @@
 
                svg {
                   path {
-                     /* fill: #292D32; */
                      stroke: #292D32;
                   }
                }
@@ -1052,11 +968,7 @@
          border-radius: 32px;
          position: relative;
 
-         &:hover {
-            /* .moneyboy-post__actions {
-               backdrop-filter: blur(25px);
-            } */
-         }
+         &:hover {}
 
          .moneyboy-post__img {
             width: 100%;
@@ -1122,20 +1034,15 @@
                      }
 
                      &:hover {
-                        /* filter: brightness(200%); */
                         opacity: 1;
 
                         svg {
                            transform: scale(1.15);
 
-                           path {
-                              /* stroke: red; */
-                           }
+                           path {}
                         }
 
-                        span {
-                           /* color: #dedede; */
-                        }
+                        span {}
                      }
                   }
                }
@@ -1166,15 +1073,11 @@
 
                                     &:nth-child(3),
                                     &:nth-child(4),
-                                    &:nth-child(5) {
-                                       /* stroke: #ffffff; */
-                                    }
+                                    &:nth-child(5) {}
                                  }
                               }
 
-                              span {
-                                 /* color: #dedede; */
-                              }
+                              span {}
                            }
                         }
                      }
@@ -1192,21 +1095,17 @@
                            &:hover {
                               svg {
                                  path {
-                                    /* stroke: red; */
                                     stroke: var(--like-color);
                                     fill: var(--like-color);
                                  }
                               }
 
-                              span {
-                                 /* color: #dedede; */
-                              }
+                              span {}
                            }
 
                            &.post-like-btn {
                               &.liked {
                                  svg {
-                                    /* animation: heartLikedPopUpAnimation .3s ease; */
                                     animation: heartLikedPopUpAnimation 0.45s ease-out;
 
                                     path {
@@ -1239,9 +1138,7 @@
                                  }
                               }
 
-                              span {
-                                 /* color: #dedede; */
-                              }
+                              span {}
                            }
                         }
                      }
