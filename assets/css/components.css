@@ -720,6 +720,10 @@
 
 /* Feed Page Container */
 .moneyboy-feed-page-container {
+   display: flex;
+   flex-direction: column;
+   gap: var(--spacing-md);
+
    .moneyboy-feed-page-cate-buttons {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
