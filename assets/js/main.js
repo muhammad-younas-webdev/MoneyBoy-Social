@@ -1,3 +1,6 @@
+// Main Layout Management Functionalities
+import "./components/layouts.js";
+
 // Featured Profile Like Functinality
 import "./components/featured-profile-like-button.js";
 

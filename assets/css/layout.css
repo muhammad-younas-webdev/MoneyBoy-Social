@@ -21,25 +21,35 @@
 
    .moneyboy-main-asides-layout-container {
       display: flex;
-      gap: 28px;
-      gap: 18px;
       gap: 12px;
+      gap: var(--spacing-md);
+
+      &:has(.moneyboy-global-sidebar-wrapper.has-scroll) {
+         .moneyboy-global-sidebar-wrapper {
+            max-width: calc(var(--sidebar-width) + calc(calc(var(--spacing-sm) + calc(var(--spacing-xxs) + 0px))));
+            min-width: calc(var(--sidebar-width) + calc(calc(var(--spacing-sm) + calc(var(--spacing-xxs) + 0px))));
+            padding-right: var(--spacing-xxs);
+            margin-right: calc(-1 * calc(var(--spacing-xxs) + 10px));
+         }
+      }
 
       .moneyboy-global-sidebar-wrapper {
          width: 100%;
-         max-width: 344px;
-         max-width: 360px;
-         position: sticky;
-         top: calc(var(--header-height) + 24px);
-         max-height: calc(100vh - calc(var(--header-height) + 48px));
-         overflow: auto;
-         /* padding-block: 34px; */
-         padding: 10px;
-         padding-right: 5px;
-         scrollbar-width: thin;
-         scrollbar-color: #aaaaaa3c transparent;
          border-radius: 32px;
-         margin-left: -10px;
+         overflow: auto;
+         position: sticky;
+         top: calc(calc(var(--header-height) + var(--spacing-md)) - var(--spacing-sm));
+         max-height: calc(100vh - calc(calc(var(--header-height) + calc(2 * var(--spacing-md))) - calc(2 * var(--spacing-sm))));
+         max-width: calc(var(--sidebar-width) + calc(var(--spacing-sm) + var(--spacing-sm)));
+         min-width: calc(var(--sidebar-width) + calc(var(--spacing-sm) + var(--spacing-sm)));
+         padding-block: var(--spacing-sm);
+         padding-left: var(--spacing-sm);
+         padding-right: var(--spacing-sm);
+         margin-left: calc(-1 * var(--spacing-sm));
+         margin-right: calc(-1 * var(--spacing-sm));
+         /* Scrollbar */
+         scrollbar-width: thin;
+         scrollbar-color: #aaaaaa00 transparent;
 
          &:hover {
             scrollbar-color: #aaaaaa transparent;
@@ -48,7 +58,7 @@
          .global-sidebar-container {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: var(--spacing-md);
 
             .sidebar-profile-card {}
 
@@ -64,6 +74,7 @@
 
       .moneyboy-page-content-container {
          padding-block: 34px;
+         padding-block: var(--spacing-md);
          width: 100%;
 
          .moneyboy-dynamic-content-layout {
@@ -71,7 +82,7 @@
 
             .moneyboy-2x-1x-layout-container {
                display: flex;
-               gap: 28px;
+               gap: var(--spacing-md);
 
                .moneyboy-2x-1x-a-layout {
                   width: 100%;
@@ -79,7 +90,7 @@
 
                .moneyboy-2x-1x-b-layout {
                   width: 100%;
-                  max-width: 400px;
+                  max-width: var(--right-aside-width);
                }
             }
          }
