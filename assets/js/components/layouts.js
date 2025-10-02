@@ -1,7 +1,12 @@
 const sidebar = document.getElementById("leftSidebar");
 
+function isTouchDevice() {
+  return "ontouchstart" in window || navigator.maxTouchPoints > 0;
+}
+
 function checkSidebarScroll() {
   if (!sidebar) return;
+  if (isTouchDevice()) return;
 
   const hasVerticalScroll = sidebar.scrollHeight > sidebar.clientHeight;
   const hasHorizontalScroll = sidebar.scrollWidth > sidebar.clientWidth;

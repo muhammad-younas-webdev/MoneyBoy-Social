@@ -1,47 +1,116 @@
-@media (max-width: 1600px) {
+@media (max-width: 1280px) {
     :root {
-        --sidebar-width: 300px;
-        --right-aside-width: 370px;
+        --sidebar-width: 260px;
+        --sidebar-width: 90px;
+        --right-aside-width: 330px;
     }
 
     .container {
-        /* max-width: 1320px; */
+        max-width: calc(100% - 75px);
     }
 
-    .card {
-        border-radius: 24px;
-    }
+    .card {}
 
     .btn-primary {
-        border-radius: 14px;
-        padding-block: 20px;
+        span {}
+    }
 
-        span {
-            font-size: 19px;
+    .card-heading {}
+
+    .sidebar-footer-card {
+        display: none;
+    }
+
+    .moneyboy-layout-container {
+        & .moneyboy-main-asides-layout-container {
+            & .moneyboy-global-sidebar-wrapper {
+
+                /* align-items: stretch; */
+                & .global-sidebar-container {
+                    background-color: white;
+                    padding: 10px;
+                    border-radius: 16px;
+                    box-shadow: var(--card-shadow);
+
+                    /* height: 100%; */
+                    .sidebar-profile-card {
+                        box-shadow: none;
+                        padding: 0;
+                        background: none;
+
+                        .profile-card {
+                            padding: 0;
+
+                            .profile-card__main {
+                                flex-direction: column;
+                                gap: 16px;
+
+                                .profile-card__info {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+
+                    .sidebar-post-button {
+                        .btn-primary {
+                            padding: 0;
+                            aspect-ratio: 1/1;
+                            width: 100%;
+
+                            svg {
+                                transform: scale(1.23);
+                            }
+
+                            span {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .sidebar-navigation-container {
+                        background: none;
+                        box-shadow: none;
+                    }
+                }
+            }
+
+            .moneyboy-page-content-container {
+                & .moneyboy-dynamic-content-layout {
+                    & .moneyboy-2x-1x-layout-container {
+                        .moneyboy-2x-1x-b-layout {
+                            /* display: none; */
+                        }
+                    }
+                }
+            }
         }
     }
 
-    .card-heading {
-        font-size: 22px;
-    }
-
     .sidbar-navigation {
-        padding: 16px;
+        box-shadow: none;
+        padding: 5px;
 
         ul {
             li {
                 a {
-                    padding: 10px 12px;
+                    aspect-ratio: 1/1;
+                    width: 100%;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0;
 
                     div {
                         svg {
-                            width: 28px;
+                            width: 30px;
 
                             path {}
                         }
 
                         span {
-                            font-size: 20px;
+                            display: none;
                         }
                     }
 
@@ -66,9 +135,7 @@
                                 path {}
                             }
 
-                            span {
-                                font-size: 22px;
-                            }
+                            span {}
                         }
                     }
                 }
@@ -78,18 +145,10 @@
 
     /* Profile Card */
     .profile-card {
-        padding: 14px;
-
         &.featured-profile-card {
-            padding: 12px;
-            border-radius: 16px;
-
             .profile-card__main {
                 .profile-card__avatar-settings {
                     .profile-card__avatar {
-                        width: 54px;
-                        border-radius: 16px;
-
                         &::before {}
 
                         img {}
@@ -98,9 +157,7 @@
 
                 .profile-card__info {
                     .profile-card__name-badge {
-                        .profile-card__name {
-                            font-size: 18px;
-                        }
+                        .profile-card__name {}
 
                         .profile-card__badge {
                             img {}
@@ -108,8 +165,6 @@
                     }
 
                     .profile-card__username {
-                        font-size: 15px;
-
                         &:hover {}
                     }
                 }
@@ -139,8 +194,6 @@
         .profile-card__main {
             .profile-card__avatar-settings {
                 .profile-card__avatar {
-                    width: 70px;
-
                     img {}
                 }
 
@@ -151,14 +204,10 @@
 
             .profile-card__info {
                 .profile-card__name-badge {
-                    .profile-card__name {
-                        font-size: 20px;
-                    }
+                    .profile-card__name {}
 
                     .profile-card__badge {
-                        img {
-                            width: 24px;
-                        }
+                        img {}
                     }
                 }
 
@@ -185,13 +234,9 @@
         }
 
         .profile-card__stats {
-            padding: 14px 8px 10px;
-            gap: 16px;
-            border-radius: 16px;
+            display: none;
 
             .profile-card__stats-item {
-                gap: 6px;
-
                 &:hover {
 
                     .profile-card__stats-num,
@@ -204,9 +249,7 @@
                     }
                 }
 
-                .profile-card__stats-num {
-                    font-size: 18px;
-                }
+                .profile-card__stats-num {}
 
                 .profile-card__stats-label {
                     svg {
@@ -226,16 +269,10 @@
     /*  */
     .moneyboy-feed-page-container {
         .moneyboy-feed-page-cate-buttons {
-            border-radius: 18px;
-            padding: 8px 10px;
-
             &.is-sticky {}
 
             /* Feed Page Post type Navigation Buttons */
             .page-content-type-button {
-                padding: 15px 0px;
-                font-size: 18px;
-                border-radius: 14px;
 
                 &:hover,
                 &.active {}
@@ -246,8 +283,6 @@
     /* Posts  */
     .moneyboy-posts-wrapper {
         .moneyboy-post__container {
-            gap: 16px;
-
             &:hover {
                 .moneyboy-post__media {
                     img {}
@@ -301,8 +336,6 @@
                     }
 
                     .profile-card__main {
-                        gap: 14px;
-
                         .profile-card__avatar-settings {
                             .profile-card__avatar {
                                 img {}
@@ -367,16 +400,12 @@
             }
 
             .moneyboy-post__desc {
-                font-size: 17px;
-
                 span {
                     &:hover {}
                 }
             }
 
             .moneyboy-post__media {
-                border-radius: 24px;
-
                 &:hover {}
 
                 .moneyboy-post__img {
@@ -384,14 +413,9 @@
                 }
 
                 .moneyboy-post__actions {
-                    padding: 20px;
-                    border-radius: 18px;
-
                     ul {
                         li {
                             a {
-                                gap: 8px;
-
                                 svg {}
 
                                 span {}
@@ -401,8 +425,6 @@
                                 }
 
                                 &:hover {
-                                    opacity: 1;
-
                                     svg {
                                         path {}
                                     }

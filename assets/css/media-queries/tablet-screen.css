@@ -1,0 +1,502 @@
+@media (max-width: 992px) {
+    :root {
+        --sidebar-width: 80px;
+    }
+
+    .container {
+        max-width: calc(100% - 40px);
+    }
+
+    .card {}
+
+    .btn-primary {
+        span {}
+    }
+
+    .card-heading {}
+
+    .sidebar-footer-card {}
+
+    .header-main {
+        & .header-container {
+            & .header-logo {
+                & a {
+                    img {
+                        height: auto;
+                        width: 170px;
+                    }
+                }
+            }
+
+            .header-search-nav-profile-container {
+                .header-search-input {
+                    width: 200px;
+
+                    &:has(input:focus) {
+                        width: 250px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .moneyboy-layout-container {
+        & .moneyboy-main-asides-layout-container {
+            & .moneyboy-global-sidebar-wrapper {
+                & .global-sidebar-container {
+                    gap: 12px;
+
+                    .sidebar-profile-card {
+                        .profile-card {
+                            .profile-card__main {
+                                .profile-card__info {}
+                            }
+                        }
+                    }
+
+                    .sidebar-post-button {
+                        .btn-primary {
+                            svg {}
+
+                            span {}
+                        }
+                    }
+
+                    .sidebar-navigation-container {}
+                }
+            }
+
+            .moneyboy-page-content-container {
+                & .moneyboy-dynamic-content-layout {
+                    & .moneyboy-2x-1x-layout-container {
+                        .moneyboy-2x-1x-b-layout {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .sidbar-navigation {
+        ul {
+            li {
+                a {
+                    div {
+                        svg {
+                            path {}
+                        }
+
+                        span {}
+                    }
+
+                    &.active,
+                    &:hover {
+                        div {
+                            svg {
+                                &.wishlist-icon {
+                                    path:nth-child(3) {}
+                                }
+
+                                path {}
+                            }
+
+                            span {}
+                        }
+                    }
+
+                    &.active {
+                        div {
+                            svg {
+                                path {}
+                            }
+
+                            span {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* Profile Card */
+    .profile-card {
+        &.featured-profile-card {
+            .profile-card__main {
+                .profile-card__avatar-settings {
+                    .profile-card__avatar {
+                        &::before {}
+
+                        img {}
+                    }
+                }
+
+                .profile-card__info {
+                    .profile-card__name-badge {
+                        .profile-card__name {}
+
+                        .profile-card__badge {
+                            img {}
+                        }
+                    }
+
+                    .profile-card__username {
+                        &:hover {}
+                    }
+                }
+            }
+
+            &:hover {
+                .profile-card__main {
+                    .profile-card__icon {
+                        .profile-card__blur-icon {}
+                    }
+                }
+            }
+        }
+
+        .profile-card__bg-img {
+            &::before {}
+
+            &::after {}
+
+            img {}
+
+            &~* {}
+
+            img {}
+        }
+
+        .profile-card__main {
+            .profile-card__avatar-settings {
+                .profile-card__avatar {
+                    width: 100%;
+                    border-radius: 14px;
+
+                    img {}
+                }
+
+                .profile-card__settings {
+                    svg {}
+                }
+            }
+
+            .profile-card__info {
+                .profile-card__name-badge {
+                    .profile-card__name {}
+
+                    .profile-card__badge {
+                        img {}
+                    }
+                }
+
+                .profile-card__username {
+                    &:hover {}
+                }
+            }
+
+            .profile-card__icon {
+                .profile-card__blur-icon {
+                    &:active {}
+
+                    &:hover {}
+
+                    &.like-button {
+                        &.liked {
+                            svg {
+                                path {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .profile-card__stats {
+            display: none;
+
+            .profile-card__stats-item {
+                &:hover {
+
+                    .profile-card__stats-num,
+                    .profile-card__stats-label span {}
+
+                    .profile-card__stats-label {
+                        svg {
+                            path {}
+                        }
+                    }
+                }
+
+                .profile-card__stats-num {}
+
+                .profile-card__stats-label {
+                    svg {
+                        path {}
+                    }
+
+                    span {}
+                }
+            }
+        }
+
+        .profile-card__desc {
+            p {}
+        }
+    }
+
+    /*  */
+    .moneyboy-feed-page-container {
+        .moneyboy-feed-page-cate-buttons {
+            &.is-sticky {}
+
+            /* Feed Page Post type Navigation Buttons */
+            .page-content-type-button {
+
+                &:hover,
+                &.active {}
+            }
+        }
+    }
+
+    /* Posts  */
+    .moneyboy-posts-wrapper {
+        .moneyboy-post__container {
+            &:hover {
+                .moneyboy-post__media {
+                    img {}
+
+                    .moneyboy-post__actions {}
+                }
+            }
+
+            .moneyboy-post__header {
+                .profile-card {
+                    &.featured-profile-card {
+                        .profile-card__main {
+                            .profile-card__avatar-settings {
+                                .profile-card__avatar {
+                                    img {}
+                                }
+                            }
+
+                            .profile-card__info {
+                                .profile-card__name-badge {
+                                    .profile-card__name {}
+
+                                    .profile-card__badge {
+                                        img {}
+                                    }
+                                }
+
+                                .profile-card__username {}
+                            }
+                        }
+
+                        &:hover {
+                            .profile-card__main {
+                                .profile-card__icon {
+                                    .profile-card__blur-icon {}
+                                }
+                            }
+                        }
+                    }
+
+                    .profile-card__bg-img {
+                        &::before {}
+
+                        &::after {}
+
+                        img {}
+
+                        &~* {}
+
+                        img {}
+                    }
+
+                    .profile-card__main {
+                        .profile-card__avatar-settings {
+                            .profile-card__avatar {
+                                img {}
+                            }
+
+                            .profile-card__settings {
+                                svg {}
+                            }
+                        }
+
+                        .profile-card__info {
+                            .profile-card__name-badge {
+                                .profile-card__name {}
+
+                                .profile-card__badge {
+                                    img {}
+                                }
+                            }
+
+                            .profile-card__username {}
+                        }
+
+                        .profile-card__icon {
+                            .profile-card__blur-icon {
+                                &:hover {}
+                            }
+                        }
+                    }
+
+                    .profile-card__stats {
+                        .profile-card__stats-item {
+                            &:hover {
+
+                                .profile-card__stats-num,
+                                .profile-card__stats-label span {}
+                            }
+
+                            .profile-card__stats-num {}
+
+                            .profile-card__stats-label {
+                                svg {}
+
+                                span {}
+                            }
+                        }
+                    }
+
+                    .profile-card__desc {
+                        p {}
+                    }
+                }
+
+                .moneyboy-post__upload-more-info {
+                    .moneyboy-post__upload-time {}
+
+                    .moenyboy-post__more-opt-btn {
+                        svg {
+                            path {}
+                        }
+                    }
+                }
+            }
+
+            .moneyboy-post__desc {
+                span {
+                    &:hover {}
+                }
+            }
+
+            .moneyboy-post__media {
+                &:hover {}
+
+                .moneyboy-post__img {
+                    img {}
+                }
+
+                .moneyboy-post__actions {
+                    ul {
+                        li {
+                            a {
+                                svg {}
+
+                                span {}
+
+                                &:active {
+                                    svg {}
+                                }
+
+                                &:hover {
+                                    svg {
+                                        path {}
+                                    }
+
+                                    span {}
+                                }
+                            }
+                        }
+
+                        &:nth-child(1) {
+                            li {
+                                &:nth-child(1) {
+                                    a {
+                                        svg {}
+
+                                        span {}
+
+                                        &:active {
+                                            svg {}
+                                        }
+
+                                        &:hover {
+                                            svg {
+                                                path {
+                                                    &:nth-child(1) {}
+
+                                                    &:nth-child(2) {}
+
+                                                    &:nth-child(3),
+                                                    &:nth-child(4),
+                                                    &:nth-child(5) {}
+                                                }
+                                            }
+
+                                            span {}
+                                        }
+                                    }
+                                }
+
+                                &:nth-child(2) {
+                                    a {
+                                        svg {}
+
+                                        span {}
+
+                                        &:active {
+                                            svg {}
+                                        }
+
+                                        &:hover {
+                                            svg {
+                                                path {}
+                                            }
+
+                                            span {}
+                                        }
+
+                                        &.post-like-btn {
+                                            &.liked {
+                                                svg {
+                                                    path {}
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &:nth-child(3) {
+                                    a {
+                                        svg {}
+
+                                        span {}
+
+                                        &:active {
+                                            svg {}
+                                        }
+
+                                        &:hover {
+                                            svg {
+                                                path {
+                                                    &:nth-child(1) {}
+                                                }
+                                            }
+
+                                            span {}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

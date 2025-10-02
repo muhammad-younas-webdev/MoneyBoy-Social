@@ -10,4 +10,19 @@
      DO NOT CHANGE THE ORDER OF THE FOLLOWING FILES 
 */
 /* 1600px Max-Width Media Query */
-@import url("media-queries/large-screens.css");
+@import url("media-queries/large-screen.css");
+/*  
+- 
+*/
+/* 1280px Max-Width Media Query */
+@import url("media-queries/laptop-screen.css");
+/*  
+- 
+*/
+/* 992px Max-Width Media Query */
+@import url("media-queries/tablet-screen.css");
+/*  
+- 
+*/
+/* 620px Max-Width Media Query */
+@import url("media-queries/mobile-screen.css");
