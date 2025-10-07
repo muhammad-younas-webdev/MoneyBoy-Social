@@ -9,3 +9,6 @@ import "./components/post-interactivities.js";
 
 // Posts Tabs On Scroll Sticky Effect Functionality
 import "./components/posts-tabs-sticky-effect.js";
+
+// Multiple Tabs Functionalities
+import "./components/multi-tabs.js";

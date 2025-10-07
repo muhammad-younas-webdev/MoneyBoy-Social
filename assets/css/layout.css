@@ -91,6 +91,22 @@
                   width: 100%;
                   max-width: var(--right-aside-width);
                }
+
+               .creator-profile-page-container {
+                  width: 100%;
+
+                  .creator-profile-front-content-container {
+                     display: flex;
+                     flex-direction: column;
+                     gap: 20px;
+
+                     .creator-profile-page-multi-tab-section {
+                        .creator-profile-page-multi-tab-container {
+                           /* background-color: orange; */
+                        }
+                     }
+                  }
+               }
             }
          }
       }

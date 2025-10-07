@@ -11,17 +11,15 @@ if (postsTabsBtnCard && headerMain && mainLayout) {
   let headerHeight = getHeaderHeight();
 
   // Decide whether the layout element is the scroll container or the page is scrolling
-  // If mainLayout actually scrolls (content taller than visible area) use it; otherwise use window
   const elementIsScroller = mainLayout.scrollHeight > mainLayout.clientHeight;
   const scroller = elementIsScroller ? mainLayout : window;
 
-  // Function that checks scroll position and toggles the class
+  // Function that checks the element's position relative to the viewport
   const checkSticky = () => {
-    // Use scrollTop for element scroller, window.scrollY for page scroller
-    const scrollPosition =
-      scroller === window ? window.scrollY : mainLayout.scrollTop;
+    // Distance of sticky element from the top of the viewport
+    const stickyTop = postsTabsBtnCard.getBoundingClientRect().top;
 
-    if (scrollPosition >= headerHeight) {
+    if (stickyTop <= headerHeight) {
       postsTabsBtnCard.classList.add("is-sticky");
     } else {
       postsTabsBtnCard.classList.remove("is-sticky");

@@ -121,6 +121,22 @@ body {
    }
 }
 
+/* Global Components */
+/* Multi Tabs Functionality */
+[data-multiple-tabs-section] {
+   [data-multi-tabs-switch-btn] {
+      &[data__active] {}
+   }
+
+   [data-multi-tabs-content-tab] {
+      display: none;
+
+      &[data__active] {
+         display: block;
+      }
+   }
+}
+
 /* --------------------------------------------------------------------------
    4) Typography
    - Headings use the dedicated heading font for clear hierarchy.
@@ -302,43 +318,15 @@ input::placeholder {
    position: relative;
    background: #F9F9F9;
    width: 100%;
-
-   /* Hover and focus visual states for the entire wrapper */
-   &:hover,
-   &:has(input:focus) {
-      .input-placeholder-icon {
-
-         .svg-icon path,
-         .svg-icon:hover path {
-            stroke: #404040;
-         }
-      }
-
-      label,
-      input,
-      input::placeholder {
-         color: #404040;
-      }
-
-      input {
-         border-color: #cdcdcd;
-      }
-   }
-
-   /* Stronger focus state for the input element */
-   &:has(input:focus) {
-      input:focus {
-         border-color: #a1a1a1;
-      }
-   }
+   border-radius: 13px;
 
    .input-placeholder-icon {
+      transition: var(--transition-fast);
       position: absolute;
       left: 12px;
       display: flex;
 
-      .svg-icon path,
-      .svg-icon:hover path {
+      .svg-icon path {
          stroke: #727272;
       }
    }
@@ -354,6 +342,44 @@ input::placeholder {
       position: relative;
       z-index: 2;
       outline: none;
+      border-radius: inherit;
+   }
+
+   /* Hover and focus visual states for the entire wrapper */
+   &:hover {
+      .input-placeholder-icon {
+
+         .svg-icon path,
+         .svg-icon:hover path {
+            stroke: #404040;
+         }
+      }
+
+      label,
+      input,
+      input::placeholder {
+         color: #404040;
+      }
+
+      input {
+         border-color: #a1a1a1;
+         border-color: #cecece;
+      }
+   }
+
+   /* Stronger focus state for the input element */
+   &:has(input:focus) {
+      input {
+         border-color: #000000;
+         box-shadow: 0px 6px 4px -4px #08080814, 0px 2px 13.5px 1px #08080818;
+         color: #000000;
+      }
+
+      .input-placeholder-icon {
+         .svg-icon path {
+            stroke: #000000;
+         }
+      }
    }
 }
 
@@ -452,5 +478,109 @@ input::placeholder {
             stroke: var(--color-secondary);
          }
       }
+   }
+}
+
+.btn-txt-gradient {
+   background: #000;
+   border: none;
+   padding: 10px 22px;
+   border-radius: 9px;
+   cursor: pointer;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   box-shadow: 0px 4px 4px 0px #00000012;
+   transition: var(--transition-fast);
+
+   &.p-sm {
+      padding: 12px;
+   }
+
+   /* Gradient text */
+   span {
+      font-family: var(--font-family-heading);
+      font-weight: 500;
+      font-size: 14px;
+      display: inline-block;
+      letter-spacing: 0.25px;
+      background: linear-gradient(103.7deg, #FECE26 4.76%, #E5741F 118.16%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      line-height: 17px;
+   }
+
+   &:hover {
+      filter: brightness(120%);
+   }
+}
+
+/* Premium Button */
+.premium-btn {
+   &.btn-bg-img {
+      &::before {
+         content: '';
+         position: absolute;
+         inset: .5px;
+         display: block;
+         background-color: rgb(0, 0, 0);
+         border-radius: inherit;
+      }
+
+      &::after {
+         content: '';
+         inset: .5px;
+         display: block;
+         position: absolute;
+         border-radius: inherit;
+         background-image: url('./../media/images/element-assets/store-btn-bg-img.jpg');
+         background-size: 140%;
+         background-repeat: no-repeat;
+         background-position: center center;
+         background-color: #000;
+         opacity: .5;
+      }
+   }
+
+   background: linear-gradient(103.7deg, #FECE26 4.76%, #E5741F 118.16%);
+   min-width: max-content;
+   width: 100%;
+   border-radius: 14px;
+   padding: 18px 10px;
+   display: flex;
+   justify-content: center;
+   position: relative;
+   cursor: pointer;
+
+   &>* {
+      position: relative;
+   }
+
+   &::before {
+      background-color: black;
+      content: '';
+      inset: 1px;
+      position: absolute;
+      border-radius: inherit;
+   }
+
+   img {
+      width: 31px;
+   }
+
+   svg {}
+
+   span {
+      display: block;
+      display: inline-block;
+      font-weight: 600;
+      letter-spacing: 0.25px;
+      background: linear-gradient(103.7deg, #FECE26 4.76%, #E5741F 118.16%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
    }
 }
