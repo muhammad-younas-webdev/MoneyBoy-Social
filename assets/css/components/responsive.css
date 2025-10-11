@@ -658,9 +658,49 @@
             p {}
         }
     }
+
+    /* Filters */
+    /* Filter Section */
+    .content-filters-main-wrapper {
+        .content-filters-head-wrapper {
+            .content-basic-filters-wrapper {
+                .content-basic-filters-container {
+                    grid-template-columns: 1fr 1fr;
+
+                    .content-filter-card-wrapper {}
+                }
+            }
+        }
+
+        .content-advanced-filters-wrapper {
+            .content-advanced-filters-layout {
+                .custom-select-element {}
+            }
+        }
+    }
 }
 
 @media (max-width: 992px) {
+
+    /* Filter Section */
+    .content-filters-main-wrapper {
+        .content-filters-head-wrapper {
+            .content-basic-filters-wrapper {
+                .content-basic-filters-container {
+                    .content-filter-card-wrapper {}
+                }
+            }
+        }
+
+        .content-advanced-filters-wrapper {
+            .content-advanced-filters-layout {
+                grid-template-columns: 1fr 1fr;
+
+                .custom-select-element {}
+            }
+        }
+    }
+
     .header-main {
         & .header-container {
             & .header-logo {
