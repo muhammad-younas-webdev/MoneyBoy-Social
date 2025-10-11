@@ -1,0 +1,64 @@
+/* ==========================================================================
+   CSS Manifest (Root Stylesheet)
+   
+   Purpose:
+     - Acts as the single entry point, orchestrating the global cascade.
+     - Enforces a clear, layered loading hierarchy (low specificity to high specificity).
+   Load Sequence Strategy:
+     - Each layer's base styles are immediately followed by its corresponding
+       responsive overrides to ensure modularity and local context.
+   Layer Hierarchy (Following ITCSS/similar principles):
+     1. Foundation (Base, Resets, Globals)
+     2. Utilities (Atomic Helpers/Trumps)
+     3. Elements (Raw HTML Tag Styling)
+     4. Components (UI Modules)
+     5. Scaffolding (Page Layouts)
+   ========================================================================== */
+/* --------------------------------------------------------------------------
+   1) Foundation Layer (Base, Settings, Tokens)
+   - Must load first to define CSS variables, fonts, and global resets.
+   -------------------------------------------------------------------------- */
+@import url('./base/base.css');
+/* Base definitions and design tokens */
+@import url('./base/responsive.css');
+/* Responsive adjustments for the base layer */
+/* --------------------------------------------------------------------------
+   2) Utility Layer (Helpers/Trumps)
+   - Contains atomic, high-specificity classes for layout or overrides.
+   - Placed early to ensure basic helpers are available for elements and components.
+   -------------------------------------------------------------------------- */
+@import url('./utilities/utilities.css');
+/* Core utility classes */
+@import url('./utilities/responsive.css');
+/* Responsive overrides for utility classes */
+/* --------------------------------------------------------------------------
+   3) Element Layer (Defaults)
+   - Raw styling for bare HTML tags (e.g., h1, a, input) without class selectors.
+   -------------------------------------------------------------------------- */
+@import url('./elements/elements.css');
+/* Default element styling */
+@import url('./elements/responsive.css');
+/* Responsive adjustments for raw elements */
+/* --------------------------------------------------------------------------
+   4) Component Layers (Primitives and Aggregates)
+   - Defines the UI modules: reusable, class-based components.
+   -------------------------------------------------------------------------- */
+/* Primitives / Atoms (Small, non-contextual components) */
+@import url('./small-components/small-components.css');
+/* Primitive component definitions */
+@import url('./small-components/responsive.css');
+/* Responsive behavior for small components */
+/* Modules / Aggregates (Complex, high-value blocks) */
+@import url('./components/components.css');
+/* Complex module definitions */
+@import url('./components/responsive.css');
+/* Responsive behavior for complex modules */
+/* --------------------------------------------------------------------------
+   5) Scaffolding Layer (Layouts)
+   - Defines the structural regions of the application (e.g., Header, Sidebar, Grid).
+   - Note: This layer should only define layout structure, not component styling.
+   -------------------------------------------------------------------------- */
+@import url('./layouts/layouts.css');
+/* Page structure and grid definitions */
+@import url('./layouts/responsive.css');
+/* Responsive adjustments for the primary layouts */

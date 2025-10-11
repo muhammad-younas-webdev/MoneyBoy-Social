@@ -1,0 +1,29 @@
+@media (max-width: 1620px) {
+    :root {
+        --header-height: 64px;
+        --sidebar-width: 280px;
+        --right-aside-width: 350px;
+    }
+}
+
+@media (max-width: 1280px) {
+    :root {
+        --sidebar-width: 260px;
+        --sidebar-width: 90px;
+        --right-aside-width: 330px;
+    }
+}
+
+@media (max-width: 992px) {
+    :root {
+        /* --sidebar-width: 80px; */
+    }
+}
+
+@media (max-width: 620px) {
+    :root {
+        --sidebar-width: 60px;
+        --spacing-md: 8px;
+        --header-height: 62px;
+    }
+}

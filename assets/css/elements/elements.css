@@ -1,0 +1,419 @@
+/* Input Wrapper Pattern: Icon/Label Field (Advanced Input Primitive)
+   - Implements a complex, structured input field with an inline icon and label.
+   - Uses positioning to layer the icon and label visually inside the wrapper.
+   - Employs the powerful :has() selector for state-based styling on the wrapper (where supported).
+*/
+.label-input {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: #F9F9F9;
+    width: 100%;
+    border-radius: 13px;
+
+    .input-placeholder-icon {
+        transition: var(--transition-fast);
+        position: absolute;
+        left: 12px;
+        /* Fixed position inside the wrapper */
+        display: flex;
+
+        .svg-icon path {
+            stroke: #727272;
+            /* Default icon color */
+        }
+    }
+
+    label {
+        position: absolute;
+        left: 46px;
+        /* Position offset to clear the icon */
+    }
+
+    input {
+        padding-left: 46px;
+        /* Offset text input to clear the icon/label area */
+        background-color: transparent;
+        /* Allows wrapper background to show */
+        position: relative;
+        z-index: 2;
+        /* Ensures input receives click/touch events */
+        outline: none;
+        border-radius: inherit;
+    }
+
+    /* Hover state: Applies subtle visual changes to the entire wrapper */
+    &:hover {
+        .input-placeholder-icon {
+
+            .svg-icon path,
+            .svg-icon:hover path {
+                stroke: #404040;
+            }
+        }
+
+        label,
+        input,
+        input::placeholder {
+            color: #404040;
+        }
+
+        input {
+            border-color: #cecece;
+        }
+    }
+
+    /* Focus State (High Fidelity): Driven by :has(input:focus) on the wrapper */
+    &:has(input:focus) {
+        input {
+            border-color: #101010;
+            box-shadow: 0px 6px 4px -4px #0808080a, 0px 2px 13.5px 1px #0808080e;
+            /* Prominent elevation */
+            color: #101010;
+        }
+
+        .input-placeholder-icon {
+            .svg-icon path {
+                stroke: #101010;
+                /* High contrast icon */
+            }
+        }
+    }
+}
+
+/* Primary Button Component (High-Value Action)
+   - Features a solid background, gradient effect, and complex hover state.
+   - Designed for primary calls-to-action (CTAs).
+*/
+.btn-primary {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding-block: 24px;
+    gap: 10px;
+    color: white;
+    background: linear-gradient(93.25deg, #E5741F -49.57%, #FECE26 98.1%);
+    box-shadow: 0px 4px 9px 0px #0000000F;
+    position: relative;
+    overflow: hidden;
+    /* Important for containing future ripple/hover effects */
+    transition: var(--transition-fast);
+
+    span {
+        font-family: var(--font-family-heading);
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 4%;
+        position: relative;
+        transition: var(--transition-fast);
+    }
+
+    svg {
+        position: relative;
+        transition: var(--transition-fast);
+    }
+
+    &:hover {
+        /* Inverts/changes the gradient on hover for clear feedback */
+        background: linear-gradient(93.25deg, var(--color-text-active) -49.57%, var(--color-text-active) 98.1%);
+
+        span {
+            color: var(--color-secondary);
+        }
+
+        svg {
+            path {
+                stroke: var(--color-secondary);
+            }
+        }
+    }
+}
+
+/* Gradient Text Button (Secondary/Tertiary Action)
+   - Used for actions where the background needs to be flat but the text is vibrant.
+   - Achieves gradient text effect using background-clip and text-fill-color properties.
+*/
+.btn-txt-gradient {
+    background: #000;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 9px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 4px 0px #00000012;
+    transition: var(--transition-fast);
+    will-change: transform;
+
+    &.p-sm {
+        padding: 12px;
+        /* Small padding variant */
+    }
+
+    /* Gradient text rendering */
+    span {
+        font-family: var(--font-family-heading);
+        font-weight: 500;
+        font-size: 14px;
+        display: inline-block;
+        letter-spacing: 0.25px;
+        background: linear-gradient(103.7deg, #FECE26 4.76%, #E5741F 118.16%);
+        background-clip: text;
+        /* -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; */
+        color: transparent;
+        /* Fallback for browsers not supporting text-fill-color */
+        line-height: 17px;
+        transition: var(--transition-fast);
+    }
+
+    &:hover {
+        /* filter: brightness(120%); */
+        /* Simple visual feedback on hover */
+        background: linear-gradient(93.25deg, #E5741F -49.57%, #FECE26 98.1%);
+        color: white;
+
+        span {
+            background-clip: initial;
+            background: none;
+            color: #ffffff;
+        }
+    }
+
+    &:active {
+        transform: scale(.95);
+    }
+}
+
+/* Premium Button Component (Layered, Complex Visual Design)
+   - Uses multiple pseudo-elements (::before, ::after) to create a layered, "premium" look.
+   - Includes a specific variant for a 'store' context.
+*/
+.premium-btn {
+
+    /* Store Button Variant */
+    &.store-btn {
+        gap: 5px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 1px;
+            display: block;
+            background-color: rgb(0, 0, 0);
+            /* First inner layer (Black border effect) */
+            border-radius: inherit;
+        }
+
+        &::after {
+            content: '';
+            inset: 1px;
+            display: block;
+            position: absolute;
+            border-radius: inherit;
+            background-image: url('../../media/images/element-assets/store-btn-bg-img.jpg');
+            /* Background texture */
+            background-size: 140%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: #000;
+            opacity: .5;
+            /* Blending the texture */
+        }
+
+        img {
+            width: 36px;
+        }
+
+        span {
+            font-size: 24px;
+        }
+    }
+
+    /* Base Premium Button Styling */
+    background: linear-gradient(103.7deg, #FECE26 4.76%, #E5741F 118.16%);
+    /* Outer gradient border effect */
+    min-width: max-content;
+    width: 100%;
+    border-radius: 18px;
+    padding: 18px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    gap: 10px;
+
+    &>* {
+        position: relative;
+        z-index: 1;
+        /* Ensures content is always above the pseudo-elements */
+    }
+
+    &::before {
+        background-color: black;
+        /* Inner background fill */
+        content: '';
+        inset: 1px;
+        position: absolute;
+        border-radius: inherit;
+    }
+
+    svg {
+        will-change: transform;
+        /* Optimizes GPU rendering for transform animations */
+    }
+
+    span {
+        display: inline-block;
+        font-family: var(--font-family-heading);
+        font-weight: 500;
+        font-size: 20px;
+        letter-spacing: 0.25px;
+        background: linear-gradient(103.7deg, #FECE26 4.76%, #E5741F 118.16%);
+        /* Gradient text for contrast */
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+}
+
+.custom-select-element {
+    border: 1.5px solid #EBEBEB;
+    border-radius: 18px;
+    box-shadow: 0px 0px 0px 3px #FFFFFF inset;
+    display: flex;
+    position: relative;
+    background-color: #F9F9F9;
+    width: 100%;
+
+    &.bg-white {
+        background-color: #FFFFFF;
+        border: 1.5px solid #EBEBEB;
+    }
+
+    &.p-sm {
+        border-radius: 12px;
+
+        .custom-select-label-wrapper {
+            padding: 14px;
+        }
+
+        .custom-select-options-dropdown-wrapper {
+            border-radius: 16px;
+        }
+    }
+
+    .custom-select-label-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 12px;
+        width: 100%;
+        cursor: pointer;
+        border-radius: inherit;
+
+        .custom-select-icon-txt {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            svg {
+                path {
+                    stroke: #444444;
+                }
+            }
+
+            span {
+                font-weight: 500;
+                font-size: 15px;
+                letter-spacing: 0%;
+                color: #444444;
+            }
+        }
+
+        .custom-select-chevron {
+            display: flex;
+            align-items: center;
+
+            svg {
+                path {
+                    stroke: #292D32;
+                }
+            }
+        }
+    }
+
+    .custom-select-options-dropdown-wrapper {
+        position: absolute;
+        width: 100%;
+        z-index: 3;
+        top: calc(100% + 0px);
+        border: 1.5px solid #EBEBEB;
+        background: #F9F9F9;
+        border-radius: 18px;
+        box-shadow: 0px 0px 0px 3px #FFFFFF inset, 0px 4px 13.5px 0px #00000040;
+        /* ------------------------------------------------- */
+        /* ------------------------------------------------- */
+        /* ------------------------------------------------- */
+        /* ------------------------------------------------- */
+        /* ---------- Hide the DropDown by Default --------- */
+        display: none;
+
+        .custom-select-options-dropdown-container {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+
+            .custom-select-options-search {
+                .label-input {
+                    background: #f6f6f6;
+                }
+            }
+
+            .custom-select-options-lists-container {
+                width: 100%;
+                max-height: 200px;
+                overflow: auto;
+                scrollbar-width: thin;
+                padding-right: 2px;
+
+                .custom-select-options-list {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2px;
+
+                    .custom-select-option {
+                        width: 100%;
+                        padding: 6px 10px;
+                        border-radius: 6px;
+                        cursor: pointer;
+
+                        &[data__option__active],
+                        &:hover {
+                            background-color: #eeeeee;
+
+                            span {
+                                color: #000000;
+                            }
+                        }
+
+                        span {
+                            width: 100%;
+                            display: block;
+                            font-size: 14px;
+                            color: #2b2b2b;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

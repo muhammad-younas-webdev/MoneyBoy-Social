@@ -1,0 +1,10 @@
+@media (max-width: 1620px) {
+    .btn-primary {
+        border-radius: 14px;
+        padding-block: 20px;
+
+        span {
+            font-size: 19px;
+        }
+    }
+}

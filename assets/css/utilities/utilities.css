@@ -1,0 +1,153 @@
+/* --------------------------------------------------------------------------
+   8) Utility Classes and Global Patterns
+   - Defines generic, highly reusable classes for structure and micro-interactions.
+   - These are lightweight and intended to be applied directly to HTML elements.
+   -------------------------------------------------------------------------- */
+/* Layout Container: Enforces maximum content width and central alignment */
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Base Card Component (Aggregate) Styling
+   - Establishes default elevation, background, and hover effects for card modules.
+*/
+.card {
+    box-shadow: var(--card-shadow);
+    border-radius: 32px;
+    transition: var(--transition-normal);
+    background-color: white;
+
+    &:hover {
+        /* Applies a subtle shadow elevation on hover for visual feedback */
+        box-shadow: 0px 6px 4px -4px #08080816, 0px 2px 13.5px 1px #08080825;
+    }
+}
+
+/* Card Heading Utility: Standardized typography for card titles */
+.card-heading {
+    font-family: var(--font-family-heading);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    text-transform: capitalize;
+    color: #020202;
+}
+
+/* Interactive Icon Button Primitive: Standardized size and interaction area */
+.icon-btn {
+    width: 24px;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-fast);
+    cursor: pointer;
+
+    svg {
+        path {
+            stroke: #505050;
+            /* Default icon stroke color */
+        }
+    }
+
+    &:hover {
+        svg {
+            path {
+                stroke: var(--color-text-active);
+                /* High contrast stroke on hover */
+            }
+        }
+    }
+}
+
+/* Global SVG Path Styling: Applies base transition and default color */
+.svg-icon {
+    path {
+        transition: var(--transition-fast);
+        stroke: #505050;
+    }
+}
+
+/* Icon Hover State: Applies active text color on hover for icon links and standalone SVGs */
+.icon-link:hover .svg-icon path,
+.svg-icon:hover path {
+    stroke: var(--color-text-active);
+}
+
+/* Icon Link Wrapper: Defines a larger, centralized hit area for icons */
+.icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    aspect-ratio: 1/1;
+}
+
+/* Profile Avatar Helper
+   - Defines the container size and ensures the contained image fits correctly.
+   - Border radius chosen for the specific visual style.
+*/
+.hover-scale-icon {
+    svg {}
+
+    /* Retained empty selector from original code */
+    svg {
+        transition: var(--transition-fast);
+        display: block;
+    }
+
+    &:active {
+        svg {
+            transform: scale(1) !important;
+            /* Forces reset to base scale on active/click */
+        }
+    }
+
+    &:hover {
+        svg {
+            transform: scale(1.15);
+            /* Scales up the icon on hover */
+        }
+    }
+}
+
+/* Micro-Interaction Utility: Subtle press-down scale effect (95%) */
+.active-down-effect {
+    transition: var(--transition-fast);
+
+    &:active {
+        transform: scale(.95);
+    }
+}
+
+/* Micro-Interaction Utility: Prominent press-down scale effect (90%) */
+.active-down-effect-2x {
+    transition: var(--transition-fast);
+
+    &:active {
+        transform: scale(.90);
+    }
+}
+
+/* Profile Avatar Component: Standardized dimensions and crop for user images */
+.profile-avatar {
+    width: 53px;
+    aspect-ratio: 1/1;
+
+    img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        /* Ensures image fills the container without distortion */
+        border-radius: 21px;
+    }
+}
+
+.featured-profiles-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 20px;
+}

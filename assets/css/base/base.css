@@ -1,0 +1,240 @@
+/* ==========================================================================
+   Design System Foundation Stylesheet (Base)
+   
+   Purpose:
+     - Establishes the project's **Global Style Contract** (Design Tokens).
+     - Applies necessary resets and sensible defaults for fundamental HTML elements.
+   Scope Note:
+     - This file must remain lean and focused exclusively on **global, non-component styles**.
+     - Specific component styling, complex blocks, and layouts must be imported or
+       defined in dedicated files (e.g., `components.css`, `layouts.css`).
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* --------------------------------------------------------------------------
+   1) Design Tokens (:root Variables)
+   - Central source of truth for all brand and theme values.
+   - Modification here ensures consistent global updates across the entire UI.
+   -------------------------------------------------------------------------- */
+:root {
+   /* Typography Families: Defining semantic roles */
+   --font-family-heading: "Cal Sans", sans-serif;
+   --font-family-base: "Poppins", Arial, sans-serif;
+   --font-family-secondary: "Plus Jakarta Sans", Arial, sans-serif;
+   /* (Previously commented-out legacy colors kept for reference) */
+   /* Legacy Color Reference Block */
+   /* --color-primary: #1a73e8;
+   --color-secondary: #ff9800;
+   --color-background: #ffffff;
+   --color-text: #222222;
+   --color-text-light: #555555;
+   --color-border: #e0e0e0; */
+   /* --- Current Color Palette --- */
+   --color-primary: #f5ad24;
+   --color-secondary: #FECE26;
+   --light-bg: #1c222911;
+   /* Utility background for subtle fills */
+   --color-text: #020202;
+   --color-text-active: #000000;
+   /* Used for hover/focus contrast */
+   /* Icon State Colors */
+   --like-color: #f6305d;
+   /* Specific status color (e.g., error, like) */
+   /* Base Units */
+   --base-fs: 16px;
+   /* Defines 1rem = 16px for predictable scaling */
+   /* Corner Radius Scale: Semantic tokens for visual consistency */
+   --radius-sm: 4px;
+   --radius-md: 8px;
+   --radius-lg: 16px;
+   /* Spacing Scale: Maintains vertical and horizontal rhythm */
+   --spacing-xxs: 0.25rem;
+   --spacing-xs: 0.5rem;
+   --spacing-sm: 0.75rem;
+   --spacing-md: 1rem;
+   --spacing-lg: 2rem;
+   /* Transition Presets: Standardizes animation speed and curve across the UI */
+   --transition-fast: all 0.2s ease;
+   --transition-normal: all 0.3s ease;
+   /* Visual Assets */
+   --btn-gradient: linear-gradient(93.25deg, #FECE26 -49.57%, #E5741F 98.1%);
+   /* Layout Metrics: Fixed dimensions for structural Scaffolding components */
+   --sidebar-width: 345px;
+   --right-aside-width: 400px;
+   --header-height: 76px;
+   /* Elevation/Box Shadows */
+   --card-shadow: 0px 6px 4px -4px #08080803, 0px 2px 13.5px 1px #0808080A;
+}
+
+/* --------------------------------------------------------------------------
+   2) CSS Reset (The Universal Selector)
+   - Applies the modern `border-box` model for predictable sizing calculations.
+   - Removes default browser margins and paddings globally.
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   3) Global HTML/Body Configuration & Base Components
+   - Sets the global canvas: base font, background, and default rendering quality.
+   -------------------------------------------------------------------------- */
+html {
+   font-size: 16px;
+   /* Defines base font unit for rem calculations */
+   scroll-behavior: smooth;
+   /* Enhances user experience for fragment navigation */
+}
+
+body {
+   font-family: var(--font-family-base);
+   background-color: #F4F4F4;
+   background-color: #ffffff;
+   color: var(--color-text);
+   line-height: 1.6;
+   /* Ensures optimal font rendering fidelity across devices */
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base Keyframe Definitions */
+@keyframes heartLikedPopUpAnimation {
+
+   /* Animation for prominent visual feedback (e.g., successful action) */
+   0% {
+      transform: scale(1);
+   }
+
+   40% {
+      transform: scale(1.4);
+   }
+
+   60% {
+      transform: scale(0.9);
+   }
+
+   80% {
+      transform: scale(1.2);
+   }
+
+   100% {
+      transform: scale(1);
+   }
+}
+
+/* Global Components */
+/* Data Attribute Toggle (Tabs/Accordion) Functionality */
+/* Defines the default hidden state and active block state for multi-tab content */
+[data-multiple-tabs-section] {
+   [data-multi-tabs-switch-btn] {
+      &[data__active] {}
+
+      /* Style for the active switch button */
+   }
+
+   [data-multi-tabs-content-tab] {
+      display: none;
+
+      /* Default hidden state */
+      &[data__active] {
+         display: block;
+         /* Content visible state */
+      }
+   }
+}
+
+/* --------------------------------------------------------------------------
+   4) Global Typography Defaults (H-Tags and Links)
+   - Applies semantic font families to maintain information hierarchy.
+   -------------------------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: var(--font-family-heading);
+   /* Distinct font for visual hierarchy */
+   font-weight: 600;
+   color: var(--color-text);
+   line-height: 1.3;
+}
+
+p {
+   /* Minimal base styling. Text color variations should be applied on component-level. */
+}
+
+/* Links (Anchor Tags) */
+a {
+   text-decoration: none;
+   transition: var(--transition-fast);
+   /* Uses global token for interaction consistency */
+}
+
+/* --------------------------------------------------------------------------
+   5) Media and Layout Helpers
+   - Ensures all media elements are naturally responsive and block-level.
+   -------------------------------------------------------------------------- */
+img,
+video {
+   max-width: 100%;
+   height: auto;
+   display: block;
+   /* Removes baseline gap/whitespace beneath inline media */
+}
+
+/* --------------------------------------------------------------------------
+   6) List Resets
+   - Clears default markers and padding on lists.
+   -------------------------------------------------------------------------- */
+ul,
+ol {
+   list-style: none;
+}
+
+/* --------------------------------------------------------------------------
+   7) Primitive Form Element Normalization
+   - Removes default browser decorations to prepare inputs/buttons for component styling.
+   - Applies a global base style for form primitives (input, textarea).
+   -------------------------------------------------------------------------- */
+button,
+input,
+textarea,
+select {
+   font: inherit;
+   border: none;
+   /* outline: none; (Kept commented as per original code for dev preference) */
+   background: none;
+}
+
+/* Base style for text inputs and textareas */
+input,
+textarea {
+   min-height: 48px;
+   /* Adheres to standard touch target size */
+   padding: 0 12px;
+   border-radius: 13px;
+   background: #F9F9F9;
+   color: #716F6F;
+   border: 1.5px solid #EBEBEB;
+   width: 100%;
+   /* Default block behavior for standard form flow */
+}
+
+/* Typography tokens applied to form text for consistent appearance */
+label,
+input,
+input::placeholder {
+   font-family: var(--font-family-base);
+   font-weight: 500;
+   font-size: 15px;
+   letter-spacing: 0;
+   color: #716F6F;
+   transition: var(--transition-fast);
+}

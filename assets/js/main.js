@@ -1,3 +1,6 @@
+// CDNs
+import "./cdns.js";
+
 // Main Layout Management Functionalities
 import "./components/layouts.js";
 
@@ -12,3 +15,12 @@ import "./components/posts-tabs-sticky-effect.js";
 
 // Multiple Tabs Functionalities
 import "./components/multi-tabs.js";
+
+// Custom Select Element Functionalities
+import "./components/custom-select.js";
+
+// Advanced Filters Layout Toggle Functionality
+import "./components/advanced-filters.js";
+
+// Floating Menu Toggle Functionality
+import "./components/menu-toggle.js";
