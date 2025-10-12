@@ -1540,8 +1540,7 @@
                   }
 
                   .custom-select-options-search {
-                     .label-input {
-                        background-color: rgb(255, 0, 0);
+                     .label-input { 
                      }
                   }
                }
