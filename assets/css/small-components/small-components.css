@@ -380,6 +380,9 @@
                     }
 
                     svg {
+                        will-change: transform;
+                        transition: var(--transition-fast);
+
                         path {
                             stroke: white;
                         }
@@ -451,6 +454,9 @@
                     }
 
                     svg {
+                        will-change: transform;
+                        transition: var(--transition-fast);
+
                         path {
                             stroke: white;
                         }

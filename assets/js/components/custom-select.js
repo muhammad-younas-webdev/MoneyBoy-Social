@@ -234,7 +234,7 @@ function setupCustomSelect(selectElement) {
     }
   });
 
-  console.log("Custom Select Initialized:", selectElement);
+  // console.log("Custom Select Initialized:", selectElement);
 }
 
 // -------------------------------------------------------------------

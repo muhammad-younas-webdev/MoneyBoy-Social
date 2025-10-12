@@ -116,6 +116,7 @@
 /* Micro-Interaction Utility: Subtle press-down scale effect (95%) */
 .active-down-effect {
     transition: var(--transition-fast);
+    will-change: transform;
 
     &:active {
         transform: scale(.95);
