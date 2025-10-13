@@ -1,0 +1,329 @@
+@media (max-width: 1620px) {
+
+    /* Profile Card */
+    .profile-card {
+        padding: 14px;
+
+        &.featured-profile-card {
+            padding: 12px;
+            border-radius: 20px;
+
+            .profile-card__main {
+                .profile-card__avatar-settings {
+                    .profile-card__avatar {
+                        width: 54px;
+                        border-radius: 16px;
+
+                        &::before {}
+
+                        img {}
+                    }
+                }
+
+                .profile-card__info {
+                    .profile-card__name-badge {
+                        .profile-card__name {
+                            font-size: 18px;
+                        }
+
+                        .profile-card__badge {
+                            img {}
+                        }
+                    }
+
+                    .profile-card__username {
+                        font-size: 15px;
+
+                        &:hover {}
+                    }
+                }
+            }
+
+            &:hover {
+                .profile-card__main {
+                    .profile-card__icon {
+                        .profile-card__blur-icon {}
+                    }
+                }
+            }
+        }
+
+        .profile-card__bg-img {
+            &::before {}
+
+            &::after {}
+
+            img {}
+
+            &~* {}
+
+            img {}
+        }
+
+        .profile-card__main {
+            .profile-card__avatar-settings {
+                .profile-card__avatar {
+                    width: 70px;
+
+                    img {}
+                }
+
+                .profile-card__settings {
+                    svg {}
+                }
+            }
+
+            .profile-card__info {
+                .profile-card__name-badge {
+                    .profile-card__name {
+                        font-size: 20px;
+                    }
+
+                    .profile-card__badge {
+                        img {
+                            width: 24px;
+                        }
+                    }
+                }
+
+                .profile-card__username {
+                    &:hover {}
+                }
+            }
+
+            .profile-card__icon {
+                .profile-card__blur-icon {
+                    &:active {}
+
+                    &:hover {}
+
+                    &.like-button {
+                        &.liked {
+                            svg {
+                                path {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .profile-card__stats {
+            padding: 14px 8px 10px;
+            gap: 16px;
+            border-radius: 16px;
+
+            .profile-card__stats-item {
+                gap: 6px;
+
+                &:hover {
+
+                    .profile-card__stats-num,
+                    .profile-card__stats-label span {}
+
+                    .profile-card__stats-label {
+                        svg {
+                            path {}
+                        }
+                    }
+                }
+
+                .profile-card__stats-num {
+                    font-size: 18px;
+                }
+
+                .profile-card__stats-label {
+                    svg {
+                        path {}
+                    }
+
+                    span {}
+                }
+            }
+        }
+
+        .profile-card__desc {
+            p {}
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .user-profile-card-wrapper {
+        .user-profile-card-container {
+            border-radius: 20px;
+
+            &:hover {}
+
+            .user-profile-card__img {
+                img {}
+            }
+
+            .user-profile-content-overlay-container {
+                padding: 6px;
+
+                .user-profile-card__action-btns {
+                    .user-profile-card__like-btn {
+                        width: 30px;
+
+                        &:hover {
+                            svg {}
+                        }
+
+                        svg {
+                            width: 15px;
+
+                            path {}
+                        }
+                    }
+                }
+
+                .user-profile-card__info-container {
+                    padding: 8px;
+                    position: relative;
+
+                    .user-profile-card__info {
+                        .user-profile-card__name-badge {
+                            .user-profile-card__name {
+                                font-size: 12px;
+                                line-height: 100%;
+                                min-width: max-content;
+                            }
+
+                            .user-profile-card__badge {
+                                width: 17px;
+
+                                img {}
+                            }
+                        }
+
+                        .user-profile-card__username {
+                            font-size: 10px;
+                        }
+                    }
+
+                    .user-profile-card__wishlist-btn {
+                        width: 30px;
+                        min-width: 30px;
+                        position: absolute;
+                        right: 8px;
+
+                        &:hover {
+                            svg {}
+                        }
+
+                        svg {
+                            width: 15px;
+
+                            path {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* Profile Card */
+    .profile-card {
+        &.featured-profile-card {
+            .profile-card__main {
+                .profile-card__avatar-settings {
+                    .profile-card__avatar {
+                        &::before {}
+
+                        img {}
+                    }
+                }
+
+                .profile-card__info {
+                    .profile-card__name-badge {
+                        .profile-card__name {}
+
+                        .profile-card__badge {
+                            img {}
+                        }
+                    }
+
+                    .profile-card__username {
+                        &:hover {}
+                    }
+                }
+            }
+
+            &:hover {
+                .profile-card__main {
+                    .profile-card__icon {
+                        .profile-card__blur-icon {}
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    .creator-content-card-container {
+        .creator-content-card {
+            border-radius: 20px;
+
+            &:hover {
+                .creator-content-card__media {
+                    .creator-card__img {
+                        img {}
+                    }
+
+                    .content-locked-label {}
+                }
+            }
+
+            .creator-content-card__media {
+                .creator-card__img {
+                    img {}
+                }
+
+                .content-locked-label {
+                    padding: 4px 8px;
+                    gap: 5px;
+                    border-radius: 12px;
+
+                    svg {
+                        width: 20px;
+
+                        path {}
+                    }
+
+                    span {
+                        font-size: 10px;
+                    }
+                }
+            }
+
+            .creator-content-card__description {
+                p {
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+            }
+
+            .creator-content-card__stats {
+                gap: 5px;
+
+                .creator-content-stat-box {
+                    gap: 4px;
+                    border-radius: 12px;
+                    padding: 3px 6px;
+
+                    svg {
+                        width: 20px;
+
+                        path {}
+                    }
+
+                    span {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

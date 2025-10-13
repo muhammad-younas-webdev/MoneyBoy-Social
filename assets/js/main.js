@@ -24,3 +24,6 @@ import "./components/advanced-filters.js";
 
 // Floating Menu Toggle Functionality
 import "./components/menu-toggle.js";
+
+// Grid Cols Toggle Functionality
+import "./components/grid-cols-layout-toggle.js";

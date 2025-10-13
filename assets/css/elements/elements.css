@@ -317,6 +317,8 @@
         width: 100%;
         cursor: pointer;
         border-radius: inherit;
+        gap: 6px;
+        gap: 8px;
 
         .custom-select-icon-txt {
             display: flex;

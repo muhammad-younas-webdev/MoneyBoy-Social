@@ -111,153 +111,6 @@
         }
     }
 
-    /* Profile Card */
-    .profile-card {
-        padding: 14px;
-
-        &.featured-profile-card {
-            padding: 12px;
-            border-radius: 16px;
-
-            .profile-card__main {
-                .profile-card__avatar-settings {
-                    .profile-card__avatar {
-                        width: 54px;
-                        border-radius: 16px;
-
-                        &::before {}
-
-                        img {}
-                    }
-                }
-
-                .profile-card__info {
-                    .profile-card__name-badge {
-                        .profile-card__name {
-                            font-size: 18px;
-                        }
-
-                        .profile-card__badge {
-                            img {}
-                        }
-                    }
-
-                    .profile-card__username {
-                        font-size: 15px;
-
-                        &:hover {}
-                    }
-                }
-            }
-
-            &:hover {
-                .profile-card__main {
-                    .profile-card__icon {
-                        .profile-card__blur-icon {}
-                    }
-                }
-            }
-        }
-
-        .profile-card__bg-img {
-            &::before {}
-
-            &::after {}
-
-            img {}
-
-            &~* {}
-
-            img {}
-        }
-
-        .profile-card__main {
-            .profile-card__avatar-settings {
-                .profile-card__avatar {
-                    width: 70px;
-
-                    img {}
-                }
-
-                .profile-card__settings {
-                    svg {}
-                }
-            }
-
-            .profile-card__info {
-                .profile-card__name-badge {
-                    .profile-card__name {
-                        font-size: 20px;
-                    }
-
-                    .profile-card__badge {
-                        img {
-                            width: 24px;
-                        }
-                    }
-                }
-
-                .profile-card__username {
-                    &:hover {}
-                }
-            }
-
-            .profile-card__icon {
-                .profile-card__blur-icon {
-                    &:active {}
-
-                    &:hover {}
-
-                    &.like-button {
-                        &.liked {
-                            svg {
-                                path {}
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        .profile-card__stats {
-            padding: 14px 8px 10px;
-            gap: 16px;
-            border-radius: 16px;
-
-            .profile-card__stats-item {
-                gap: 6px;
-
-                &:hover {
-
-                    .profile-card__stats-num,
-                    .profile-card__stats-label span {}
-
-                    .profile-card__stats-label {
-                        svg {
-                            path {}
-                        }
-                    }
-                }
-
-                .profile-card__stats-num {
-                    font-size: 18px;
-                }
-
-                .profile-card__stats-label {
-                    svg {
-                        path {}
-                    }
-
-                    span {}
-                }
-            }
-        }
-
-        .profile-card__desc {
-            p {}
-        }
-    }
-
     /* Posts  */
     .moneyboy-posts-wrapper {
         .moneyboy-post__container {
@@ -798,11 +651,11 @@
         }
 
         .profile-card__main {
+            flex-direction: column;
+            align-items: center;
+
             .profile-card__avatar-settings {
                 .profile-card__avatar {
-
-                    /* width: 100%; */
-                    /* border-radius: 14px; */
                     img {}
                 }
 
@@ -843,8 +696,6 @@
         }
 
         .profile-card__stats {
-
-            /* display: none; */
             .profile-card__stats-item {
                 &:hover {
 
@@ -874,36 +725,216 @@
             p {}
         }
     }
-}
 
-@media (max-width: 768px) {
     .creator-profile-card-container {
-        & .creator-profile-info-container {
-            & .profile-card {
+        &.user-profile-card {
+            .creator-profile-info-container {
+                .profile-card {
+                    .profile-info-buttons {
+                        .creator-profile-buttons {
+                            ul {
+                                li {
+                                    a {
+                                        svg {}
+
+                                        &:hover,
+                                        &.active {
+                                            svg {
+                                                path {}
+                                            }
+                                        }
+
+                                        &:active {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .creator-profile-banner {
+            &::before {}
+
+            img {}
+        }
+
+        .creator-profile-info-container {
+            .profile-card {
                 .profile-info-buttons {
                     flex-direction: column;
                     align-items: center;
-                    gap: 12px;
+                    gap: 20px;
 
                     .profile-card__main {
-                        flex-direction: column;
-                        margin: 0 auto;
-                        text-align: center;
                         align-items: center;
+
+                        .profile-card__avatar-settings {
+                            .profile-card__avatar {
+                                &::before {}
+
+                                img {}
+                            }
+                        }
+
+                        .profile-card__info {
+                            .profile-card__name-badge {
+                                .profile-card__name {}
+
+                                .profile-card__badge {
+                                    img {}
+                                }
+                            }
+
+                            .profile-card__username {
+                                &:hover {}
+                            }
+                        }
+                    }
+
+                    .creator-profile-buttons {
+                        padding-bottom: 0;
+
+                        ul {
+                            li {
+                                a {
+                                    svg {
+                                        path {}
+                                    }
+
+                                    &:hover,
+                                    &.active {
+                                        svg {
+                                            path {}
+                                        }
+                                    }
+
+                                    &:active {}
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .profile-card__geo-details {
+                    margin-top: 10px;
+                    justify-content: center;
+
+                    .profile-card__geo-detail {
+                        svg {
+                            path {}
+                        }
+
+                        span {}
+
+                        &:hover {
+                            svg {
+                                path {}
+                            }
+
+                            span {}
+                        }
+                    }
+                }
+
+                .creator-profile-stats-link {
+                    flex-direction: column;
+                    gap: 16px;
+
+                    .profile-card__stats {
+                        border: 1px solid #80808030;
+                        padding: 17px 0px;
+                        background: #afafaf12;
+
+                        .profile-card__stats-item {
+                            .profile-card__stats-num {}
+
+                            .profile-card__stats-label {
+                                svg {}
+
+                                span {}
+                            }
+                        }
+                    }
+
+                    .creator-profile-link {
+                        a {
+                            &:hover {
+                                span {}
+                            }
+
+                            svg {
+                                path {}
+                            }
+
+                            span {}
+                        }
+                    }
+                }
+            }
+
+            .creator-profile-description {
+                p {
+                    text-align: center;
+                }
+            }
+
+            .creator-subscriptions-container {
+                .subscriptions-container {
+                    ul {
+                        li {
+                            &:hover {}
+
+                            .subscription-info {
+                                .subscription-label {}
+
+                                .subscription-price {
+                                    h3 {}
+
+                                    span {}
+
+                                    .save-txt {}
+                                }
+                            }
+
+                            .subscripton-button {
+                                button {}
+                            }
+                        }
                     }
                 }
             }
         }
     }
 
-    .creator-content-filter-grid-container {
-        .creator-content-cards-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
+    /* Multi Tabs Container */
+    .multi-tab-section {
+        .multi-tabs-layout-container {
+            padding: 15px;
+
+            .multi-tabs-action-buttons {
+                &>* {}
+
+                .multi-tab-switch-btn {
+                    &[data__active] {}
+
+                    svg {
+                        path {}
+                    }
+
+                    span {
+                        display: none;
+                    }
+
+                    &:hover {}
+                }
+            }
         }
     }
 }
+
+@media (max-width: 768px) {}
 
 @media (max-width: 620px) {
     .header-main {
@@ -1041,7 +1072,9 @@
         .profile-card__bg-img {
             &::before {}
 
-            &::after {}
+            &::after {
+                top: 42px;
+            }
 
             img {}
 
@@ -1432,6 +1465,461 @@
                                         }
                                     }
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 560px) {
+
+    /* Filter Section */
+    .content-filters-main-wrapper {
+        padding: 10px;
+
+        .content-filters-head-wrapper {
+            .content-basic-filters-wrapper {
+                .content-basic-filters-container {
+                    grid-template-columns: 1fr 1fr 1fr;
+                    gap: 5px;
+
+                    .content-filter-card-wrapper {
+                        height: 40px;
+
+                        & .content-filter-card {
+                            height: 40px;
+
+                            &>.label-input {
+                                border-radius: 12px;
+                                height: 40px;
+
+                                .input-placeholder-icon {
+                                    svg {
+                                        width: 15px;
+                                        height: 15px;
+                                    }
+                                }
+
+                                input {
+                                    height: 40px;
+                                    max-height: 40px;
+                                    min-height: 40px;
+                                    line-height: 10px;
+                                    font-size: 10px;
+                                    overflow: hidden;
+                                    font-size: 10px;
+                                    padding: 0 5px 0 32px;
+
+                                    &::placeholder {
+                                        font-size: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .show-advance-filter-btn {
+                        grid-column: 1 / -1;
+                        margin-top: 3px;
+
+                        .premium-btn {
+                            padding: 12px 10px;
+                            border-radius: 12px;
+
+                            span {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .content-advanced-filters-wrapper {
+            padding: 10px;
+
+            .content-advanced-filters-layout {
+                row-gap: 10px;
+                column-gap: 5px;
+            }
+        }
+    }
+
+    .moneyboy-feed-sidebar-container {
+        .featured-profiles-card-container {
+            padding: 14px;
+            border-radius: 20px;
+
+            .featured-profiles-header {}
+
+            .featured-card-opts {}
+        }
+
+        .moneyboy-network-grow-card-wrapper {}
+    }
+
+    .moneyboy-feed-sidebar-container {
+        & .featured-profiles-card-container {
+            .featured-card-opts {
+                gap: 10px;
+            }
+        }
+    }
+
+    .multi-tab-section {
+        .multi-tabs-layout-container {
+            padding: 10px;
+
+            .multi-tabs-action-buttons {
+                &>* {}
+
+                .multi-tab-switch-btn {
+                    &[data__active] {}
+
+                    svg {
+                        path {}
+                    }
+
+                    span {
+                        display: none;
+                    }
+
+                    &:hover {}
+                }
+            }
+        }
+    }
+
+    .creator-profile-card-container {
+        &.user-profile-card {
+            .creator-profile-info-container {
+                .profile-card {
+                    .profile-info-buttons {
+                        .creator-profile-buttons {
+                            ul {
+                                li {
+                                    a {
+                                        svg {}
+
+                                        &:hover,
+                                        &.active {
+                                            svg {
+                                                path {}
+                                            }
+                                        }
+
+                                        &:active {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .creator-profile-banner {
+            &::before {}
+
+            img {}
+        }
+
+        .creator-profile-info-container {
+            padding: 16px;
+            padding: 16px 12px;
+
+            .profile-card {
+                .profile-info-buttons {
+                    .profile-card__main {
+                        .profile-card__avatar-settings {
+                            .profile-card__avatar {
+                                &::before {}
+
+                                img {}
+                            }
+                        }
+
+                        .profile-card__info {
+                            .profile-card__name-badge {
+                                .profile-card__name {}
+
+                                .profile-card__badge {
+                                    img {}
+                                }
+                            }
+
+                            .profile-card__username {
+                                &:hover {}
+                            }
+                        }
+                    }
+
+                    .creator-profile-buttons {
+                        ul {
+                            li {
+                                a {
+                                    svg {
+                                        path {}
+                                    }
+
+                                    &:hover,
+                                    &.active {
+                                        svg {
+                                            path {}
+                                        }
+                                    }
+
+                                    &:active {}
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .profile-card__geo-details {
+                    .profile-card__geo-detail {
+                        svg {
+                            path {}
+                        }
+
+                        span {}
+
+                        &:hover {
+                            svg {
+                                path {}
+                            }
+
+                            span {}
+                        }
+                    }
+                }
+
+                .creator-profile-stats-link {
+                    .profile-card__stats {
+                        gap: 10px;
+                        justify-content: space-evenly;
+                        width: 100%;
+
+                        .profile-card__stats-item {
+                            align-items: center;
+
+                            .profile-card__stats-num {}
+
+                            .profile-card__stats-label {
+                                svg {}
+
+                                span {}
+                            }
+                        }
+                    }
+
+                    .creator-profile-link {
+                        a {
+                            &:hover {
+                                span {}
+                            }
+
+                            svg {
+                                path {}
+                            }
+
+                            span {}
+                        }
+                    }
+                }
+            }
+
+            .creator-profile-description {
+                p {}
+            }
+
+            .creator-subscriptions-container {
+                .subscriptions-container {
+                    ul {
+                        li {
+                            padding: 10px;
+
+                            &:hover {}
+
+                            .subscription-info {
+                                gap: 6px;
+
+                                .subscription-label {
+                                    font-size: 14px;
+                                    min-width: max-content;
+                                }
+
+                                .subscription-price {
+                                    display: grid;
+                                    grid-template-columns: auto auto;
+                                    gap: 0;
+                                    position: relative;
+                                    top: 1px;
+
+                                    h3 {
+                                        font-size: 15px;
+                                        line-height: 18px;
+                                    }
+
+                                    span {
+                                        font-size: 10px;
+                                        line-height: 16px;
+                                        margin: 0;
+                                    }
+
+                                    .save-txt {
+                                        font-size: 8px;
+                                        margin: 0;
+                                        position: absolute;
+                                        left: 0;
+                                        bottom: -16px;
+                                    }
+                                }
+                            }
+
+                            .subscripton-button {
+                                button {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .creator-profile-card-container {
+        .creator-profile-info-container {
+            .profile-card {
+                .profile-info-buttons {
+                    .profile-card__main {
+                        .profile-card__avatar-settings {
+                            .profile-card__avatar {
+                                &::before {}
+
+                                img {}
+                            }
+                        }
+
+                        .profile-card__info {
+                            .profile-card__name-badge {
+                                .profile-card__name {}
+
+                                .profile-card__badge {
+                                    img {}
+                                }
+                            }
+
+                            .profile-card__username {
+                                &:hover {}
+                            }
+                        }
+                    }
+
+                    .creator-profile-buttons {
+                        ul {
+                            li {
+                                a {
+                                    svg {
+                                        path {}
+                                    }
+
+                                    &:hover,
+                                    &.active {
+                                        svg {
+                                            path {}
+                                        }
+                                    }
+
+                                    &:active {}
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .profile-card__geo-details {
+                    .profile-card__geo-detail {
+                        svg {
+                            path {}
+                        }
+
+                        span {}
+
+                        &:hover {
+                            svg {
+                                path {}
+                            }
+
+                            span {}
+                        }
+                    }
+                }
+
+                .creator-profile-stats-link {
+                    .profile-card__stats {
+                        .profile-card__stats-item {
+                            .profile-card__stats-num {}
+
+                            .profile-card__stats-label {
+                                svg {}
+
+                                span {}
+                            }
+                        }
+                    }
+
+                    .creator-profile-link {
+                        a {
+                            &:hover {
+                                span {}
+                            }
+
+                            svg {
+                                path {}
+                            }
+
+                            span {}
+                        }
+                    }
+                }
+            }
+
+            .creator-profile-description {
+                p {}
+            }
+
+            .creator-subscriptions-container {
+                .subscriptions-container {
+                    ul {
+                        li {
+                            &:hover {}
+
+                            .subscription-info {
+                                flex-direction: column;
+                                align-items: start;
+
+                                .subscription-label {}
+
+                                .subscription-price {
+                                    h3 {}
+
+                                    span {}
+
+                                    .save-txt {}
+
+                                    &:has(.save-txt) {
+                                        margin-bottom: 10px;
+                                    }
+                                }
+                            }
+
+                            .subscripton-button {
+                                button {}
                             }
                         }
                     }

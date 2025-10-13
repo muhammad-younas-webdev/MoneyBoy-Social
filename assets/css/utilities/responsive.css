@@ -28,4 +28,12 @@
     .container {
         max-width: calc(100% - 25px);
     }
+
+    .featured-profiles-wrapper {
+        padding-top: 16px;
+    }
+
+    .icon-btn {
+        width: 22px;
+    }
 }

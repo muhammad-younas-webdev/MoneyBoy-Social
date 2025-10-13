@@ -235,6 +235,16 @@
     }
 }
 
+@media (max-width: 992px) {
+    .multi-dem-cards-wrapper-layout {
+        grid-template-columns: 1fr 1fr;
+
+        &[data-layout-toggle-rows] {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
 @media (max-width: 768px) {
     :root {
         --sidebar-width: 100%;
@@ -352,4 +362,8 @@
     }
 }
 
-@media (max-width: 620px) {}
+@media (max-width: 560px) {
+    .multi-dem-cards-wrapper-layout {
+        gap: 12px;
+    }
+}

@@ -138,3 +138,13 @@
       }
    }
 }
+
+.multi-dem-cards-wrapper-layout {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   gap: 16px;
+
+   &[data-layout-toggle-rows] {
+      grid-template-columns: 1fr 1fr;
+   }
+}

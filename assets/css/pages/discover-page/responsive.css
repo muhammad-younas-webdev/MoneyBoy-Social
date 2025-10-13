@@ -33,6 +33,7 @@
 
             .discovery-page-content-wrapper {
                 .discovery-page-cards-layouts {
+                    gap: 12px;
                     grid-template-columns: 1fr 1fr;
                 }
             }
