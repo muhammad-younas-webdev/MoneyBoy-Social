@@ -326,6 +326,8 @@
 
                         svg {
                            width: 24px;
+                           transition: var(--transition-fast);
+                           will-change: transform;
 
                            &:not(.self-colored) {
                               path {
@@ -351,6 +353,10 @@
                         }
 
                         &:hover {
+                           svg {
+                              transform: scale(1.05) translateY(-2px);
+                           }
+
                            span {
                               color: #000000;
                            }
