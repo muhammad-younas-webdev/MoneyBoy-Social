@@ -152,3 +152,38 @@
     gap: 10px;
     padding-top: 20px;
 }
+
+.like-button {
+    width: inherit;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(14px);
+    border-radius: 50%;
+    overflow: hidden;
+    transition: var(--transition-fast);
+    cursor: pointer;
+    backface-visibility: hidden;
+    will-change: transform;
+    user-select: none;
+
+    &:active {
+        transform: scale(.85);
+    }
+
+    &:hover {
+        filter: brightness(125%);
+    }
+
+    &.liked {
+        svg {
+            animation: heartLikedPopUpAnimation 0.45s ease-out;
+
+            path {
+                fill: var(--like-color);
+                stroke: var(--like-color) !important;
+            }
+        }
+    }
+}

@@ -204,39 +204,6 @@
 
             .profile-card__blur-icon {
                 width: 36px;
-                aspect-ratio: 1/1;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                backdrop-filter: blur(14px);
-                border-radius: 50%;
-                overflow: hidden;
-                transition: var(--transition-fast);
-                cursor: pointer;
-                backface-visibility: hidden;
-                will-change: transform;
-                user-select: none;
-
-                &:active {
-                    transform: scale(.85);
-                }
-
-                &:hover {
-                    filter: brightness(125%);
-                }
-
-                &.like-button {
-                    &.liked {
-                        svg {
-                            animation: heartLikedPopUpAnimation 0.45s ease-out;
-
-                            path {
-                                fill: var(--like-color);
-                                stroke: var(--like-color);
-                            }
-                        }
-                    }
-                }
             }
         }
     }
@@ -366,24 +333,18 @@
                 gap: 6px;
 
                 .user-profile-card__like-btn {
-                    background-color: #FFFFFF30;
-                    display: grid;
-                    place-items: center;
                     width: 36px;
-                    aspect-ratio: 1/1;
-                    border-radius: 100%;
-                    cursor: pointer;
 
-                    &:hover {
-                        svg {
-                            scale: 1.1;
+                    .like-button {
+                        background-color: #FFFFFF30;
+                        backdrop-filter: blur(0px);
+
+                        &:hover {
+                            filter: brightness(110%);
                         }
                     }
 
                     svg {
-                        will-change: transform;
-                        transition: var(--transition-fast);
-
                         path {
                             stroke: white;
                         }

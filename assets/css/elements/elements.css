@@ -151,7 +151,26 @@
 
     &.p-sm {
         padding: 12px;
-        /* Small padding variant */
+    }
+
+    &.btn-outline {
+        background: linear-gradient(103.7deg, #FECE26 4.76%, #E5741F 118.16%);
+
+        &:hover {
+            &::before {
+                opacity: 0;
+            }
+        }
+
+        &::before {
+            content: '';
+            inset: 1px;
+            display: block;
+            position: absolute;
+            border-radius: inherit;
+            transition: var(--transition-fast);
+            background-color: #000;
+        }
     }
 
     /* Gradient text rendering */
@@ -169,6 +188,7 @@
         /* Fallback for browsers not supporting text-fill-color */
         line-height: 17px;
         transition: var(--transition-fast);
+        position: relative;
     }
 
     &:hover {
@@ -198,6 +218,16 @@
     /* Store Button Variant */
     &.store-btn {
         gap: 5px;
+        will-change: transform;
+
+        img {
+            width: 36px;
+        }
+
+        span {
+            transition: var(--transition-fast);
+            font-size: 24px;
+        }
 
         &::before {
             content: '';
@@ -225,12 +255,28 @@
             /* Blending the texture */
         }
 
-        img {
-            width: 36px;
+        &:hover {
+
+            &::after,
+            &::before {
+                opacity: 0;
+            }
+
+            span {
+                color: white;
+                background: none;
+                -webkit-background-clip: unset;
+                background-clip: unset;
+                -webkit-text-fill-color: unset;
+            }
+
+            img {
+                filter: brightness(0) invert(1);
+            }
         }
 
-        span {
-            font-size: 24px;
+        &:active {
+            transform: scale(.975);
         }
     }
 
@@ -246,6 +292,7 @@
     align-items: center;
     position: relative;
     cursor: pointer;
+    transition: var(--transition-fast);
     gap: 10px;
 
     &>* {
@@ -260,10 +307,12 @@
         content: '';
         inset: 1px;
         position: absolute;
+        transition: var(--transition-fast);
         border-radius: inherit;
     }
 
     svg {
+        transition: var(--transition-fast);
         will-change: transform;
         /* Optimizes GPU rendering for transform animations */
     }
@@ -271,6 +320,7 @@
     span {
         display: inline-block;
         font-family: var(--font-family-heading);
+        transition: var(--transition-fast);
         font-weight: 500;
         font-size: 20px;
         letter-spacing: 0.25px;

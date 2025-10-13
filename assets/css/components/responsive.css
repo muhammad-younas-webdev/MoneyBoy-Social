@@ -390,9 +390,9 @@
 @media (max-width: 1280px) {
     .header-main {
         .header-container {
-            .header-logo {
-                margin-left: 8px;
-            }
+            padding-inline: 8px;
+
+            .header-logo {}
         }
     }
 
@@ -543,9 +543,9 @@
 @media (max-width: 992px) {
     .header-main {
         .header-container {
-            .header-logo {
-                margin-left: 4px;
-            }
+            padding-inline: 4px;
+
+            .header-logo {}
         }
     }
 
