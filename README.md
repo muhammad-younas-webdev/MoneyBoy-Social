@@ -19,10 +19,10 @@ Recommended: open the project in VS Code and use Live Server or a simple static 
 - With Live Server (VS Code extension): right click `index.html` → "Open with Live Server".
 - With Node (http-server):
   1. npm install -g http-server
-  2. cd c:\Users\dell\Documents\GitHub\Salman\moneyBoy
+  2. cd PROJECT-PATH\moneyBoy
   3. http-server -c-1
 - With Python:
-  1. cd c:\Users\dell\Documents\GitHub\Salman\moneyBoy
+  1. cd PROJECT-PATH\moneyBoy
   2. python -m http.server 3000
   3. Open http://localhost:3000
 

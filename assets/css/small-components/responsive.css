@@ -1,149 +1,182 @@
-@media (max-width: 1620px) {
-
-    /* Profile Card */
-    .profile-card {
-        padding: 14px;
-
-        &.featured-profile-card {
-            padding: 12px;
-            border-radius: 20px;
-
-            .profile-card__main {
-                .profile-card__avatar-settings {
-                    .profile-card__avatar {
-                        width: 54px;
-                        border-radius: 16px;
-
-                        &::before {}
-
-                        img {}
-                    }
-                }
-
-                .profile-card__info {
-                    .profile-card__name-badge {
-                        .profile-card__name {
-                            font-size: 18px;
-                        }
-
-                        .profile-card__badge {
-                            img {}
-                        }
-                    }
-
-                    .profile-card__username {
-                        font-size: 15px;
-
-                        &:hover {}
-                    }
-                }
-            }
-
-            &:hover {
-                .profile-card__main {
-                    .profile-card__icon {
-                        .profile-card__blur-icon {}
-                    }
-                }
-            }
-        }
-
-        .profile-card__bg-img {
-            &::before {}
-
-            &::after {}
-
-            img {}
-
-            &~* {}
-
-            img {}
-        }
-
-        .profile-card__main {
-            .profile-card__avatar-settings {
-                .profile-card__avatar {
-                    width: 70px;
+@media (max-width: 992px) {
+    .moneyboy-feed-page-container {
+        .store-page-header-wrapper.store-page-header-wrapper {
+            .store-page-header {
+                .store-page-header-bg-img {
+                    &::before {}
 
                     img {}
                 }
 
-                .profile-card__settings {
-                    svg {}
-                }
-            }
-
-            .profile-card__info {
-                .profile-card__name-badge {
-                    .profile-card__name {
-                        font-size: 20px;
-                    }
-
-                    .profile-card__badge {
-                        img {
-                            width: 24px;
-                        }
-                    }
-                }
-
-                .profile-card__username {
-                    &:hover {}
-                }
-            }
-
-            .profile-card__icon {
-                .profile-card__blur-icon {
-                    &:active {}
-
-                    &:hover {}
-
-                    &.like-button {
-                        &.liked {
-                            svg {
-                                path {}
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        .profile-card__stats {
-            padding: 14px 8px 10px;
-            gap: 16px;
-            border-radius: 16px;
-
-            .profile-card__stats-item {
-                gap: 6px;
-
-                &:hover {
-
-                    .profile-card__stats-num,
-                    .profile-card__stats-label span {}
-
-                    .profile-card__stats-label {
+                .cate-back-btn {
+                    &:hover {
                         svg {
                             path {}
                         }
                     }
                 }
 
-                .profile-card__stats-num {
-                    font-size: 18px;
+                .store-page-header-content-wrapper {
+                    .store-page-header--profile {
+                        .profile-card {
+                            .profile-card__main {
+                                .profile-card__avatar-settings {
+                                    .profile-card__avatar {
+                                        border-radius: 14px;
+                                        width: 50px;
+
+                                        &::before {}
+                                    }
+                                }
+
+                                .profile-card__info {
+                                    gap: 3px;
+
+                                    .profile-card__name-badge {
+                                        .profile-card__name {
+                                            font-size: 19px;
+                                        }
+
+                                        .profile-card__badge {
+                                            img {
+                                                width: 25px;
+                                            }
+                                        }
+                                    }
+
+                                    .profile-card__username {
+                                        font-size: 14px;
+
+                                        &:hover {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .store-page-header-tag {
+                        padding-right: 50px;
+
+                        img {
+                            max-width: 34px;
+                        }
+
+                        span {
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .moneyboy-special-content-banner-wrapper {
+        .moneyboy-special-content-banner-container {
+            padding: 14px;
+            border-radius: 24px;
+            flex-direction: column;
+            display: flex;
+            gap: 12px;
+
+            .moneyboy-special-content-banner--content {
+                h2 {
+                    font-size: 30px;
                 }
 
-                .profile-card__stats-label {
-                    svg {
-                        path {}
-                    }
+                p {}
+
+                a {
+                    svg {}
 
                     span {}
                 }
             }
-        }
 
-        .profile-card__desc {
-            p {}
+            .moneyboy-special-content-banner--img-wrapper {
+                img {}
+
+                .text-overlay {
+                    p {}
+                }
+            }
+        }
+    }
+
+    .featured-content-premium-card {
+        .featured-content-premium-card-container {
+            .featured-content-bg-img {
+                img {}
+            }
+
+            .featured-premium-card-content-container {
+                .featured-premium-card-content {
+                    .featured-premium-card-icons {
+                        .featured-premium-card-icon {
+                            svg {
+                                path {}
+                            }
+
+                            span {}
+
+                            &:nth-child(2) {}
+                        }
+                    }
+
+                    h5 {}
+
+                    p {
+                        font-size: 14px;
+                        letter-spacing: 0.25px;
+                    }
+
+                    .btn-txt-gradient {
+                        svg {}
+
+                        span {}
+                    }
+                }
+            }
+        }
+    }
+
+    .hero-type-card-wrapper {
+        .hero-type-card-container {
+            .hero-type-card--bg-img {
+                &::before {}
+
+                img {}
+            }
+
+            .hero-type-card--content-container {
+                padding: 18px;
+
+                h2 {
+                    font-size: 34px;
+                }
+
+                h4 {
+                    font-size: 19px;
+                }
+
+                .hero-type-card--cta-box {
+                    p {}
+
+                    div {
+                        min-width: unset;
+
+                        .btn-txt-gradient {
+                            padding: 14px 20px;
+                            min-width: max-content;
+
+                            span {}
+                        }
+                    }
+                }
+
+                .hero-type-card--desc {
+                    p {}
+                }
+            }
         }
     }
 }
@@ -259,6 +292,228 @@
             }
         }
     }
+
+    .creator-media-card {
+        border-radius: 20px;
+
+        .creator-media-card__media-wrapper {
+            border-radius: 20px;
+
+            .creator-media-card__media {
+                border-radius: 16px;
+
+                img {}
+            }
+
+            .creator-media-card__overlay {
+                inset: 8px;
+
+                .creator-media-card__stats {
+                    .creator-media-card__stats-btn {
+                        gap: 3px;
+
+                        &.video-icon {
+                            width: 30px;
+                            aspect-ratio: 1/1;
+                            padding: 0;
+                        }
+
+                        &.wishlist-icon {
+                            padding: 0 4px;
+                            border-radius: 10px;
+
+                            svg {
+                                width: 14px;
+                            }
+                        }
+
+                        svg {
+                            width: 16px;
+
+                            path {}
+                        }
+
+                        span {
+                            font-size: 10px;
+                            line-height: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .creator-media-card__desc {
+            p {
+                font-size: 12px;
+                line-height: 16px;
+            }
+        }
+    }
+
+    .rel-users-wrapper {
+        .rel-user-box {
+            .rel-user-profile-action {
+                .rel-user-actions {
+                    .rel-user-more-opts-wrapper {
+                        .rel-users-more-opts-popup-wrapper {
+                            position: fixed !important;
+                            padding-inline: 12.5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .rel-users-wrapper {
+        .rel-user-box {
+            .rel-user-profile-action {
+                .rel-user-profile {
+                    .profile-card {
+                        .profile-card__main {
+                            .profile-card__avatar-settings {
+                                .profile-card__avatar {
+                                    &::before {}
+
+                                    img {}
+                                }
+                            }
+
+                            .profile-card__info {
+                                .profile-card__name-badge {
+                                    .profile-card__name {
+                                        font-size: 16px;
+                                        min-width: max-content;
+                                    }
+
+                                    .profile-card__badge {
+                                        min-width: 20px;
+                                        width: 20px;
+
+                                        img {
+                                            position: absolute;
+                                        }
+                                    }
+                                }
+
+                                .profile-card__username {
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .rel-user-actions {
+                    .rel-user-action-btn {
+                        .btn-txt-gradient {
+                            padding: 10px 0;
+                            min-width: 74px;
+                            max-width: 74px;
+
+                            span {
+                                font-size: 10px;
+                            }
+                        }
+                    }
+
+                    .rel-user-more-opts-wrapper {
+                        &[data-active] {
+                            .rel-user-more-opts-trigger-icon {
+                                svg {
+                                    path {}
+                                }
+                            }
+                        }
+
+                        .rel-user-more-opts-trigger-icon {
+                            &:hover {
+                                svg {
+                                    path {}
+                                }
+                            }
+
+                            &:active {}
+
+                            svg {
+                                path {}
+                            }
+                        }
+
+                        .rel-users-more-opts-popup-wrapper {
+                            .rel-users-more-opts-popup-container {
+                                ul {
+                                    li {
+                                        .icon {
+                                            svg {
+                                                path {}
+                                            }
+                                        }
+
+                                        span {}
+
+                                        &:hover {
+                                            .icon {
+                                                svg {
+                                                    path {}
+                                                }
+
+                                                &.share-icon {
+                                                    svg path {
+                                                        &:nth-child(1) {}
+                                                    }
+                                                }
+
+                                                &.mute-icon {
+                                                    svg path {
+
+                                                        &:nth-child(1),
+                                                        &:nth-child(2) {}
+                                                    }
+                                                }
+
+                                                &.remove-icon {
+                                                    svg path {
+
+                                                        &:nth-child(1),
+                                                        &:nth-child(2) {}
+                                                    }
+                                                }
+
+                                                &.block-icon {
+                                                    svg path {
+
+                                                        &:nth-child(1),
+                                                        &:nth-child(2) {}
+                                                    }
+                                                }
+
+                                                &.report-icon {
+                                                    svg path {}
+                                                }
+                                            }
+
+                                            span {}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .rel-user-desc {
+                padding: 0;
+
+                p {}
+            }
+        }
+    }
+
+    .creator-content-card-container {
+        overflow: hidden;
+    }
 }
 
 @media (max-width: 560px) {
@@ -321,6 +576,205 @@
 
                     span {
                         font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    /*  */
+    .moneyboy-feed-page-container {
+        .store-page-header-wrapper.store-page-header-wrapper {
+            .store-page-header {
+                gap: 6px;
+
+                .store-page-header-bg-img {
+                    &::before {}
+
+                    img {}
+                }
+
+                .cate-back-btn {
+                    &:hover {
+                        svg {
+                            path {}
+                        }
+                    }
+                }
+
+                .store-page-header-content-wrapper {
+                    .store-page-header--profile {
+                        .profile-card {
+                            .profile-card__main {
+                                gap: 5px;
+
+                                .profile-card__avatar-settings {
+                                    .profile-card__avatar {
+                                        &::before {}
+                                    }
+                                }
+
+                                .profile-card__info {
+                                    gap: 3px;
+
+                                    .profile-card__name-badge {
+                                        .profile-card__name {
+                                            font-size: 16px;
+                                        }
+
+                                        .profile-card__badge {
+                                            margin-left: -3px;
+
+                                            img {
+                                                position: absolute;
+                                            }
+                                        }
+                                    }
+
+                                    .profile-card__username {
+                                        font-size: 12px;
+
+                                        &:hover {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .store-page-header-tag {
+                        padding-right: 6px;
+
+                        img {
+                            max-width: 30px;
+                        }
+
+                        span {
+                            font-size: 20px
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .hero-type-card-wrapper {
+        .hero-type-card-container {
+            border-radius: 20px;
+
+            .hero-type-card--bg-img {
+                &::before {}
+
+                img {}
+            }
+
+            .hero-type-card--content-container {
+                padding: 10px;
+
+                h2 {
+                    font-size: 32px;
+                }
+
+                h4 {
+                    font-size: 16px;
+                }
+
+                .hero-type-card--cta-box {
+                    padding: 10px;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    p {
+                        width: 100%;
+                        max-width: 100%;
+                        font-size: 14px;
+                    }
+
+                    div {
+                        min-width: unset;
+                        width: 100%;
+
+                        .btn-txt-gradient {
+                            max-width: 100%;
+                            width: 100%;
+
+                            span {}
+                        }
+                    }
+                }
+
+                .hero-type-card--desc {
+                    p {
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+
+    /*  */
+    .featured-content-premium-card {
+        .featured-content-premium-card-container {
+            .featured-content-bg-img {
+                img {}
+            }
+
+            .featured-premium-card-content-container {
+                .featured-premium-card-content {
+                    max-width: 100%;
+
+                    .featured-premium-card-icons {
+                        .featured-premium-card-icon {
+                            svg {
+                                path {}
+                            }
+
+                            span {}
+
+                            &:nth-child(2) {}
+                        }
+                    }
+
+                    h5 {}
+
+                    p {}
+
+                    .btn-txt-gradient {
+                        svg {}
+
+                        span {}
+                    }
+                }
+            }
+        }
+    }
+
+    .moneyboy-special-content-banner-wrapper {
+        .moneyboy-special-content-banner-container {
+            .moneyboy-special-content-banner--content {
+                h2 {}
+
+                p {
+                    font-size: 13px;
+                }
+
+                a {
+                    max-width: 100%;
+                    width: 100%;
+
+                    svg {}
+
+                    span {}
+                }
+            }
+
+            .moneyboy-special-content-banner--img-wrapper {
+                img {}
+
+                .text-overlay {
+                    border-radius: 16px;
+
+                    p {
+                        font-size: 12px;
                     }
                 }
             }

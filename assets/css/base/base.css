@@ -66,6 +66,21 @@
    --header-height: 76px;
    /* Elevation/Box Shadows */
    --card-shadow: 0px 6px 4px -4px #08080803, 0px 2px 13.5px 1px #0808080A;
+   /*  */
+   /*  */
+   /*  */
+   /*  */
+   /*  */
+   /*  */
+   /*  */
+   /*  */
+   /*  */
+   /*  */
+   /*  */
+   /*  */
+   --header-height: 64px;
+   --sidebar-width: 280px;
+   --right-aside-width: 350px;
 }
 
 /* --------------------------------------------------------------------------
@@ -139,11 +154,11 @@ body {
    }
 
    [data-multi-tabs-content-tab] {
-      display: none;
+      display: none !important;
 
       /* Default hidden state */
       &[data__active] {
-         display: block;
+         display: grid !important;
          /* Content visible state */
       }
    }
@@ -237,4 +252,4 @@ input::placeholder {
    letter-spacing: 0;
    color: #716F6F;
    transition: var(--transition-fast);
-}
+} 

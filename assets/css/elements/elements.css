@@ -100,6 +100,8 @@
     overflow: hidden;
     /* Important for containing future ripple/hover effects */
     transition: var(--transition-fast);
+    border-radius: 14px;
+    padding-block: 20px;
 
     span {
         font-family: var(--font-family-heading);
@@ -109,6 +111,7 @@
         letter-spacing: 4%;
         position: relative;
         transition: var(--transition-fast);
+        font-size: 19px;
     }
 
     svg {
@@ -173,6 +176,25 @@
         }
     }
 
+    &.btn-grey {
+        background: #E4E4E4;
+
+        span {
+            color: #000000;
+        }
+    }
+
+    &.grey-variant {
+        background: #D3D3D3;
+
+        span {
+            background: linear-gradient(180deg, #B7B7B7 16.18%, #666666 101.47%);
+            background-clip: text;
+            color: transparent;
+            transition: var(--transition-fast);
+        }
+    }
+
     /* Gradient text rendering */
     span {
         font-family: var(--font-family-heading);
@@ -182,18 +204,13 @@
         letter-spacing: 0.25px;
         background: linear-gradient(103.7deg, #FECE26 4.76%, #E5741F 118.16%);
         background-clip: text;
-        /* -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; */
         color: transparent;
-        /* Fallback for browsers not supporting text-fill-color */
         line-height: 17px;
         transition: var(--transition-fast);
         position: relative;
     }
 
     &:hover {
-        /* filter: brightness(120%); */
-        /* Simple visual feedback on hover */
         background: linear-gradient(93.25deg, #E5741F -49.57%, #FECE26 98.1%);
         color: white;
 
@@ -201,6 +218,18 @@
             background-clip: initial;
             background: none;
             color: #ffffff;
+        }
+
+        svg:not(.only-fill-hover-effect) {
+            path {
+                stroke: white;
+            }
+        }
+
+        svg.only-fill-hover-effect {
+            path {
+                fill: #fff;
+            }
         }
     }
 
@@ -331,6 +360,37 @@
         -webkit-text-fill-color: transparent;
         color: transparent;
     }
+
+    &[data-content-advanced-filters-toggle-button] {
+        &:hover {
+            svg {
+                path {
+                    fill: white;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        &::before {
+            opacity: 0;
+        }
+
+        span {
+            background: none;
+            -webkit-background-clip: none;
+            background-clip: none;
+            -webkit-text-fill-color: unset;
+            color: white !important;
+        }
+
+        svg {
+            path {
+                stroke: white;
+                /* fill: white; */
+            }
+        }
+    }
 }
 
 .custom-select-element {
@@ -356,6 +416,44 @@
 
         .custom-select-options-dropdown-wrapper {
             border-radius: 16px;
+        }
+    }
+
+    &.size-sm {
+        .custom-select-label-wrapper {
+            padding: 6px 8px;
+
+            .custom-select-icon-txt {
+                svg {}
+
+                span {
+                    font-size: 12px;
+                }
+            }
+
+            .custom-select-chevron {
+                svg {
+                    width: 12px;
+
+                    path {}
+                }
+            }
+        }
+
+        .custom-select-options-dropdown-wrapper {
+            min-width: max-content;
+
+            .custom-select-options-dropdown-container {
+                .custom-select-options-search {
+                    .label-input {}
+                }
+
+                .custom-select-options-lists-container {
+                    .custom-select-options-list {
+                        .custom-select-option {}
+                    }
+                }
+            }
         }
     }
 

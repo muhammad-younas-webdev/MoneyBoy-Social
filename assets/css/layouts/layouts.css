@@ -19,7 +19,7 @@
    .header-main {
       /* Sticky Header: Ensures the main navigation/header remains visible */
       position: sticky;
-      z-index: 5;
+      z-index: 10;
       /* High z-index to overlay scrolling content */
       top: 0;
       height: var(--header-height);
@@ -96,10 +96,14 @@
       .moneyboy-page-content-container {
          padding-block: var(--spacing-md);
          width: 100%;
+         min-width: 0px;
+         display: flex;
+         max-width: 100%;
 
          /* Dynamic Content Wrapper */
          .moneyboy-dynamic-content-layout {
             width: 100%;
+            max-width: 100%;
 
             /* 2-Column Responsive Grid (2x / 1x pattern) */
             .moneyboy-2x-1x-layout-container {
@@ -108,12 +112,15 @@
 
                .moneyboy-2x-1x-a-layout {
                   width: 100%;
+                  min-width: 0px;
                   /* Flexible Main Content Column (2x) */
+                  max-width: 100%;
                }
 
                .moneyboy-2x-1x-b-layout {
                   width: 100%;
                   max-width: var(--right-aside-width);
+                  min-width: var(--right-aside-width);
                   /* Fixed Aside/Secondary Column (1x) */
                }
 
@@ -140,11 +147,132 @@
 }
 
 .multi-dem-cards-wrapper-layout {
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr;
    gap: 16px;
+   display: grid;
 
    &[data-layout-toggle-rows] {
-      grid-template-columns: 1fr 1fr;
+      .col-4-cards-layout {
+         grid-template-columns: 1fr !important;
+
+         .creator-media-card {
+            display: grid;
+            grid-template-columns: auto 1fr;
+
+            .creator-media-card__media-wrapper {
+               max-width: 250px;
+               grid-row: span 2;
+            }
+
+            .creator-media-card__desc {
+               display: flex;
+               align-items: end;
+            }
+
+            .creator-media-card__btn {
+               max-width: 200px;
+            }
+         }
+      }
+   }
+
+   &[data-direct-cards-layout] {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+
+      &[data-layout-toggle-rows] {
+         grid-template-columns: 1fr 1fr;
+      }
+   }
+
+   &[data-multi-child-grid-layout-wishlist] {
+      .creator-content-type-container-wrapper {
+         grid-template-columns: 1fr 1fr 1fr;
+         gap: 16px;
+         display: grid;
+      }
+
+      &[data-2-cols] {
+         .creator-content-type-container-wrapper {
+            grid-template-columns: 1fr 1fr;
+         }
+      }
+
+      &[data-layout-toggle-rows] {
+         &[data-2-cols] {
+            .creator-content-type-container-wrapper {
+               grid-template-columns: 1fr;
+            }
+         }
+
+         .creator-content-type-container-wrapper {
+            grid-template-columns: 1fr;
+            display: grid;
+            gap: 16px;
+
+            .creator-content-card-container {
+               .creator-content-card {
+                  flex-direction: row;
+                  align-items: center;
+                  gap: 12px;
+
+                  .creator-content-card__media {
+                     max-width: 200px;
+                  }
+
+                  .desc-btns {
+                     flex-direction: column;
+                     align-items: center;
+                  }
+
+                  .creator-content-card__stats {
+                     width: 100%;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+/*  */
+.moneyboy-diff-content-wrappers {
+   .desc-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+   }
+
+   .creator-content-filter-grid-container {
+      .search-features-grid-btns {
+         .creator-content-tabs-btn-wrapper {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+
+            button.multi-tab-switch-btn {
+               padding: 4px 6px;
+
+               svg {
+                  width: 20px;
+               }
+
+               span {
+                  font-size: 14px;
+               }
+            }
+         }
+      }
+   }
+
+   .creator-content-card-container {
+      .creator-content-card {
+         .creator-content-card__stats {
+            .creator-content-stat-box {
+               button {
+                  display: flex;
+                  align-items: center;
+               }
+            }
+         }
+      }
    }
 }
