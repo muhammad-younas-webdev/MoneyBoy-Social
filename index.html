@@ -1,88 +1,882 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MoneyBoy Social - All Page Link (Development)</title>
 
-    <!-- Favicon -->
-    <link
-      rel="shortcut icon"
-      href="assets/media/images/logo/favicons/white-favicon-square.ico"
-      type="image/x-icon" />
-    <style>
-      
-      body {
-        font-family: "Segoe UI", Arial, sans-serif;
-        background: #f7f8fa;
-        margin: 0;
-        padding: 0;
-      }
-      .container {
-        max-width: 500px;
-        margin: 40px auto;
-        padding: 24px;
-        background: #fff;
-        border-radius: 16px;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
-        text-align: center;
-      }
-      h1 {
-        font-size: 1.5rem;
-        margin-bottom: 24px;
-        color: #222;
-      }
-      .page-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        justify-content: center;
-      }
-      .page-btn {
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoneyBoy Social - All Page Link (Development)</title>
+
+  <link rel="shortcut icon" href="assets/media/images/logo/favicons/white-favicon-square.ico" type="image/x-icon" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "system-ui", Arial, sans-serif;
+      background: #f7f8fa;
+      margin: 0;
+      list-style: none;
+      padding: 0;
+    }
+
+    .containers-wrapper {
+      display: flex;
+      margin: 40px auto;
+      gap: 20px;
+      max-width: max-content;
+      align-items: start;
+      padding: 0 30px;
+      min-width: 800px;
+    }
+
+    .main-2-containers {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .container {
+      max-width: 700px;
+      /* Increased max-width for the two-column layout */
+      min-width: 700px;
+      width: 100%;
+      padding: 24px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+      color: #222;
+
+      a {
+        color: blue;
         display: inline-block;
-        padding: 12px 24px;
-        background: linear-gradient(90deg, #f4ab23 0%, #e6771f 100%);
-        color: #fff;
-        border: none;
-        border-radius: 8px;
-        font-size: 1rem;
-        font-weight: 500;
-        text-decoration: none;
-        box-shadow: 0 2px 8px rgba(79, 140, 255, 0.12);
-        transition: background 0.2s, transform 0.2s;
-        cursor: pointer;
-      }
-      .page-btn:hover {
-        background: linear-gradient(90deg, #e6771f 0%, #f4ab23 100%);
-        transform: translateY(-2px) scale(1.04);
-      }
-      @media (max-width: 600px) {
-        .container {
-          width: 85%;
-          margin: 20px auto;
-          padding: 16px;
-        }
-        .page-btn {
-          font-size: 1rem;
-        }
-        .page-links {
-          flex-direction: column;
-          gap: 12px;
+        margin-left: 2px;
+
+        svg {
+          width: 20px;
         }
       }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>All Page Links</h1>
-      <div class="page-links">
-        <!-- Add your .html file links below -->
-        <a href="feed-page.html" class="page-btn">Feed Page</a>
-        <a href="discover-page.html" class="page-btn">Discover Page</a>
-        <a href="user-profile.html" class="page-btn">User Profile </a>
-        <a href="creator-profile.html" class="page-btn">Creator Profile </a>
-        <!-- Add more links as needed -->
+    }
+
+    .milestone-section {
+      margin-bottom: 30px;
+      padding-top: 10px;
+      border-top: 1px solid #eee;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      /* Slightly smaller for H2 now */
+      margin-bottom: 20px;
+      width: 100%;
+      text-align: left;
+      color: #333;
+      font-weight: 600;
+    }
+
+    h2 span {
+      color: #e6791f;
+    }
+
+    /* New CSS for the two-column layout */
+    .page-links-group {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .pages-group-row,
+    .column {
+      flex: 1;
+      /* Makes both columns equally wide */
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fcfcfc;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-top: 0;
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid #f4ab23;
+      color: #444;
+      font-weight: 500;
+    }
+
+    /* --- */
+
+    .page-btn {
+      display: block;
+      /* Change to block for full-width buttons in columns */
+      margin-bottom: 12px;
+      padding: 10px 15px;
+      background: linear-gradient(90deg, #f4ab23 0%, #e6771f 100%);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(79, 140, 255, 0.12);
+      transition: background 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+
+    .page-btn:hover {
+      background: linear-gradient(90deg, #e6771f 0%, #f4ab23 100%);
+      transform: translateY(-1px) scale(1.01);
+      /* Reduced hover effect */
+    }
+
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    .container-2 {
+      padding: 24px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+      display: flex;
+      flex-direction: column;
+      min-width: 300px;
+      box-sizing: border-box;
+      justify-content: start;
+      gap: 20px;
+
+      h1 {
+        margin-bottom: 4px;
+      }
+    }
+
+    .pages-group-row {
+      flex: unset;
+
+      ul {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+
+        li {
+          list-style: none;
+          font-size: 18px;
+          display: flex;
+          align-items: start;
+          gap: 8px;
+          cursor: not-allowed;
+          opacity: 0.5;
+          opacity: 0.25;
+          transition: all 0.3s ease;
+          transform-origin: center;
+          will-change: transform;
+
+          span {
+            width: 20px;
+            aspect-ratio: 1/1;
+            display: grid;
+            place-items: center;
+            margin-top: 1px;
+            border: 1px solid black;
+            border-radius: 100%;
+            border-color: transparent;
+            margin-top: 2px;
+          }
+
+          svg {
+            display: block;
+            width: 24px;
+            stroke: #000000;
+            cursor: not-allowed;
+            display: block;
+            margin-left: -2px;
+          }
+
+          a {
+            text-decoration: none;
+            color: #000000;
+            font-weight: 400;
+            cursor: not-allowed;
+          }
+
+          &.completed {
+            opacity: 1;
+            cursor: pointer;
+
+            &:hover {
+              transform: scale(1.05) translateY(-2px) translateX(4px);
+            }
+
+            &>span {
+              cursor: pointer;
+              border: none;
+            }
+
+            svg {
+              stroke: green;
+              cursor: pointer;
+              width: 20px;
+              margin: 0;
+            }
+
+            a {
+              cursor: pointer;
+              color: green;
+            }
+          }
+
+          &.under-development {
+            opacity: 1;
+            cursor: pointer;
+
+            &:hover {
+              transform: scale(1.05) translateY(-2px) translateX(6px);
+            }
+
+            &>span {
+              background-color: none;
+              cursor: pointer;
+              border: none;
+            }
+
+            svg {
+              cursor: pointer;
+              stroke: #3d30f9;
+              margin: 0;
+              width: 20px;
+            }
+
+            a {
+              cursor: pointer;
+              color: #3d30f9;
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+
+      /* Adjust breakpoint for the new wider layout */
+      .container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 16px;
+      }
+
+      .page-links-group {
+        flex-direction: column;
+        /* Stacks the columns on mobile */
+        gap: 15px;
+      }
+
+      .column {
+        padding: 12px;
+      }
+    }
+
+    @media (max-width: 1200px) {
+
+      /* Adjust breakpoint for the new wider layout */
+      .containers-wrapper {
+        flex-direction: column;
+        min-width: 100%;
+      }
+
+      .main-2-containers,
+      .container,
+      .container-2 {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="containers-wrapper">
+    <div class="main-2-containers">
+      <div class="container">
+        <h1>All Pages Links (User Based)</h1>
+
+        <div class="milestone-section">
+          <div class="page-links-group">
+            <div class="column">
+              <h3>User Pages</h3>
+              <a href="feed-page-USER.html" class="page-btn">
+                Feed Page - USER
+              </a>
+              <a href="profile-page-USER.html" class="page-btn">
+                Profile Page - USER
+              </a>
+              <a href="discover-page-USER.html" class="page-btn">
+                Discover Page - USER
+              </a>
+              <a href="wishlist-page-USER.html" class="page-btn">
+                Wishlist Page - USER
+              </a>
+              <a href="likes-page-USER.html" class="page-btn">
+                Likes Page - USER
+              </a>
+              <a href="followers-following-page-USER.html" class="page-btn">
+                Followers Page - USER
+              </a>
+            </div>
+            <div class="column">
+              <h3>Creator Pages</h3>
+              <a href="feed-page-CREATOR.html" class="page-btn">
+                Feed Page - CREATOR
+              </a>
+              <a href="profile-page-CREATOR.html" class="page-btn">
+                Profile Page - CREATOR
+              </a>
+              <a href="discover-page-CREATOR.html" class="page-btn">
+                Discover Page - CREATOR
+              </a>
+              <a href="wishlist-page-CREATOR.html" class="page-btn">
+                Wishlist Page - CREATOR
+              </a>
+              <a href="likes-page-CREATOR.html" class="page-btn">
+                Likes Page - CREATOR
+              </a>
+              <a href="followers-following-page-CREATOR.html" class="page-btn">
+                Followers Page - CREATOR
+              </a>
+              <a href="purchased-media-CREATOR.html" class="page-btn">
+                Purchased Media Page - CREATOR
+              </a>
+              <a href="store-page-CREATOR.html" class="page-btn">
+                Store Page - CREATOR
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h1>All Page Links (Milestones Accordingly)</h1>
+
+        <div class="milestone-section">
+          <h2>Milestone 01</h2>
+          <div class="page-links-group">
+            <div class="column">
+              <h3>User Pages</h3>
+            </div>
+            <div class="column">
+              <h3>Creator Pages</h3>
+              <a href="feed-page-CREATOR.html" class="page-btn">
+                Feed Page - CREATOR
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="milestone-section">
+          <h2>Milestone 02</h2>
+          <div class="page-links-group">
+            <div class="column">
+              <h3>User Pages</h3>
+              <a href="profile-page-USER.html" class="page-btn">
+                Profile Page - USER
+              </a>
+            </div>
+            <div class="column">
+              <h3>Creator Pages</h3>
+              <a href="profile-page-CREATOR.html" class="page-btn">
+                Profile Page - CREATOR
+              </a>
+              <a href="discover-page-CREATOR.html" class="page-btn">
+                Discover Page - CREATOR
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="milestone-section">
+          <h2>Milestone 03 <span>(Active)</span></h2>
+          <div class="page-links-group">
+            <div class="column">
+              <h3>User Pages</h3>
+              <a href="feed-page-USER.html" class="page-btn">
+                Feed Page - USER
+              </a>
+              <a href="profile-page-USER.html" class="page-btn">
+                Profile Page - USER
+              </a>
+              <a href="discover-page-USER.html" class="page-btn">
+                Discover Page - USER
+              </a>
+              <a href="wishlist-page-USER.html" class="page-btn">
+                Wishlist Page - USER
+              </a>
+              <a href="likes-page-USER.html" class="page-btn">
+                Likes Page - USER
+              </a>
+              <a href="followers-following-page-USER.html" class="page-btn">
+                Followers Page - USER
+              </a>
+            </div>
+            <div class="column">
+              <h3>Creator Pages</h3>
+              <a href="wishlist-page-CREATOR.html" class="page-btn">
+                Wishlist Page - CREATOR
+              </a>
+              <a href="likes-page-CREATOR.html" class="page-btn">
+                Likes Page - CREATOR
+              </a>
+              <a href="followers-following-page-CREATOR.html" class="page-btn">
+                Followers Page - CREATOR
+              </a>
+              <a href="purchased-media-CREATOR.html" class="page-btn">
+                Purchased Media Page - CREATOR
+              </a>
+              <a href="store-page-CREATOR.html" class="page-btn">
+                Store Page - CREATOR
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="container-2">
+      <h1>
+        All Pages List (Figma)
+        <a href="https://www.figma.com/design/WjliLGnrJahuqHOkJSSjRN" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+          </svg>
+        </a>
+      </h1>
+      <div class="pages-group-row">
+        <h3> First Row (Forms) </h3>
+        <ul>
+          <!-- <li class="completed">
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5" />
+                </svg>
+              </span>
+              <a href="#"> Home Page </a>
+            </li> -->
+          <!-- <li class="under-development">
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+                </svg>
+              </span>
+              <a href="#"> Home Page </a>
+            </li> -->
+          <li>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+            </span>
+
+            <a href="#"> Benefits</a>
+          </li>
+          <li>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+            </span>
+
+            <a href="#">Fan Sign up </a>
+          </li>
+          <li>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+            </span>
+
+            <a href="#"> Creator Sign Up </a>
+          </li>
+          <li>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+            </span>
+
+            <a href="#"> Contact Us </a>
+          </li>
+        </ul>
+      </div>
+      <div class="pages-group-row">
+        <h3> Second Row (Creator Pages) </h3>
+        <ul>
+          <li class="completed">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+            </span>
+
+            <a href="feed-page-CREATOR.html"> Feed</a>
+          </li>
+          <li class="completed">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+            </span>
+
+            <a href="discover-page-CREATOR.html"> Discover</a>
+          </li>
+          <li class="completed">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+            </span>
+
+            <a href="profile-page-CREATOR.html"> Profile</a>
+          </li>
+          <li class="completed">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+            </span>
+
+            <a href="store-page-CREATOR.html"> Store</a>
+          </li>
+          <li>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+            </span>
+
+            <a href="#"> Chat</a>
+          </li>
+          <li>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+            </span>
+
+            <a href="#"> Notifications</a>
+          </li>
+          <li class="completed">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"></path>
+              </svg>
+            </span>
+
+            <a href="followers-following-page-CREATOR.html"> Followers</a>
+          </li>
+          <li class="completed">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"></path>
+              </svg>
+            </span>
+
+            <a href="followers-following-page-CREATOR.html"> Following</a>
+          </li>
+        </ul>
+      </div>
+      <div class="pages-group-row">
+        <h3> Third Row (Creator Advance Pages) </h3>
+        <ul>
+          <li class="completed">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+            </span>
+
+            <a href="wishlist-page-CREATOR.html"> Wishlist Moneyboys</a>
+          </li>
+          <li>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+            </span>
+
+            <a href="#"> Subscriptions</a>
+          </li>
+          <li class="under-development">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"></path>
+              </svg>
+            </span>
+
+            <a href="purchased-media-CREATOR.html"> Purchased Media</a>
+          </li>
+          <li>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+            </span>
+
+            <a href="#"> Wallet Transactions Earnings</a>
+          </li>
+          <li>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+            </span>
+
+            <a href="#"> Wallet Transactions </a>
+          </li>
+          <li>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+            </span>
+
+            <a href="#"> Request a Payout</a>
+          </li>
+          <li>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+            </span>
+
+            <a href="#"> Add funds</a>
+          </li>
+          <li class="completed">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"></path>
+              </svg>
+            </span>
+
+            <a href="likes-page-CREATOR.html"> Likes - Posts</a>
+          </li>
+          <li>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+            </span>
+
+            <a href="#"> Edit Profile Basic information</a>
+          </li>
+          <li>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+            </span>
+
+            <a href="#"> Edit Profile Pricing settings</a>
+          </li>
+          <li>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+            </span>
+
+            <a href="#"> Edit Profile Account and security</a>
+          </li>
+          <li>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+            </span>
+
+            <a href="#"> Block Countries</a>
+          </li>
+          <li>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+            </span>
+
+            <a href="#"> Terms of Service</a>
+          </li>
+          <li>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+            </span>
+
+            <a href="#"> Privacy & Policy</a>
+          </li>
+          <li>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+            </span>
+
+            <a href="#">  U.S.C 2257</a>
+          </li>
+          <li>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+            </span>
+
+            <a href="#"> DMCA</a>
+          </li>
+          <li>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+            </span>
+
+            <a href="#"> Help & Support</a>
+          </li>
+        </ul>
+      </div>
+      <div class="pages-group-row">
+        <h3> Forth Row (User Pages)</h3>
+        <ul>
+          <li class="completed">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+            </span>
+
+            <a href="profile-page-USER.html"> Profile</a>
+          </li>
+          <li class="completed">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+            </span>
+
+            <a href="feed-page-USER.html"> Feed</a>
+          </li>
+          <li>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+            </span>
+
+            <a href="#"> Wallet History User</a>
+          </li>
+          <li>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+            </span>
+
+            <a href="#"> Add Funds</a>
+          </li>
+        </ul>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

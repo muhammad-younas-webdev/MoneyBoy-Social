@@ -70,7 +70,7 @@ function initializeFloatingMenu() {
 
   /**
    * Toggles the menu open or closed by playing/reversing the timeline.
-   * @param {boolean} forceOpen - Forces the menu state (true for open, false for close).
+   * @param { boolean} forceOpen - Forces the menu state (true for open, false for close).
    */
   const toggleMenu = (forceOpen) => {
     const isCurrentlyOpen = !menuTimeline.reversed();

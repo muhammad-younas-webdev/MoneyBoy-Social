@@ -1,52 +1,37 @@
-@media (max-width: 1620px) {
-    .moneyboy-layout-container {
-        .header-main {}
+@media (max-width:1200px) {
+    .multi-dem-cards-wrapper-layout {
+        &[ data-direct-cards-layout] {
+            &[data-layout-toggle-rows] {}
+        }
 
-        .moneyboy-main-asides-layout-container {
-
-            /* Conditional Styling: Adjusts sidebar width when a custom scrollbar is present (via the `has-scroll` class) */
-            &:has(.moneyboy-global-sidebar-wrapper.has-scroll) {
-                .moneyboy-global-sidebar-wrapper {}
+        &[data-multi-child-grid-layout-wishlist] {
+            .creator-content-type-container-wrapper {
+                grid-template-columns: 1fr 1fr;
             }
 
-            /* Global Sidebar Wrapper: Defines the structural constraints for the left navigation/sidebar */
-            .moneyboy-global-sidebar-wrapper {
-                &:hover {}
+            &[data-layout-toggle-rows] {
+                .creator-content-type-container-wrapper {
+                    .creator-content-card-container {
+                        .creator-content-card {
+                            .creator-content-card__media {}
 
-                /* Sidebar Content Alignment */
-                .global-sidebar-container {
-                    .sidebar-profile-card {}
+                            .desc-btns {}
 
-                    /* Placeholder for component styling */
-                    .sidebar-post-button {}
-
-                    /* Placeholder for component styling */
-                    .sidebar-navigation-container {}
-
-                    /* Placeholder for component styling */
-                    .sidebar-footer-card.card {}
+                            .creator-content-card__stats {}
+                        }
+                    }
                 }
             }
+        }
+    }
 
-            /* Main Page Content Area: Primary flexible container */
-            .moneyboy-page-content-container {
-
-                /* Dynamic Content Wrapper */
-                .moneyboy-dynamic-content-layout {
-
-                    /* 2-Column Responsive Grid (2x / 1x pattern) */
-                    .moneyboy-2x-1x-layout-container {
-                        .moneyboy-2x-1x-a-layout {}
-
-                        .moneyboy-2x-1x-b-layout {}
-
-                        /* Specific Page Layout Override (e.g., Creator Profile) */
-                        .creator-profile-page-container {
-                            .creator-profile-front-content-container {
-                                .creator-profile-page-multi-tab-section {
-                                    .creator-profile-page-multi-tab-container {}
-                                }
-                            }
+    .moneyboy-diff-content-wrappers {
+        .creator-content-filter-grid-container {
+            .search-features-grid-btns {
+                .creator-content-tabs-btn-wrapper {
+                    button.multi-tab-switch-btn {
+                        span {
+                            display: none;
                         }
                     }
                 }
@@ -83,6 +68,10 @@
 
                         .profile-card {
                             padding: 0;
+
+                            .profile-card__stats {
+                                display: none;
+                            }
 
                             .profile-card__main {
                                 flex-direction: column;
@@ -233,13 +222,51 @@
             }
         }
     }
+
+    .multi-dem-cards-wrapper-layout {
+        &[ data-direct-cards-layout] {
+            &[data-layout-toggle-rows] {}
+        }
+
+        &[data-multi-child-grid-layout-wishlist] {
+            grid-template-columns: 1fr;
+
+            .creator-content-type-container-wrapper {}
+
+            &[data-layout-toggle-rows] {
+                .creator-content-type-container-wrapper {
+                    .creator-content-card-container {
+                        .creator-content-card {
+                            .creator-content-card__media {}
+
+                            .desc-btns {}
+
+                            .creator-content-card__stats {}
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 992px) {
     .multi-dem-cards-wrapper-layout {
         grid-template-columns: 1fr 1fr;
 
+        &:has(.col-4-cards-layout) {
+            grid-template-columns: 1fr;
+
+            .col-4-cards-layout {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
         &[data-layout-toggle-rows] {
+            grid-template-columns: 1fr;
+        }
+
+        &[data-temporary-pause] {
             grid-template-columns: 1fr;
         }
     }
@@ -297,7 +324,7 @@
                         bottom: 87px;
                         right: 15px;
                         z-index: 99;
-                        width: 70px;
+                        width: 60px;
                         aspect-ratio: 1/1;
                         display: flex;
                         align-items: center;
@@ -305,7 +332,7 @@
                         border-radius: 100%;
 
                         .btn-primary {
-                            width: 70px;
+                            width: 100%;
                             aspect-ratio: 1/1;
                             display: flex;
                             align-items: center;
@@ -317,7 +344,7 @@
                             }
 
                             svg {
-                                transform: scale(1.3);
+                                transform: scale(1.15);
                             }
                         }
                     }
@@ -362,8 +389,82 @@
     }
 }
 
+@media (max-width: 620px) {
+    .moneyboy-diff-content-wrappers {
+        .creator-content-filter-grid-container {
+            .search-features-grid-btns {
+                border-radius: 16px;
+                padding: 8px;
+
+                &.has-multi-tabs-btns {
+                    flex-wrap: wrap;
+                    justify-content: end;
+
+                    .creator-content-search-input {
+                        width: 100%;
+                    }
+                }
+
+                .creator-content-search-input {
+                    width: 50%;
+                }
+
+                .creater-content-filters-layouts {
+                    gap: 12px;
+
+                    .creator-content-grid-layout-options {
+                        gap: 12px;
+
+                        .creator-content-grid-layout-btn {
+                            width: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .user-profile-card-wrapper {
+            &.user-profile-card-small {
+                & .user-profile-card-container {
+                    .user-profile-content-overlay-container {
+                        padding: 6px;
+                    }
+                }
+            }
+        }
+    }
+
+    .tabs-content-wrapper-layout {
+        /* padding: 12px; */
+    }
+
+    .multi-dem-cards-wrapper-layout {
+        &[data-multi-child-grid-layout-wishlist] {
+            .creator-content-type-container-wrapper {
+                gap: 10px;
+            }
+        }
+    }
+}
+
 @media (max-width: 560px) {
     .multi-dem-cards-wrapper-layout {
         gap: 12px;
+    }
+
+    .multi-dem-cards-wrapper-layout {
+        &[data-layout-toggle-rows] {
+            .col-4-cards-layout {
+                .creator-media-card {
+                    .creator-media-card__media-wrapper {
+                        max-width: 150px;
+                    }
+
+                    .creator-media-card__desc {}
+
+                    .creator-media-card__btn {}
+                }
+            }
+        }
     }
 }

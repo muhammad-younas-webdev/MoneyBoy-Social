@@ -19,6 +19,9 @@ import "./components/multi-tabs.js";
 // Custom Select Element Functionalities
 import "./components/custom-select.js";
 
+// More Actions Popup Toggle Element Functionalities
+import "./components/more-actions-toggle-element.js";
+
 // Advanced Filters Layout Toggle Functionality
 import "./components/advanced-filters.js";
 
@@ -27,3 +30,9 @@ import "./components/menu-toggle.js";
 
 // Grid Cols Toggle Functionality
 import "./components/grid-cols-layout-toggle.js";
+
+// Swiper Functionality
+import "./components/swipers.js";
+
+// Follow/Unfollow Button Toggle Functionality
+import "./components/follow-unfollow-btn-toggle.js";
