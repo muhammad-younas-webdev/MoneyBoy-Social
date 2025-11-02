@@ -986,6 +986,8 @@
                     }
 
                     &.wishlist-icon {
+                        margin-left: auto;
+
                         &:hover {
                             svg {
                                 path {
@@ -1075,28 +1077,24 @@
                             }
 
                             &.post-like-btn {
-                                &:hover {
-                                    svg {
-                                        transform: scale(1.15);
+                                svg {
+                                    transform: scale(1.15);
 
-                                        path {
-                                            stroke: var(--like-color);
-                                            fill: var(--like-color);
-                                        }
+                                    path {
+                                        stroke: var(--like-color);
+                                        fill: var(--like-color);
                                     }
                                 }
                             }
 
                             &.post-comment-btn {
-                                &:hover {
-                                    svg {
-                                        transform: scale(1.15);
+                                svg {
+                                    transform: scale(1.15);
 
-                                        path {
-                                            &:nth-child(1) {
-                                                fill: #46a0e3;
-                                                stroke: #46a0e3;
-                                            }
+                                    path {
+                                        &:nth-child(1) {
+                                            fill: #46a0e3;
+                                            stroke: #46a0e3;
                                         }
                                     }
                                 }
@@ -1116,13 +1114,15 @@
 
                 /*  */
                 .profile-card {
-                    padding: 12px;
+                    padding: 12px 12px 10px 12px;
 
                     .profile-card__main {
+                        gap: 6px;
+
                         .profile-card__avatar-settings {
                             .profile-card__avatar {
-                                border-radius: 16px;
-                                width: 52px;
+                                border-radius: 12px;
+                                width: 44px;
 
                                 &::before {
                                     content: '';
@@ -1138,20 +1138,24 @@
                         }
 
                         .profile-card__info {
+                            gap: 5px;
+
                             .profile-card__name-badge {
                                 .profile-card__name {
                                     color: #fff;
-                                    font-size: 18px;
+                                    font-size: 16px;
                                 }
 
                                 .profile-card__badge {
-                                    img {}
+                                    img {
+                                        width: 20px;
+                                    }
                                 }
                             }
 
                             .profile-card__username {
                                 color: #fff;
-                                font-size: 13px;
+                                font-size: 12px;
 
                                 &:hover {}
                             }
@@ -1186,6 +1190,147 @@
             svg {
                 position: relative;
                 top: -1px;
+            }
+        }
+    }
+}
+
+[data-2-cols][data-layout-toggle-rows] {
+    .creator-content-type-container-wrapper {
+        .creator-media-card {
+            &:hover {
+                .creator-media-card__media-wrapper {
+                    .creator-media-card__stats-overlay {
+                        .creator-media-card__post-stats {}
+
+                        .creator-media-card__overlay-profile-wrapper {
+                            bottom: 10px;
+                        }
+                    }
+                }
+            }
+
+            .creator-media-card__media-wrapper {
+                .creator-media-card__media {
+                    img {}
+                }
+
+                .creator-media-card__overlay {
+                    .creator-media-card__stats {
+                        .creator-media-card__stats-btn {
+                            &.video-icon {
+                                &:hover {
+                                    svg {
+                                        path {
+                                            &:nth-child(1) {}
+
+                                            &:nth-child(2) {}
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.photo-icon {
+                                &:hover {
+                                    svg {
+                                        path {
+                                            &:nth-child(1) {}
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.wishlist-icon {
+                                &:hover {
+                                    svg {
+                                        path {
+                                            &:nth-child(1) {}
+
+                                            &:nth-child(2) {}
+
+                                            &:nth-child(3) {}
+                                        }
+                                    }
+                                }
+                            }
+
+                            svg {
+                                path {}
+                            }
+
+                            span {}
+                        }
+                    }
+                }
+
+                .creator-media-card__stats-overlay {
+                    .creator-media-card__post-stats {
+                        ul {
+                            li {
+                                a {
+                                    svg {}
+
+                                    span {}
+
+                                    &.post-like-btn {
+                                        svg {
+                                            path {}
+                                        }
+                                    }
+
+                                    &.post-comment-btn {
+                                        svg {
+                                            path {
+                                                &:nth-child(1) {}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .creator-media-card__overlay-profile-wrapper {
+                        transform: scale(1.35);
+                        left: 34px;
+
+                        .profile-card {
+                            .profile-card__main {
+                                .profile-card__avatar-settings {
+                                    .profile-card__avatar {
+                                        &::before {}
+
+                                        img {}
+                                    }
+                                }
+
+                                .profile-card__info {
+                                    .profile-card__name-badge {
+                                        .profile-card__name {}
+
+                                        .profile-card__badge {
+                                            img {}
+                                        }
+                                    }
+
+                                    .profile-card__username {
+                                        &:hover {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .creator-media-card__desc {
+                p {}
+            }
+
+            .creator-media-card__btn {
+                a {
+                    svg {}
+                }
             }
         }
     }
