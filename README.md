@@ -128,7 +128,3 @@ No license is specified in this repository. If you plan to share or publish this
 
 - If styles look broken: ensure the correct CSS files are included in the HTML head and that responsive CSS files are loaded.
 - If JS features don't run on `file://`: run a local server (see Quick start) to avoid cross-origin/resource loading issues.
-
-## Contact / Maintainer
-
-If you want me to refine the README, add a license, scaffold npm scripts, or set up a minimal dev toolchain, tell me what you'd like next and I will implement it.
