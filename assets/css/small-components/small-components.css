@@ -715,6 +715,7 @@
 
             .creator-content-stat-box {
                 padding: 9px 10px;
+                padding: 6px 10px 4px;
                 background-color: #fff;
                 border: 1.5px solid #EBEBEB;
                 border-radius: 12px;
@@ -722,16 +723,24 @@
                 display: flex;
                 align-items: center;
                 gap: 10px;
+                gap: 8px;
                 cursor: pointer;
 
-                svg {
-                    gap: 10px;
+                button {
+                    display: flex;
                     cursor: pointer;
-                    transition: var(--transition-fast);
+                    align-items: center;
 
-                    path {
+                    svg {
+                        cursor: pointer;
                         transition: var(--transition-fast);
-                        stroke: #505050;
+                        width: 24px;
+                        height: 24px;
+
+                        path {
+                            transition: var(--transition-fast);
+                            stroke: #505050;
+                        }
                     }
                 }
 
@@ -778,12 +787,9 @@
                     }
                 }
 
-                &:nth-child(2) {
-                    button {
-                        display: flex;
-                        cursor: pointer;
-
-                        &:hover {
+                &.views-btn {
+                    &:hover {
+                        button {
                             svg {
                                 path {
                                     &:nth-child(1) {
@@ -795,6 +801,46 @@
                                         stroke: #A77BFF;
                                         fill: #fff;
                                     }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.wishlist-btn {
+                    &:hover {
+                        svg {
+                            path {
+                                &:nth-child(1) {
+                                    stroke: #6C5CE7;
+                                    fill: #6C5CE7;
+                                    position: relative;
+                                    z-index: 2;
+                                }
+
+                                &:nth-child(2) {
+                                    stroke: #6C5CE7;
+                                    fill: #6C5CE7;
+                                }
+
+                                &:nth-child(3) {
+                                    stroke: #ffffff;
+                                    fill: #ffffff;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.photo-icon {
+                    &:hover {
+                        svg {
+                            path {
+                                stroke: white;
+
+                                &:nth-child(1) {
+                                    stroke: #00c2ff;
+                                    fill: #00c2ff;
                                 }
                             }
                         }
