@@ -988,4 +988,20 @@
             }
         }
     }
+
+    [data-2-cols][data-layout-toggle-rows] {
+        .creator-content-type-container-wrapper {
+            .creator-media-card {
+                .creator-media-card__media-wrapper {
+                    .creator-media-card__stats-overlay {
+                        .creator-media-card__post-stats {
+                            ul {
+                                transform: scale(1.2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

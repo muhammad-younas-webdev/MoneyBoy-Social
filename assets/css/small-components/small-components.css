@@ -1312,6 +1312,8 @@
                 .creator-media-card__stats-overlay {
                     .creator-media-card__post-stats {
                         ul {
+                            transform: scale(1.4);
+
                             li {
                                 a {
                                     svg {}
