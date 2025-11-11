@@ -54,7 +54,7 @@
    --spacing-xs: 0.5rem;
    --spacing-sm: 0.75rem;
    --spacing-md: 1rem;
-   --spacing-md: 14px;
+   --spacing-md: 12px;
    --spacing-lg: 2rem;
    /* Transition Presets: Standardizes animation speed and curve across the UI */
    --transition-fast: all 0.2s ease;
@@ -84,8 +84,9 @@
    --sidebar-width: 280px;
    --right-aside-width: 350px;
    /*  */
-   --sidebar-width: 260px;
    --right-aside-width: 320px;
+   --header-height: 60px;
+   --sidebar-width: 250px;
 }
 
 /* --------------------------------------------------------------------------
@@ -257,4 +258,5 @@ input::placeholder {
    letter-spacing: 0;
    color: #716F6F;
    transition: var(--transition-fast);
+   font-size: 14px;
 }

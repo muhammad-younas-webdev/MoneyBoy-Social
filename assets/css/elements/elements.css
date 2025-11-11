@@ -18,9 +18,14 @@
         /* Fixed position inside the wrapper */
         display: flex;
 
-        .svg-icon path {
-            stroke: #727272;
-            /* Default icon color */
+        .svg-icon {
+            width: 20px;
+            height: 20px;
+
+            path {
+                stroke: #727272;
+                /* Default icon color */
+            }
         }
     }
 
@@ -32,6 +37,7 @@
 
     input {
         padding-left: 46px;
+        padding-left: 42px;
         /* Offset text input to clear the icon/label area */
         background-color: transparent;
         /* Allows wrapper background to show */
@@ -102,6 +108,7 @@
     transition: var(--transition-fast);
     border-radius: 14px;
     padding-block: 20px;
+    padding-block: 14px;
 
     span {
         font-family: var(--font-family-heading);
@@ -112,6 +119,7 @@
         position: relative;
         transition: var(--transition-fast);
         font-size: 19px;
+        font-size: 17px;
     }
 
     svg {

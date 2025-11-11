@@ -50,7 +50,7 @@
          overflow: auto;
          position: sticky;
          /* Sticky position relative to the main layout container */
-         top: calc(calc(var(--header-height) + var(--spacing-md)) - var(--spacing-sm) - 4px);
+         top: calc(calc(var(--header-height) + var(--spacing-md)) - var(--spacing-sm) - 0px);
          /* Calculated sticky offset */
          max-height: calc(100dvh - calc(calc(var(--header-height) + calc(2 * var(--spacing-md))) - calc(2 * var(--spacing-sm))));
          /* Full height minus header/padding */
