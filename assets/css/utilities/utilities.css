@@ -10,6 +10,7 @@
     width: calc(100% - 25px);
     max-width: 1400px;
     max-width: 1280px;
+    max-width: 1180px;
 }
 
 /* Base Card Component (Aggregate) Styling

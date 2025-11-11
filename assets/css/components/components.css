@@ -874,9 +874,14 @@
 }
 
 .moneyboy-feed-sidebar-container {
-   display: flex;
+   /* display: flex;
    flex-direction: column;
-   gap: var(--spacing-md);
+   gap: var(--spacing-md); */
+   display: inline;
+
+   &>:not(:first-child) {
+      margin-top: var(--spacing-md);
+   }
 
    .featured-profiles-card-container {
       padding: 16px;
