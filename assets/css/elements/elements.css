@@ -324,6 +324,7 @@
     width: 100%;
     border-radius: 18px;
     padding: 18px 10px;
+    padding: 14px 8px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -331,6 +332,8 @@
     cursor: pointer;
     transition: var(--transition-fast);
     gap: 10px;
+    gap: 6px;
+    border-radius: 14px;
 
     &>* {
         position: relative;
@@ -359,7 +362,8 @@
         font-family: var(--font-family-heading);
         transition: var(--transition-fast);
         font-weight: 500;
-        font-size: 20px;
+        font-size: 17px;
+        line-height: 17px;
         letter-spacing: 0.25px;
         background: linear-gradient(103.7deg, #FECE26 4.76%, #E5741F 118.16%);
         /* Gradient text for contrast */
@@ -404,6 +408,7 @@
 .custom-select-element {
     border: 1.5px solid #EBEBEB;
     border-radius: 18px;
+    border-radius: 14px;
     box-shadow: 0px 0px 0px 3px #FFFFFF inset;
     display: flex;
     position: relative;
@@ -475,13 +480,17 @@
         border-radius: inherit;
         gap: 6px;
         gap: 8px;
+        padding: 14px 12px;
 
         .custom-select-icon-txt {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
 
             svg {
+                width: 20px;
+                height: 20px;
+
                 path {
                     stroke: #444444;
                 }
@@ -490,6 +499,8 @@
             span {
                 font-weight: 500;
                 font-size: 15px;
+                font-size: 14px;
+                font-size: 13px;
                 letter-spacing: 0%;
                 color: #444444;
             }
@@ -500,6 +511,9 @@
             align-items: center;
 
             svg {
+                width: 20px;
+                height: 20px;
+
                 path {
                     stroke: #292D32;
                 }
@@ -532,6 +546,10 @@
             .custom-select-options-search {
                 .label-input {
                     background: #f6f6f6;
+
+                    input {
+                        min-height: 42px;
+                    }
                 }
             }
 
@@ -567,6 +585,7 @@
                             width: 100%;
                             display: block;
                             font-size: 14px;
+                            font-size: 13px;
                             color: #2b2b2b;
                         }
                     }

@@ -2299,6 +2299,8 @@
    flex-direction: column;
    gap: 10px;
    transition: var(--transition-fast);
+   padding: 9px 10px;
+   border-radius: 20px;
 
    &:hover {
       box-shadow: 0px 6px 4px -4px #08080816, 0px 2px 13.5px 1px #08080825;
@@ -2310,6 +2312,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             gap: 16px;
+            gap: 8px;
 
             .content-filter-card-wrapper {
                width: 100%;
@@ -2327,6 +2330,7 @@
                   &>.label-input {
                      border-radius: 18px;
                      box-shadow: 0px 0px 0px 3px #FFFFFF inset;
+                     border-radius: 14px;
 
                      .input-placeholder-icon {
                         svg {
