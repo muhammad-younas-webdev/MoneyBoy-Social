@@ -50,11 +50,13 @@
 
          .header-search-input {
             width: 385px;
+            width: 325px;
             display: flex;
 
             input {
                min-height: 44px;
-               min-height: 40px;
+               min-height: 38px;
+               border-radius: 10px;
             }
          }
 
@@ -739,6 +741,7 @@
       flex-direction: column;
       gap: 5px;
       gap: 2px;
+      gap: 3px;
 
       li {
          a {
@@ -768,6 +771,8 @@
                   width: 24px;
                   width: 21px;
                   height: 21px;
+                  width: 22px;
+                  height: 22px;
 
                   path {
                      transition: var(--transition-fast);
@@ -946,12 +951,15 @@
       z-index: 9;
       border-radius: 18px;
       padding: 8px 10px;
+      gap: 6px;
 
       &.is-sticky {
          backdrop-filter: blur(8px);
          background: #ffffff47;
          box-shadow: 0px 6px 4px -4px #08080816, 0px 2px 13.5px 1px #08080825;
-         border-radius: 0 0 25px 25px;
+         /* border-radius: 0 0 25px 25px; */
+         border-bottom-left-radius: 18px;
+         border-bottom-right-radius: 18px;
       }
 
       .cate-back-btn {
@@ -1026,6 +1034,8 @@
       display: flex;
       flex-direction: column;
       gap: 16px;
+      padding: 12px;
+      gap: 12px;
 
       &:hover {
          box-shadow: 0px 6px 4px -4px #0808082e, 0px 2px 13.5px 1px #08080836;
@@ -1097,11 +1107,14 @@
 
             .profile-card__main {
                gap: 14px;
+               gap: 8px;
 
                .profile-card__avatar-settings {
                   .profile-card__avatar {
                      width: 53px;
                      border-radius: 21px;
+                     width: 50px;
+                     border-radius: 17px;
 
                      img {}
                   }
@@ -1112,10 +1125,13 @@
                }
 
                .profile-card__info {
+                  gap: 4px;
+
                   .profile-card__name-badge {
                      .profile-card__name {
                         font-size: 20px;
                         line-height: 100%;
+                        font-size: 18px;
                      }
 
                      .profile-card__badge {
@@ -1125,6 +1141,7 @@
 
                   .profile-card__username {
                      font-size: 16px;
+                     font-size: 14px;
                   }
                }
 
@@ -1163,6 +1180,7 @@
             min-width: max-content;
             align-items: center;
             gap: 11px;
+            gap: 8px;
 
             .moneyboy-post__upload-time {
                font-family: var(--font-family-base);
@@ -1171,6 +1189,7 @@
                font-size: 15px;
                line-height: 100%;
                color: #505050;
+               font-size: 14px;
             }
 
             /* .moenyboy-post__more-opt-btn { 
@@ -1199,6 +1218,8 @@
          letter-spacing: 3%;
          color: #505050;
          font-size: 17px;
+         line-height: 23px;
+         font-size: 15px;
 
          span {
             display: inline-block;
@@ -1220,6 +1241,7 @@
          position: relative;
          z-index: 2;
          border-radius: 24px;
+         border-radius: 20px;
 
          &:hover {}
 
@@ -1253,11 +1275,17 @@
             /*  */
             padding: 20px;
             border-radius: 18px;
+            right: 14px;
+            left: 14px;
+            bottom: 16px;
+            padding: 12px 16px;
+            border-radius: 15px;
 
             ul {
                display: flex;
                align-items: center;
                gap: 20px;
+               gap: 16px;
 
                li {
                   a {
@@ -1270,6 +1298,8 @@
                      svg {
                         transition: var(--transition-fast);
                         transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                        width: 20px;
+                        height: 20px;
                      }
 
                      span {
@@ -2287,6 +2317,8 @@
                max-height: 62px;
                height: 62px;
                align-self: center;
+               max-height: 52px;
+               height: 52px;
 
                .content-filter-card {
                   width: 100%;

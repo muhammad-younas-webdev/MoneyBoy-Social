@@ -84,9 +84,10 @@
    --sidebar-width: 280px;
    --right-aside-width: 350px;
    /*  */
-   --right-aside-width: 320px;
    --header-height: 60px;
    --sidebar-width: 250px;
+   --right-aside-width: 320px;
+   --right-aside-width: 350px;
 }
 
 /* --------------------------------------------------------------------------

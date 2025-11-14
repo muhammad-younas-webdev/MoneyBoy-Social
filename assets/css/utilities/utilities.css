@@ -22,7 +22,7 @@
     border-radius: 32px;
     transition: var(--transition-normal);
     background-color: white;
-    border-radius: 24px;
+    border-radius: 20px;
 
     &:hover {
         /* Applies a subtle shadow elevation on hover for visual feedback */

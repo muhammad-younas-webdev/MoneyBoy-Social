@@ -1528,6 +1528,10 @@
         cursor: pointer;
         transition: var(--transition-fast);
 
+        svg {
+            width: 20px;
+        }
+
         &:hover {
             svg {
                 path {
@@ -1568,6 +1572,7 @@
             .rel-users-more-opts-popup-container {
                 padding: 10px 14px 10px 10px;
                 border-radius: 12px;
+                padding: 8px 12px 8px 8px;
 
                 ul {
                     li {
@@ -1620,6 +1625,8 @@
                             width: 24px;
                             transition: var(--transition-fast);
                             aspect-ratio: 1/1;
+                            width: 16px;
+                            height: 16px;
 
                             path {
                                 transition: var(--transition-fast);
@@ -1635,6 +1642,7 @@
                         font-weight: 500;
                         font-size: 16px;
                         transition: var(--transition-fast);
+                        font-size: 14px;
                     }
 
                     &:hover {
