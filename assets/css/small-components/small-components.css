@@ -9,6 +9,7 @@
     position: relative;
     padding: 14px;
     padding: 12px;
+    padding: 10px;
 
     &.featured-profile-card {
         padding: 14px;
@@ -21,6 +22,9 @@
         padding: 10px;
         border-radius: 16px;
         gap: 8px;
+        padding: 8px;
+        border-radius: 14px;
+        gap: 7px;
 
         .profile-card__main {
             .profile-card__avatar-settings {
@@ -31,6 +35,8 @@
                     border-radius: 16px;
                     width: 45px;
                     border-radius: 14px;
+                    width: 40px;
+                    border-radius: 13px;
 
                     &::before {
                         content: '';
@@ -57,11 +63,13 @@
                         text-transform: capitalize;
                         font-size: 18px;
                         font-size: 16px;
+                        font-size: 15px;
                     }
 
                     .profile-card__badge {
                         img {
                             width: 22px;
+                            width: 20px;
                         }
                     }
                 }
@@ -74,6 +82,7 @@
                     line-height: 100%;
                     font-size: 15px;
                     font-size: 13px;
+                    font-size: 12px;
 
                     &:hover {
                         color: white;
@@ -115,6 +124,7 @@
             right: 0;
             bottom: 0;
             top: 41px;
+            top: 30px;
             backdrop-filter: blur(4px);
         }
 
@@ -151,6 +161,7 @@
                 border-radius: 16px;
                 width: 62px;
                 width: 58px;
+                width: 54px;
 
                 img {
                     width: 100%;
@@ -173,6 +184,8 @@
                 place-items: center;
                 background-color: white;
                 box-shadow: 0px 6px 4px -4px #08080803, 0px 2px 1.5px -4px #0808080A, 0px 4px 4px 0px #00000017;
+                width: 23px;
+                border-radius: 7px;
 
                 &:hover {
                     background: black;
@@ -185,7 +198,8 @@
                 }
 
                 svg {
-                    width: 18px;
+                    width: 16px;
+                    height: 16px;
                 }
             }
         }
@@ -195,11 +209,13 @@
             flex-direction: column;
             gap: 7px;
             gap: 5px;
+            gap: 4px;
 
             .profile-card__name-badge {
                 display: flex;
                 align-items: center;
                 gap: 2px;
+                gap: 3px;
 
                 .profile-card__name {
                     font-family: var(--font-family-heading);
@@ -210,6 +226,7 @@
                     font-size: 20px;
                     font-size: 19px;
                     font-size: 17px;
+                    font-size: 16px;
                 }
 
                 .profile-card__badge {
@@ -218,6 +235,7 @@
 
                     img {
                         width: 24px;
+                        width: 21px;
                     }
                 }
             }
@@ -231,6 +249,7 @@
                 transition: var(--transition-fast);
                 font-size: 15px;
                 font-size: 13px;
+                font-size: 12px;
 
                 &:hover {
                     color: #000000;
@@ -273,6 +292,8 @@
         gap: 16px;
         border-radius: 16px;
         border-radius: 14px;
+        padding: 8px 9px 6px;
+        border-radius: 12px;
 
         .profile-card__stats-item {
             display: flex;
@@ -367,6 +388,7 @@
                 font-size: 18px;
                 font-size: 17px;
                 font-size: 15px;
+                font-size: 14px;
             }
 
             .profile-card__stats-label {
@@ -397,9 +419,9 @@
                     line-height: 24px;
                     letter-spacing: -1%;
                     transition: var(--transition-fast);
-                    font-size: 10px;
+                    font-size: 9px;
                     color: #505050;
-                    line-height: 18px;
+                    line-height: 16px;
                 }
             }
         }
@@ -2123,6 +2145,8 @@
                                 .profile-card__avatar {
                                     border-radius: 17px;
                                     width: 60px;
+                                    border-radius: 15px;
+                                    width: 52px;
 
                                     &::before {
                                         content: '';
@@ -2137,6 +2161,7 @@
 
                             .profile-card__info {
                                 gap: 5px;
+                                gap: 4px;
 
                                 .profile-card__name-badge {
                                     gap: 5px;
@@ -2144,6 +2169,7 @@
                                     .profile-card__name {
                                         font-size: 22px;
                                         color: white;
+                                        font-size: 18px;
                                     }
 
                                     .profile-card__badge {
@@ -2156,7 +2182,9 @@
                                 .profile-card__username {
                                     font-size: 16px;
                                     font-weight: 400;
+                                    font-size: 14px;
                                     color: white;
+                                    width: 24px;
 
                                     &:hover {
                                         color: white;
@@ -2172,9 +2200,10 @@
                     align-items: center;
                     gap: 5px;
                     padding-right: 80px;
+                    padding-right: 50px;
 
                     img {
-                        max-width: 40px;
+                        max-width: 34px;
                     }
 
                     span {
@@ -2185,6 +2214,7 @@
                         font-family: var(--font-family-heading);
                         font-weight: 500;
                         font-size: 28px;
+                        font-size: 25px;
                     }
                 }
             }

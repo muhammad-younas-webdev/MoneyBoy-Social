@@ -106,9 +106,10 @@
     overflow: hidden;
     /* Important for containing future ripple/hover effects */
     transition: var(--transition-fast);
-    border-radius: 14px;
+    border-radius: 12px;
     padding-block: 20px;
     padding-block: 14px;
+    padding-block: 13px;
 
     span {
         font-family: var(--font-family-heading);
@@ -120,11 +121,14 @@
         transition: var(--transition-fast);
         font-size: 19px;
         font-size: 17px;
+        font-size: 16px;
     }
 
     svg {
         position: relative;
         transition: var(--transition-fast);
+        width: 22px;
+        height: 22px;
     }
 
     &:hover {
