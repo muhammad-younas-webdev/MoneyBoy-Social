@@ -243,6 +243,7 @@ select {
 input,
 textarea {
    min-height: 48px;
+   min-height: 36px;
    /* Adheres to standard touch target size */
    padding: 0 12px;
    border-radius: 13px;

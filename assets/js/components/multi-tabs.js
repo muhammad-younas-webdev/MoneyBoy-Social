@@ -1,35 +1,9 @@
-// document.addEventListener("DOMContentLoaded", () => {
-//   // Select all tab sections
-//   const tabSections = document.querySelectorAll("[data-multiple-tabs-section]");
-
-//   // If no tab sections exist, just stop
-//   if (!tabSections.length) return;
-
-//   tabSections.forEach((section) => {
-//     const buttons = section.querySelectorAll("[data-multi-tabs-switch-btn]");
-//     const tabs = section.querySelectorAll("[data-multi-tabs-content-tab]");
-
-//     // Extra guard: skip if buttons or tabs are missing
-//     if (!buttons.length || !tabs.length) return;
-
-//     // Attach click listener to each button
-//     buttons.forEach((btn, index) => {
-//       btn.addEventListener("click", () => {
-//         // Remove active state from all buttons + tabs in this section
-//         buttons.forEach((b) => b.removeAttribute("data__active"));
-//         tabs.forEach((t) => t.removeAttribute("data__active"));
-
-//         // Set active state on clicked button + matching tab
-//         btn.setAttribute("data__active", "");
-//         tabs[index].setAttribute("data__active", "");
-//       });
-//     });
-//   });
-// });
-
-// multiple-tabs.js
+// multiple-tabs.js (Updated with data-scroll-zero feature)
 
 document.addEventListener("DOMContentLoaded", () => {
+  const SCROLL_TARGET_CLASS = ".moneyboy-layout-container"; // Container to scroll
+  const SCROLL_ZERO_ATTR = "data-scroll-zero"; // New attribute to check on the tab section
+
   // Select all main tab sections
   const tabSections = document.querySelectorAll("[data-multiple-tabs-section]");
 
@@ -40,7 +14,29 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
+  /**
+   * Scrolls the main content container to the top smoothly.
+   * This function is only executed if the tab section has data-scroll-zero.
+   */
+  const scrollToZero = () => {
+    const mainContentParent = document.querySelector(SCROLL_TARGET_CLASS);
+    if (mainContentParent) {
+      mainContentParent.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      console.log("Scroll zero executed on tab change.");
+    } else {
+      console.warn(
+        `Scroll zero failed: Could not find element ${SCROLL_TARGET_CLASS}`
+      );
+    }
+  };
+
   tabSections.forEach((section, sectionIndex) => {
+    // --- NEW LOGIC: Check for the scroll-zero attribute ---
+    const shouldScrollToZero = section.hasAttribute(SCROLL_ZERO_ATTR);
+
     // 1. Get the identifier from the main section (will be null if optional/missing)
     const sectionId = section.getAttribute("data-identifier");
 
@@ -49,13 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (sectionId) {
       // MODE 1: Identifier is present (e.g., nesting is likely)
-      // Query for buttons and tabs that have a matching data-identifier attribute.
       buttonsQuery = `[data-multi-tabs-switch-btn][data-identifier="${sectionId}"]`;
       tabsQuery = `[data-multi-tabs-content-tab][data-identifier="${sectionId}"]`;
       console.log(`Initializing Tab Section with ID: ${sectionId}`);
     } else {
       // MODE 2: No identifier is present (default/single-instance mode)
-      // Query for ALL buttons and tabs within this section's descendants.
       buttonsQuery = `[data-multi-tabs-switch-btn]`;
       tabsQuery = `[data-multi-tabs-content-tab]`;
       console.log(`Initializing Default Tab Section (Index ${sectionIndex})`);
@@ -78,6 +72,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // 3. Attach click listener to each button
     buttons.forEach((btn, index) => {
       btn.addEventListener("click", () => {
+        // Check if the clicked tab is already active to prevent unnecessary action
+        if (btn.hasAttribute("data__active")) {
+          return;
+        }
+
         // Remove active state from all buttons in this set
         buttons.forEach((b) => b.removeAttribute("data__active"));
 
@@ -87,6 +86,11 @@ document.addEventListener("DOMContentLoaded", () => {
         // Set active state on clicked button + matching tab
         btn.setAttribute("data__active", "");
         tabs[index].setAttribute("data__active", "");
+
+        // --- NEW LOGIC: Scroll to zero if attribute is present ---
+        if (shouldScrollToZero) {
+          scrollToZero();
+        }
       });
     });
   });

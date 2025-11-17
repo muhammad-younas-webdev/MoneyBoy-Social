@@ -155,7 +155,7 @@
     background: #000;
     border: none;
     padding: 10px 22px;
-    border-radius: 9px;
+    border-radius: 8px;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
@@ -163,6 +163,7 @@
     box-shadow: 0px 4px 4px 0px #00000012;
     transition: var(--transition-fast);
     will-change: transform;
+    padding: 9px 17px;
 
     &.p-sm {
         padding: 12px;
@@ -220,6 +221,8 @@
         line-height: 17px;
         transition: var(--transition-fast);
         position: relative;
+        font-size: 13px;
+        line-height: 14px;
     }
 
     &:hover {
@@ -263,11 +266,13 @@
 
         img {
             width: 36px;
+            width: 30px;
         }
 
         span {
             transition: var(--transition-fast);
             font-size: 24px;
+            font-size: 21px;
         }
 
         &::before {
@@ -329,6 +334,7 @@
     border-radius: 18px;
     padding: 18px 10px;
     padding: 14px 8px;
+    padding: 12px 8px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -429,6 +435,7 @@
 
         .custom-select-label-wrapper {
             padding: 14px;
+            padding: 7px 12px;
         }
 
         .custom-select-options-dropdown-wrapper {
@@ -517,6 +524,8 @@
             svg {
                 width: 20px;
                 height: 20px;
+                width: 18px;
+                height: 18px;
 
                 path {
                     stroke: #292D32;
@@ -575,6 +584,7 @@
                         padding: 6px 10px;
                         border-radius: 6px;
                         cursor: pointer;
+                        min-width: max-content;
 
                         &[data__option__active],
                         &:hover {

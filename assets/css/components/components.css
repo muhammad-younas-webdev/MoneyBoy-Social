@@ -1577,6 +1577,7 @@
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
       position: relative;
+      height: 110px;
 
       &::before {
          content: '';
@@ -1609,6 +1610,7 @@
             justify-content: space-between;
             align-items: end;
             margin-top: -42px;
+            margin-top: -26px;
 
             .profile-card__main {
                align-items: end;
@@ -1622,6 +1624,8 @@
                      width: 102px;
                      border-radius: 35px;
                      border: 2px solid #FFFFFF;
+                     width: 82px;
+                     border-radius: 24px;
 
                      &::before {}
 
@@ -1631,6 +1635,8 @@
 
                .profile-card__info {
                   gap: 2px;
+                  gap: 5px;
+                  padding-bottom: 6px;
 
                   .profile-card__name-badge {
                      gap: 3px;
@@ -1639,10 +1645,11 @@
                         font-weight: 500;
                         font-size: 24px;
                         line-height: 100%;
+                        font-size: 21px;
                      }
 
                      .profile-card__badge {
-                        width: 33px;
+                        width: 26px;
                         display: flex;
 
                         img {
@@ -1656,6 +1663,7 @@
                      font-size: 16px;
                      line-height: 100%;
                      color: #717171;
+                     font-size: 15px;
 
                      &:hover {}
                   }
@@ -1669,15 +1677,19 @@
                   align-items: center;
                   display: flex;
                   gap: 10px;
+                  gap: 6px;
 
                   li {
                      display: flex;
+
+                     .btn-txt-gradient {
+                        margin-left: 10px;
+                     }
 
                      a {
                         transition: var(--transition-fast);
                         cursor: pointer;
                         display: flex;
-                        width: 46px;
                         aspect-ratio: 1/1;
                         display: grid;
                         place-items: center;
@@ -1685,6 +1697,7 @@
                         backface-visibility: hidden;
                         transition: var(--transition-fast);
                         will-change: transform;
+                        width: 38px;
 
                         &.save-btn {
 
@@ -1808,6 +1821,9 @@
                            backface-visibility: hidden;
                            transition: var(--transition-fast);
                            display: block;
+                           width: 21px;
+                           aspect-ratio: 1/1;
+                           stroke-width: 1px;
 
                            path {
                               transition: var(--transition-fast);
@@ -1850,13 +1866,16 @@
             .profile-card__geo-detail {
                display: flex;
                align-items: center;
-               gap: 6px;
+               gap: 5px;
                transition: var(--transition-fast);
                cursor: pointer;
 
                svg {
                   will-change: transform;
                   transition: var(--transition-fast);
+                  width: 22px;
+                  aspect-ratio: 1/1;
+                  margin-top: -1.5px;
 
                   path {
                      stroke: #505050;
@@ -1870,6 +1889,7 @@
                   color: #444444;
                   color: #505050;
                   transition: var(--transition-fast);
+                  font-size: 13px;
                }
 
                &:hover {
@@ -1965,7 +1985,7 @@
                a {
                   display: flex;
                   align-items: center;
-                  gap: 10px;
+                  gap: 8px;
 
                   &:hover {
                      svg {
@@ -1986,6 +2006,8 @@
                   svg {
                      transition: var(--transition-fast);
                      will-change: transform;
+                     width: 22px;
+                     aspect-ratio: 1/1;
 
                      path {
                         stroke: #505050;
@@ -1998,6 +2020,7 @@
                      font-size: 14px;
                      line-height: 26px;
                      color: #E5741F;
+                     font-size: 13px;
                   }
                }
             }
@@ -2013,6 +2036,7 @@
             line-height: 26px;
             letter-spacing: 3%;
             color: #505050;
+            font-size: 14px;
          }
       }
 
@@ -2028,16 +2052,18 @@
                display: flex;
                flex-direction: column;
                gap: 12px;
+               gap: 8px;
 
                li {
                   padding: 8px 8px 8px 16px;
-                  border-radius: 12px;
+                  border-radius: 11px;
                   background-color: #f4f4f4;
                   display: flex;
                   transition: var(--transition-fast);
                   align-items: center;
                   justify-content: space-between;
                   border: 1.5px solid #e5e5e506;
+                  padding: 6px 6px 6px 14px;
 
                   &:hover {
                      background-color: #000000;
@@ -2072,6 +2098,7 @@
                         font-size: 16px;
                         line-height: 100%;
                         letter-spacing: 0%;
+                        font-size: 15px;
                      }
 
                      .subscription-price {
@@ -2091,6 +2118,8 @@
                            background-clip: text;
                            -webkit-text-fill-color: transparent;
                            color: transparent;
+                           font-size: 21px;
+                           letter-spacing: -.5px;
                         }
 
                         span {
@@ -2111,12 +2140,15 @@
                            font-size: 14px;
                            line-height: 22px;
                            letter-spacing: 3%;
+                           font-size: 12px;
                         }
                      }
                   }
 
                   .subscripton-button {
-                     button {}
+                     button {
+                        padding: 10px 12px;
+                     }
                   }
                }
             }
@@ -2155,6 +2187,9 @@
       cursor: pointer;
       border-bottom: 3px solid transparent;
       transition: var(--transition-fast);
+      gap: 8px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
 
       &[data__active] {
          border-color: #020202;
@@ -2222,6 +2257,9 @@
       }
 
       svg {
+         width: 20px;
+         aspect-ratio: 1/1;
+
          path {
             stroke: #020202;
          }
@@ -2233,6 +2271,7 @@
          font-size: 20px;
          line-height: 100%;
          text-align: center;
+         font-size: 17px;
       }
 
       &:hover {
@@ -2256,12 +2295,19 @@
    border-radius: 20px;
    padding: 10px;
    gap: 10px;
+   border-radius: 14px;
+   padding: 8px 10px;
 
    .creator-content-search-input {
       width: 36%;
 
       .label-input {
          background: #FFFFFF;
+         border-radius: 10px;
+
+         input {
+            /* min-height: 36px; */
+         }
       }
    }
 
@@ -2280,12 +2326,16 @@
          align-items: center;
          gap: 16px;
          cursor: pointer;
+         gap: 10px;
 
          .creator-content-grid-layout-btn {
             display: flex;
             cursor: pointer;
 
             svg {
+               width: 20px;
+               aspect-ratio: 1/1;
+
                path {
                   stroke: #2b2b2b;
                   stroke-width: 1.5px;
