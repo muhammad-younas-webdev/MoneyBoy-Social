@@ -575,11 +575,13 @@
                 justify-content: space-between;
                 align-items: center;
                 padding: 10px 15px 13px;
+                padding: 11px 10px 10px;
 
                 .user-profile-card__info {
                     display: flex;
                     flex-direction: column;
                     gap: 2px;
+                    gap: 4px;
 
                     .user-profile-card__name-badge {
                         display: flex;
@@ -621,11 +623,14 @@
                     display: grid;
                     place-items: center;
                     width: 36px;
-                    aspect-ratio: 1/1;
                     border-radius: 100%;
+                    width: 28px;
+                    aspect-ratio: 1/1;
                     cursor: pointer;
 
                     svg {
+                        width: 18px;
+                        aspect-ratio: 1/1;
                         will-change: transform;
                         transition: var(--transition-fast);
 
@@ -664,6 +669,115 @@
                                 &:nth-child(3) {
                                     stroke: #ffffff;
                                     fill: #ffffff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.wishlist-page-container {
+    .user-profile-card-wrapper {
+        &.user-profile-card-small {
+            .user-profile-card-container {
+                .user-profile-content-overlay-container {
+                    padding: 8px 6px;
+
+                    .user-profile-card__action-btns {
+                        .user-profile-card__like-btn {
+                            .like-button {
+                                &:hover {}
+                            }
+                        }
+                    }
+
+                    .user-profile-card__info-container {
+                        padding: 7px 6px 8px;
+                        border-radius: 12px;
+
+                        .user-profile-card__info {
+                            .user-profile-card__name-badge {
+                                .user-profile-card__name {}
+
+                                .user-profile-card__badge {
+                                    width: 16px;
+
+                                    img {}
+                                }
+                            }
+
+                            .user-profile-card__username {}
+                        }
+
+                        .user-profile-card__wishlist-btn {
+                            svg {
+                                path {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .user-profile-card-container {
+            &:hover {}
+
+            .user-profile-card__img {
+                img {}
+            }
+
+            .user-profile-content-overlay-container {
+                .user-profile-card__action-btns {
+                    .user-profile-card__like-btn {
+                        .like-button {
+                            &:hover {}
+                        }
+
+                        svg {
+                            path {}
+                        }
+                    }
+                }
+
+                .user-profile-card__info-container {
+                    .user-profile-card__info {
+                        .user-profile-card__name-badge {
+                            .user-profile-card__name {}
+
+                            .user-profile-card__badge {
+                                img {}
+                            }
+                        }
+
+                        .user-profile-card__username {}
+                    }
+
+                    .user-profile-card__wishlist-btn {
+                        svg {
+                            path {}
+                        }
+
+                        &:hover {
+                            svg {}
+                        }
+
+                        &:active {
+                            svg {}
+                        }
+
+                        &:hover,
+                        &:focus,
+                        &.active {
+                            svg {
+                                path {
+                                    &:nth-child(1) {}
+
+                                    &:nth-child(2) {}
+
+                                    &:nth-child(3) {}
                                 }
                             }
                         }
@@ -767,6 +881,7 @@
                     color: #FFFFFF;
                     font-weight: 500;
                     font-size: 12px;
+                    min-width: max-content;
                 }
             }
         }
@@ -1491,6 +1606,7 @@
                         .profile-card__avatar-settings {
                             .profile-card__avatar {
                                 width: 54px;
+                                width: 48px;
 
                                 &::before {
                                     content: '';
@@ -1507,9 +1623,12 @@
 
                         .profile-card__info {
                             gap: 5px;
+                            gap: 3px;
 
                             .profile-card__name-badge {
-                                .profile-card__name {}
+                                .profile-card__name {
+                                    font-size: 15px;
+                                }
 
                                 .profile-card__badge {
                                     img {}
@@ -1546,6 +1665,7 @@
 
         .rel-user-desc {
             padding-left: 66px;
+            padding-left: 58px;
 
             p {
                 font-weight: 400;
@@ -1608,6 +1728,7 @@
         display: flex;
         min-height: max-content;
         display: none;
+        right: 30%;
 
         &:has([data-copy-post-link]) {
             min-width: max-content;
@@ -1643,6 +1764,8 @@
             box-shadow: 0px 6px 12px -4px #0808081F, 0px 2px 13.5px 1px #08080803;
             display: flex;
             transition: var(--transition-fast);
+            padding: 12px;
+            border-radius: 18px;
 
             &:hover {
                 box-shadow: 0px 6px 4px -4px #08080816, 0px 2px 13.5px 1px #08080825;
@@ -1651,7 +1774,7 @@
             ul {
                 display: flex;
                 flex-direction: column;
-                gap: 10px;
+                gap: 6px;
                 width: 100%;
 
                 li {
@@ -1659,6 +1782,7 @@
                     align-items: center;
                     gap: 12px;
                     cursor: pointer;
+                    gap: 8px;
 
                     .icon {
                         display: flex;
@@ -1962,6 +2086,8 @@
             flex-direction: column;
             padding: 26px;
             gap: 10px;
+            padding: 20px;
+            gap: 8px;
 
             h2 {
                 font-family: var(--font-family-heading);
@@ -1969,13 +2095,16 @@
                 font-size: 38px;
                 color: #FFFFFF;
                 margin-bottom: -6px;
+                font-size: 33px;
             }
 
             h4 {
                 font-family: var(--font-family-heading);
                 font-weight: 500;
                 font-size: 20px;
+                font-size: 18px;
                 color: #FFFFFF;
+                letter-spacing: .5px;
             }
 
             .hero-type-card--cta-box {
@@ -1987,6 +2116,8 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                border-radius: 16px;
+                padding: 8px 8px 8px 16px;
 
                 p {
                     max-width: 370px;
@@ -2172,6 +2303,8 @@
                                     width: 60px;
                                     border-radius: 15px;
                                     width: 52px;
+                                    border-radius: 14px;
+                                    width: 48px;
 
                                     &::before {
                                         content: '';
@@ -2186,7 +2319,7 @@
 
                             .profile-card__info {
                                 gap: 5px;
-                                gap: 4px;
+                                gap: 3px;
 
                                 .profile-card__name-badge {
                                     gap: 5px;
@@ -2195,11 +2328,12 @@
                                         font-size: 22px;
                                         color: white;
                                         font-size: 18px;
+                                        font-size: 17px;
                                     }
 
                                     .profile-card__badge {
                                         img {
-                                            width: 30px;
+                                            width: 26px;
                                         }
                                     }
                                 }
@@ -2207,9 +2341,8 @@
                                 .profile-card__username {
                                     font-size: 16px;
                                     font-weight: 400;
-                                    font-size: 14px;
+                                    font-size: 13px;
                                     color: white;
-                                    width: 24px;
 
                                     &:hover {
                                         color: white;
@@ -2454,6 +2587,7 @@
                 font-weight: 500;
                 font-size: 40px;
                 text-transform: capitalize;
+                font-size: 34px;
             }
 
             p {
