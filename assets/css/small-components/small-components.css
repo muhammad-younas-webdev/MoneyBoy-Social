@@ -508,6 +508,7 @@
         box-shadow: 0px 4px 13.5px 0px #00000040;
         cursor: pointer;
         transition: var(--transition-fast);
+        border-radius: 22px;
 
         &:hover {
             box-shadow: 0px 4px 13.5px 0px #1d1d1d79;
@@ -533,6 +534,7 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: end;
+            padding: 9px;
 
             .user-profile-card__action-btns {
                 display: flex;
@@ -541,6 +543,7 @@
 
                 .user-profile-card__like-btn {
                     width: 36px;
+                    width: 28px;
 
                     .like-button {
                         background-color: #FFFFFF30;
@@ -552,6 +555,9 @@
                     }
 
                     svg {
+                        width: 18px;
+                        aspect-ratio: 1/1;
+
                         path {
                             stroke: white;
                         }
@@ -579,6 +585,7 @@
                         display: flex;
                         align-items: center;
                         gap: 2px;
+                        position: relative;
 
                         .user-profile-card__name {
                             font-family: var(--font-family-heading);
@@ -586,16 +593,16 @@
                             font-size: 14px;
                             line-height: 100%;
                             letter-spacing: 0.65px;
+                            font-size: 13px;
                             color: #FFFFFF;
                         }
 
                         .user-profile-card__badge {
-                            width: 27px;
-                            display: flex;
+                            position: absolute;
+                            width: 24px;
+                            left: 100%;
 
-                            img {
-                                width: 100%;
-                            }
+                            img {}
                         }
                     }
 
@@ -604,6 +611,8 @@
                         font-size: 12px;
                         line-height: 100%;
                         color: #FFFFFF9E;
+                        font-weight: 500;
+                        font-size: 11px;
                     }
                 }
 
