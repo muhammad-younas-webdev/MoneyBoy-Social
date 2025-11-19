@@ -411,6 +411,8 @@
 
                 .creater-content-filters-layouts {
                     gap: 12px;
+                    width: 48%;
+                    justify-content: right;
 
                     .creator-content-grid-layout-options {
                         gap: 12px;
@@ -442,6 +444,20 @@
         &[data-multi-child-grid-layout-wishlist] {
             .creator-content-type-container-wrapper {
                 gap: 10px;
+            }
+        }
+    }
+
+    .moneyboy-diff-content-wrappers {
+        .creator-content-filter-grid-container {
+            .search-features-grid-btns {
+                .creator-content-tabs-btn-wrapper {
+                    width: 48%;
+
+                    button.multi-tab-switch-btn {
+                        span {}
+                    }
+                }
             }
         }
     }
