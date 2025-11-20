@@ -17,6 +17,7 @@
         left: 12px;
         /* Fixed position inside the wrapper */
         display: flex;
+        left: 9px;
 
         .svg-icon {
             width: 20px;
@@ -37,7 +38,7 @@
 
     input {
         padding-left: 46px;
-        padding-left: 42px;
+        padding-left: 35px;
         /* Offset text input to clear the icon/label area */
         background-color: transparent;
         /* Allows wrapper background to show */

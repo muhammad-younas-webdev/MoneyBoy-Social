@@ -861,11 +861,11 @@
                 border-radius: 14px;
                 transition: var(--transition-fast);
                 will-change: transform;
-                padding: 5px 9px;
-                border-radius: 12px;
+                padding: 4px 9px;
+                border-radius: 10px;
 
                 svg {
-                    width: 18px;
+                    width: 16px;
                     aspect-ratio: 1/1;
 
                     path {
@@ -876,11 +876,11 @@
                 span {
                     font-weight: 600;
                     font-size: 14px;
-                    line-height: 26px;
+                    line-height: 20px;
                     letter-spacing: 3%;
                     color: #FFFFFF;
                     font-weight: 500;
-                    font-size: 12px;
+                    font-size: 10px;
                     min-width: max-content;
                 }
             }
@@ -901,8 +901,7 @@
         .creator-content-card__stats {
             display: flex;
             gap: 10px;
-            align-items: center;
-            gap: 8px;
+            gap: 6px;
 
             .creator-content-stat-box {
                 padding: 9px 10px;
@@ -919,6 +918,7 @@
                 border-radius: 10px;
                 gap: 5px;
                 padding: 5px 8px 3px;
+                padding: 5px 6px 3px;
 
                 button {
                     display: flex;

@@ -248,6 +248,14 @@
             }
         }
     }
+
+    .content-creator-profile-tabs-layout-wrapper {
+        .multi-dem-cards-wrapper-layout {
+            &[data-direct-cards-layout] {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -403,6 +411,15 @@
                     .creator-content-search-input {
                         width: 100%;
                     }
+
+                    &.one-row-content-wrapper {
+                        flex-wrap: nowrap;
+                        justify-content: space-between;
+
+                        .creator-content-search-input {
+                            width: 90%;
+                        }
+                    }
                 }
 
                 .creator-content-search-input {
@@ -456,6 +473,22 @@
 
                     button.multi-tab-switch-btn {
                         span {}
+                    }
+                }
+            }
+        }
+    }
+
+    .content-creator-profile-tabs-layout-wrapper {
+        .multi-dem-cards-wrapper-layout {
+            &[data-direct-cards-layout] {
+                grid-template-columns: 1fr 1fr;
+
+                &[data-layout-toggle-rows] {
+                    & .creator-content-card {
+                        .creator-content-card__media {
+                            max-width: 150px;
+                        }
                     }
                 }
             }

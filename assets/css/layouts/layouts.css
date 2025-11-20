@@ -240,6 +240,58 @@
    }
 }
 
+.content-creator-profile-tabs-layout-wrapper {
+   .multi-dem-cards-wrapper-layout {
+      &[data-direct-cards-layout] {
+         &[data-layout-toggle-rows] {
+            grid-template-columns: 1fr !important;
+
+            .creator-content-card {
+               display: grid;
+               grid-template-columns: auto 1fr;
+
+               .creator-content-card__media {
+                  max-width: 250px;
+                  grid-row: span 2;
+               }
+
+               .creator-content-card__description {
+                  display: flex;
+                  align-items: end;
+               }
+
+               .creator-content-card__stats {
+                  max-width: 200px;
+                  align-items: start;
+
+                  .creator-content-stat-box {
+                     height: 32px;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+@media (min-width: 768px) {
+   .content-creator-profile-tabs-layout-wrapper {
+      .multi-dem-cards-wrapper-layout {
+         &[data-direct-cards-layout] {
+            &[data-layout-toggle-rows] {
+               .creator-content-card {
+                  .creator-content-card__media {
+                     .content-locked-label {
+                        transform: scale(1.25);
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
 /*  */
 .moneyboy-diff-content-wrappers {
    .desc-btns {
