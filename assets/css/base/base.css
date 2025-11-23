@@ -266,4 +266,5 @@ input::placeholder {
    transition: var(--transition-fast);
    font-size: 14px;
    font-size: 13px;
+   line-height: 13px;
 }
