@@ -149,6 +149,260 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .pm-page-content-wrapper {
+        & .pm-page-content-container {
+            & .pm-page-multi-tab-content-wrapper {
+                & .pm-page-multi-tab-content-container {
+                    & .multi-tab-section {
+                        & .multi-tabs-layout-container {
+                            & .multi-tabs-content-container {
+                                & .pm-page-content-cards-wrapper {
+                                    & .pm-page-content-card {
+                                        & .pm-page-card-media-container {
+                                            & .pm-page-card-icons-wrapper {
+                                                & .creator-content-card__stats {
+                                                    & .creator-content-stat-box {
+                                                        span {
+                                                            position: relative;
+                                                            top: 1px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .pm-page-content-wrapper {
+        .pm-page-content-container {
+            .pm-page-header-wrapper {
+                .pm-page-header-container {
+                    flex-direction: column;
+                    align-items: start;
+                    gap: 10px;
+
+                    .pm-page-header-title {
+                        h1 {}
+                    }
+
+                    .pm-page-filters-wrapper {
+                        .pm-page-filters-container {
+                            .pm-page-filters-search-bar {
+                                .creator-content-search-input {
+                                    .label-input {
+                                        .input-placeholder-icon {
+                                            svg {
+                                                path {}
+                                            }
+                                        }
+
+                                        input {
+                                            &::placeholder {}
+                                        }
+                                    }
+                                }
+                            }
+
+                            .pm-page-select-filters-wrapper {
+                                .pm-page-select {
+                                    .custom-select-element {
+                                        .custom-select-label-wrapper {
+                                            .custom-select-icon-txt {
+                                                svg {
+                                                    path {}
+                                                }
+
+                                                span {}
+                                            }
+
+                                            .custom-select-chevron {
+                                                svg {
+                                                    path {}
+                                                }
+                                            }
+                                        }
+
+                                        .custom-select-options-dropdown-wrapper {
+                                            .custom-select-options-dropdown-container {
+                                                .custom-select-options-search {
+                                                    .label-input {
+                                                        .input-placeholder-icon {
+                                                            svg {
+                                                                path {}
+                                                            }
+                                                        }
+
+                                                        input {
+                                                            &::placeholder {}
+                                                        }
+                                                    }
+                                                }
+
+                                                .custom-select-options-lists-container {
+                                                    .custom-select-options-list {
+                                                        .custom-select-option {
+                                                            span {}
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .pm-page-hero-wrapper {
+                .pm-page-hero-container {
+                    .hero-type-card-wrapper {
+                        aspect-ratio: unset;
+
+                        .hero-type-card-container {
+                            gap: 12px;
+                            padding: 14px 14px 20px 20px;
+
+                            .hero-type-card--bg-img {
+                                img {}
+                            }
+
+                            .hero-type-icons-wrapper {
+                                .creator-content-card__stats {
+                                    .creator-content-stat-box {
+                                        div {
+                                            svg {
+                                                path {}
+                                            }
+                                        }
+
+                                        span {}
+                                    }
+                                }
+                            }
+
+                            .hero-type-card--content-container {
+                                h2 {}
+
+                                .hero-type-card--desc {
+                                    p {}
+                                }
+
+                                .btn-txt-gradient {
+                                    span {}
+
+                                    &.btn-outline {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .pm-page-multi-tab-content-wrapper {
+                .pm-page-multi-tab-content-container {
+                    .multi-tab-section {
+                        .multi-tabs-layout-container {
+                            .pm-multi-tabs-buttons-wrapper {
+                                .multi-tabs-action-buttons {
+                                    .multi-tab-switch-btn {
+                                        span {
+                                            display: block;
+                                        }
+                                    }
+                                }
+
+                                .btn-txt-gradient {
+                                    span {}
+                                }
+                            }
+
+                            .multi-tabs-content-container {
+                                .pm-page-content-cards-wrapper {
+                                    grid-template-columns: 1fr 1fr 1fr;
+
+                                    .pm-page-content-card {
+                                        .pm-page-card-media-container {
+                                            .pm-page-card--img {
+                                                img {}
+                                            }
+
+                                            .pm-page-card-icons-wrapper {
+                                                .creator-content-card__stats {
+                                                    .creator-content-stat-box {
+                                                        div {
+                                                            svg {
+                                                                path {}
+                                                            }
+                                                        }
+
+                                                        span {}
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .pm-page-card-body {
+                                            h2 {
+                                                font-size: 18px;
+                                                line-height: 24px;
+                                            }
+                                        }
+
+                                        .pm-page-card-footer {
+                                            .profile-card {
+                                                .profile-card__main {
+                                                    .profile-card__avatar-settings {
+                                                        .profile-card__avatar {
+                                                            width: 40px;
+                                                            border-radius: 14px;
+
+                                                            img {}
+                                                        }
+                                                    }
+
+                                                    .profile-card__info {
+                                                        .profile-card__name-badge {
+                                                            .profile-card__name {
+                                                                font-size: 14px;
+                                                            }
+
+                                                            .profile-card__badge {
+                                                                img {
+                                                                    width: 18px;
+                                                                }
+                                                            }
+                                                        }
+
+                                                        .profile-card__username {
+                                                            font-size: 11px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 992px) {
     .header-main {
         .header-container {
@@ -551,7 +805,421 @@
     }
 }
 
-@media (max-width: 768px) {}
+@media (max-width: 915px) {
+    .pm-page-content-wrapper {
+        .pm-page-content-container {
+            .pm-page-header-wrapper {
+                .pm-page-header-container {
+                    .pm-page-header-title {
+                        h1 {}
+                    }
+
+                    .pm-page-filters-wrapper {
+                        width: 100%;
+
+                        .pm-page-filters-container {
+                            flex-direction: column;
+
+                            .pm-page-filters-search-bar {
+                                width: 100%;
+                                max-width: 100%;
+
+                                .creator-content-search-input {
+                                    width: 100%;
+                                    max-width: 100%;
+
+                                    .label-input {
+                                        .input-placeholder-icon {
+                                            svg {
+                                                path {}
+                                            }
+                                        }
+
+                                        input {
+                                            &::placeholder {}
+                                        }
+                                    }
+                                }
+                            }
+
+                            .pm-page-select-filters-wrapper {
+                                width: 100%;
+
+                                .pm-page-select {
+                                    width: 100%;
+
+                                    .custom-select-element {
+                                        width: 100%;
+                                        max-width: 100%;
+
+                                        .custom-select-label-wrapper {
+                                            .custom-select-icon-txt {
+                                                svg {
+                                                    path {}
+                                                }
+
+                                                span {}
+                                            }
+
+                                            .custom-select-chevron {
+                                                svg {
+                                                    path {}
+                                                }
+                                            }
+                                        }
+
+                                        .custom-select-options-dropdown-wrapper {
+                                            .custom-select-options-dropdown-container {
+                                                .custom-select-options-search {
+                                                    .label-input {
+                                                        .input-placeholder-icon {
+                                                            svg {
+                                                                path {}
+                                                            }
+                                                        }
+
+                                                        input {
+                                                            &::placeholder {}
+                                                        }
+                                                    }
+                                                }
+
+                                                .custom-select-options-lists-container {
+                                                    .custom-select-options-list {
+                                                        .custom-select-option {
+                                                            span {}
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .pm-page-hero-wrapper {
+                .pm-page-hero-container {
+                    .hero-type-card-wrapper {
+                        .hero-type-card-container {
+                            .hero-type-card--bg-img {
+                                img {}
+                            }
+
+                            .hero-type-icons-wrapper {
+                                .creator-content-card__stats {
+                                    .creator-content-stat-box {
+                                        div {
+                                            svg {
+                                                path {}
+                                            }
+                                        }
+
+                                        span {}
+                                    }
+                                }
+                            }
+
+                            .hero-type-card--content-container {
+                                h2 {}
+
+                                .hero-type-card--desc {
+                                    p {}
+                                }
+
+                                .btn-txt-gradient {
+                                    span {}
+
+                                    &.btn-outline {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .pm-page-multi-tab-content-wrapper {
+                .pm-page-multi-tab-content-container {
+                    .multi-tab-section {
+                        .multi-tabs-layout-container {
+                            .pm-multi-tabs-buttons-wrapper {
+                                flex-direction: column;
+                                gap: 6px;
+
+                                .multi-tabs-action-buttons {
+                                    .multi-tab-switch-btn {
+                                        span {}
+                                    }
+                                }
+
+                                .btn-txt-gradient {
+                                    span {}
+                                }
+                            }
+
+                            .multi-tabs-content-container {
+                                .pm-page-content-cards-wrapper {
+                                    grid-template-columns: 1fr 1fr;
+
+                                    .pm-page-content-card {
+                                        .pm-page-card-media-container {
+                                            .pm-page-card--img {
+                                                img {}
+                                            }
+
+                                            .pm-page-card-icons-wrapper {
+                                                .creator-content-card__stats {
+                                                    .creator-content-stat-box {
+                                                        div {
+                                                            svg {
+                                                                path {}
+                                                            }
+                                                        }
+
+                                                        span {}
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .pm-page-card-body {
+                                            h2 {}
+                                        }
+
+                                        .pm-page-card-footer {
+                                            .profile-card {
+                                                .profile-card__main {
+                                                    .profile-card__avatar-settings {
+                                                        .profile-card__avatar {
+                                                            img {}
+                                                        }
+                                                    }
+
+                                                    .profile-card__info {
+                                                        .profile-card__name-badge {
+                                                            .profile-card__name {}
+
+                                                            .profile-card__badge {
+                                                                img {}
+                                                            }
+                                                        }
+
+                                                        .profile-card__username {}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .pm-page-content-wrapper {
+        .pm-page-content-container {
+            .pm-page-header-wrapper {
+                .pm-page-header-container {
+                    .pm-page-header-title {
+                        h1 {}
+                    }
+
+                    .pm-page-filters-wrapper {
+                        .pm-page-filters-container {
+                            .pm-page-filters-search-bar {
+                                .creator-content-search-input {
+                                    .label-input {
+                                        .input-placeholder-icon {
+                                            svg {
+                                                path {}
+                                            }
+                                        }
+
+                                        input {
+                                            &::placeholder {}
+                                        }
+                                    }
+                                }
+                            }
+
+                            .pm-page-select-filters-wrapper {
+                                .pm-page-select {
+                                    .custom-select-element {
+                                        .custom-select-label-wrapper {
+                                            .custom-select-icon-txt {
+                                                svg {
+                                                    path {}
+                                                }
+
+                                                span {}
+                                            }
+
+                                            .custom-select-chevron {
+                                                svg {
+                                                    path {}
+                                                }
+                                            }
+                                        }
+
+                                        .custom-select-options-dropdown-wrapper {
+                                            .custom-select-options-dropdown-container {
+                                                .custom-select-options-search {
+                                                    .label-input {
+                                                        .input-placeholder-icon {
+                                                            svg {
+                                                                path {}
+                                                            }
+                                                        }
+
+                                                        input {
+                                                            &::placeholder {}
+                                                        }
+                                                    }
+                                                }
+
+                                                .custom-select-options-lists-container {
+                                                    .custom-select-options-list {
+                                                        .custom-select-option {
+                                                            span {}
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .pm-page-hero-wrapper {
+                .pm-page-hero-container {
+                    .hero-type-card-wrapper {
+                        .hero-type-card-container {
+                            .hero-type-card--bg-img {
+                                img {}
+                            }
+
+                            .hero-type-icons-wrapper {
+                                .creator-content-card__stats {
+                                    .creator-content-stat-box {
+                                        div {
+                                            svg {
+                                                path {}
+                                            }
+                                        }
+
+                                        span {}
+                                    }
+                                }
+                            }
+
+                            .hero-type-card--content-container {
+                                h2 {}
+
+                                .hero-type-card--desc {
+                                    p {}
+                                }
+
+                                .btn-txt-gradient {
+                                    span {}
+
+                                    &.btn-outline {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .pm-page-multi-tab-content-wrapper {
+                .pm-page-multi-tab-content-container {
+                    .multi-tab-section {
+                        .multi-tabs-layout-container {
+                            .pm-multi-tabs-buttons-wrapper {
+                                .multi-tabs-action-buttons {
+                                    .multi-tab-switch-btn {
+                                        span {}
+                                    }
+                                }
+
+                                .btn-txt-gradient {
+                                    span {}
+                                }
+                            }
+
+                            .multi-tabs-content-container {
+                                .pm-page-content-cards-wrapper {
+                                    grid-template-columns: 1fr 1fr 1fr;
+
+                                    .pm-page-content-card {
+                                        .pm-page-card-media-container {
+                                            .pm-page-card--img {
+                                                img {}
+                                            }
+
+                                            .pm-page-card-icons-wrapper {
+                                                .creator-content-card__stats {
+                                                    .creator-content-stat-box {
+                                                        div {
+                                                            svg {
+                                                                path {}
+                                                            }
+                                                        }
+
+                                                        span {}
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .pm-page-card-body {
+                                            h2 {}
+                                        }
+
+                                        .pm-page-card-footer {
+                                            .profile-card {
+                                                .profile-card__main {
+                                                    .profile-card__avatar-settings {
+                                                        .profile-card__avatar {
+                                                            img {}
+                                                        }
+                                                    }
+
+                                                    .profile-card__info {
+                                                        .profile-card__name-badge {
+                                                            .profile-card__name {}
+
+                                                            .profile-card__badge {
+                                                                img {}
+                                                            }
+                                                        }
+
+                                                        .profile-card__username {}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 @media (max-width: 620px) {
     .header-main {
@@ -1408,6 +2076,441 @@
 
                             .subscripton-button {
                                 button {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .pm-page-content-wrapper {
+        .pm-page-content-container {
+            .pm-page-header-wrapper {
+                .pm-page-header-container {
+                    .pm-page-header-title {
+                        h1 {}
+                    }
+
+                    .pm-page-filters-wrapper {
+                        .pm-page-filters-container {
+                            .pm-page-filters-search-bar {
+                                .creator-content-search-input {
+                                    .label-input {
+                                        .input-placeholder-icon {
+                                            svg {
+                                                path {}
+                                            }
+                                        }
+
+                                        input {
+                                            &::placeholder {}
+                                        }
+                                    }
+                                }
+                            }
+
+                            .pm-page-select-filters-wrapper {
+                                .pm-page-select {
+                                    .custom-select-element {
+                                        .custom-select-label-wrapper {
+                                            .custom-select-icon-txt {
+                                                svg {
+                                                    path {}
+                                                }
+
+                                                span {}
+                                            }
+
+                                            .custom-select-chevron {
+                                                svg {
+                                                    path {}
+                                                }
+                                            }
+                                        }
+
+                                        .custom-select-options-dropdown-wrapper {
+                                            .custom-select-options-dropdown-container {
+                                                .custom-select-options-search {
+                                                    .label-input {
+                                                        .input-placeholder-icon {
+                                                            svg {
+                                                                path {}
+                                                            }
+                                                        }
+
+                                                        input {
+                                                            &::placeholder {}
+                                                        }
+                                                    }
+                                                }
+
+                                                .custom-select-options-lists-container {
+                                                    .custom-select-options-list {
+                                                        .custom-select-option {
+                                                            span {}
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .pm-page-hero-wrapper {
+                .pm-page-hero-container {
+                    .hero-type-card-wrapper {
+                        .hero-type-card-container {
+                            gap: 30px;
+
+                            .hero-type-card--bg-img {
+                                img {}
+                            }
+
+                            .hero-type-icons-wrapper {
+                                .creator-content-card__stats {
+                                    .creator-content-stat-box {
+                                        div {
+                                            svg {
+                                                path {}
+                                            }
+                                        }
+
+                                        span {}
+                                    }
+                                }
+                            }
+
+                            .hero-type-card--content-container {
+                                h2 {
+                                    font-size: 24px;
+                                }
+
+                                .hero-type-card--desc {
+                                    p {}
+                                }
+
+                                .btn-txt-gradient {
+                                    span {}
+
+                                    &.btn-outline {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .pm-page-multi-tab-content-wrapper {
+                .pm-page-multi-tab-content-container {
+                    .multi-tab-section {
+                        .multi-tabs-layout-container {
+                            .pm-multi-tabs-buttons-wrapper {
+                                .multi-tabs-action-buttons {
+                                    .multi-tab-switch-btn {
+                                        span {}
+                                    }
+                                }
+
+                                .btn-txt-gradient {
+                                    span {}
+                                }
+                            }
+
+                            .multi-tabs-content-container {
+                                .pm-page-content-cards-wrapper {
+                                    grid-template-columns: 1fr 1fr;
+
+                                    .pm-page-content-card {
+                                        .pm-page-card-media-container {
+                                            .pm-page-card--img {
+                                                img {}
+                                            }
+
+                                            .pm-page-card-icons-wrapper {
+                                                .creator-content-card__stats {
+                                                    .creator-content-stat-box {
+                                                        div {
+                                                            svg {
+                                                                path {}
+                                                            }
+                                                        }
+
+                                                        span {}
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .pm-page-card-body {
+                                            h2 {
+                                                font-size: 16px;
+                                                line-height: 21px;
+                                            }
+                                        }
+
+                                        .pm-page-card-footer {
+                                            .profile-card {
+                                                .profile-card__main {
+                                                    .profile-card__avatar-settings {
+                                                        .profile-card__avatar {
+                                                            img {}
+                                                        }
+                                                    }
+
+                                                    .profile-card__info {
+                                                        .profile-card__name-badge {
+                                                            .profile-card__name {}
+
+                                                            .profile-card__badge {
+                                                                img {}
+                                                            }
+                                                        }
+
+                                                        .profile-card__username {}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .pm-page-content-wrapper {
+        .pm-page-content-container {
+            .pm-page-header-wrapper {
+                .pm-page-header-container {
+                    .pm-page-header-title {
+                        h1 {}
+                    }
+
+                    .pm-page-filters-wrapper {
+                        .pm-page-filters-container {
+                            .pm-page-filters-search-bar {
+                                .creator-content-search-input {
+                                    .label-input {
+                                        .input-placeholder-icon {
+                                            svg {
+                                                path {}
+                                            }
+                                        }
+
+                                        input {
+                                            &::placeholder {}
+                                        }
+                                    }
+                                }
+                            }
+
+                            .pm-page-select-filters-wrapper {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+
+                                .pm-page-select {
+                                    &:first-child {
+                                        .custom-select-element {
+                                            border-radius: 8px 0 0 0;
+                                        }
+                                    }
+
+                                    &:nth-child(2) {
+                                        .custom-select-element {
+                                            border-radius: 0 8px 0 0;
+                                        }
+                                    }
+
+                                    &:nth-child(3) {
+                                        .custom-select-element {
+                                            border-radius: 0 0 0 8px;
+                                        }
+                                    }
+
+                                    &:last-child {
+                                        .custom-select-element {
+                                            border-radius: 0 0 8px 0;
+                                        }
+                                    }
+
+                                    .custom-select-element {
+                                        .custom-select-label-wrapper {
+                                            .custom-select-icon-txt {
+                                                svg {
+                                                    path {}
+                                                }
+
+                                                span {}
+                                            }
+
+                                            .custom-select-chevron {
+                                                svg {
+                                                    path {}
+                                                }
+                                            }
+                                        }
+
+                                        .custom-select-options-dropdown-wrapper {
+                                            .custom-select-options-dropdown-container {
+                                                .custom-select-options-search {
+                                                    .label-input {
+                                                        .input-placeholder-icon {
+                                                            svg {
+                                                                path {}
+                                                            }
+                                                        }
+
+                                                        input {
+                                                            &::placeholder {}
+                                                        }
+                                                    }
+                                                }
+
+                                                .custom-select-options-lists-container {
+                                                    .custom-select-options-list {
+                                                        .custom-select-option {
+                                                            span {}
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .pm-page-hero-wrapper {
+                .pm-page-hero-container {
+                    .hero-type-card-wrapper {
+                        .hero-type-card-container {
+                            .hero-type-card--bg-img {
+                                img {}
+                            }
+
+                            .hero-type-icons-wrapper {
+                                .creator-content-card__stats {
+                                    .creator-content-stat-box {
+                                        div {
+                                            svg {
+                                                path {}
+                                            }
+                                        }
+
+                                        span {}
+                                    }
+                                }
+                            }
+
+                            .hero-type-card--content-container {
+                                h2 {}
+
+                                .hero-type-card--desc {
+                                    p {}
+                                }
+
+                                .btn-txt-gradient {
+                                    span {}
+
+                                    &.btn-outline {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .pm-page-multi-tab-content-wrapper {
+                .pm-page-multi-tab-content-container {
+                    .multi-tab-section {
+                        .multi-tabs-layout-container {
+                            .pm-multi-tabs-buttons-wrapper {
+                                .multi-tabs-action-buttons {
+                                    .multi-tab-switch-btn {
+                                        span {}
+                                    }
+                                }
+
+                                .btn-txt-gradient {
+                                    max-width: 100%;
+                                    width: 100%;
+
+                                    span {}
+                                }
+                            }
+
+                            .multi-tabs-content-container {
+                                .pm-page-content-cards-wrapper {
+                                    .pm-page-content-card {
+                                        .pm-page-card-media-container {
+                                            .pm-page-card--img {
+                                                img {}
+                                            }
+
+                                            .pm-page-card-icons-wrapper {
+                                                padding: 7px;
+
+                                                .creator-content-card__stats {
+                                                    .creator-content-stat-box {
+                                                        padding: 2px 6px;
+                                                        gap: 3px;
+                                                        border-radius: 8px;
+
+                                                        div {
+                                                            svg {
+                                                                path {}
+                                                            }
+                                                        }
+
+                                                        span {}
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .pm-page-card-body {
+                                            h2 {}
+                                        }
+
+                                        .pm-page-card-footer {
+                                            .profile-card {
+                                                .profile-card__main {
+                                                    .profile-card__avatar-settings {
+                                                        .profile-card__avatar {
+                                                            img {}
+                                                        }
+                                                    }
+
+                                                    .profile-card__info {
+                                                        .profile-card__name-badge {
+                                                            .profile-card__name {}
+
+                                                            .profile-card__badge {
+                                                                img {}
+                                                            }
+                                                        }
+
+                                                        .profile-card__username {}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }

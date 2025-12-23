@@ -2648,6 +2648,7 @@
 
                                  span {
                                     font-size: 10px;
+                                    min-width: max-content;
                                  }
                               }
 
@@ -2838,6 +2839,7 @@
 
                      .multi-tabs-action-buttons {
                         display: flex;
+                        flex-wrap: wrap;
                         gap: 2px;
 
                         .multi-tab-switch-btn {
