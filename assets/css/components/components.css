@@ -2739,22 +2739,214 @@
       .pm-page-hero-wrapper {
          .pm-page-hero-container {
             .hero-type-card-wrapper {
+               aspect-ratio: 3 / 1;
+
                .hero-type-card-container {
+                  display: flex;
+                  flex-direction: column;
+                  padding: 14px 14px 26px 26px;
+
                   .hero-type-card--bg-img {
                      img {}
                   }
 
+                  .hero-type-icons-wrapper {
+                     position: relative;
+                     margin-left: auto;
+
+                     .creator-content-card__stats {
+                        display: flex;
+                        gap: 10px;
+
+                        .creator-content-stat-box {
+                           padding: 7px 8px;
+                           display: flex;
+                           align-items: center;
+                           border: 1px solid #c7c7c76b;
+                           backdrop-filter: blur(5px);
+                           gap: 4px;
+                           border-radius: 10px;
+
+                           &>div {
+                              display: flex;
+
+                              svg {
+                                 width: 18px;
+                                 height: 18px;
+
+                                 path {
+                                    stroke: white;
+                                 }
+                              }
+                           }
+
+                           span {
+                              color: white;
+                              font-size: 12px;
+                              line-height: 100%;
+                              font-weight: 600;
+                              letter-spacing: .5px;
+                           }
+                        }
+                     }
+                  }
+
                   .hero-type-card--content-container {
+                     padding: 0;
+                     margin-top: auto;
+
                      h2 {}
 
                      .hero-type-card--desc {
-                        p {}
+                        max-width: 360px;
+                        margin: 4px 0 6px;
+
+                        p {
+                           line-height: 22px;
+                        }
                      }
 
                      .btn-txt-gradient {
-                        span {}
+                        max-width: max-content;
+                        padding: 16px 34px;
+                        border-radius: 12px;
+
+                        span {
+                           font-size: 15px;
+                           line-height: 100%;
+                        }
 
                         &.btn-outline {}
+                     }
+                  }
+               }
+            }
+         }
+      }
+
+      /* Multi Tabs Content */
+      .pm-page-multi-tab-content-wrapper {
+         .pm-page-multi-tab-content-container {
+            .multi-tab-section {
+               .multi-tabs-layout-container {
+                  padding: 0;
+                  margin-top: 2px;
+                  gap: 10px;
+
+                  .pm-multi-tabs-buttons-wrapper {
+                     display: flex;
+
+                     .multi-tabs-action-buttons {
+                        display: flex;
+                        gap: 2px;
+
+                        .multi-tab-switch-btn {
+                           max-width: max-content;
+                           padding: 5px 6px;
+
+                           span {
+                              min-width: max-content;
+                              font-size: 12px;
+                           }
+                        }
+                     }
+
+                     .btn-txt-gradient {
+                        margin-left: auto;
+                        max-width: max-content;
+                        min-width: max-content;
+                        padding: 16px 34px;
+                        border-radius: 12px;
+
+                        span {
+                           font-size: 15px;
+                           line-height: 100%;
+                        }
+                     }
+                  }
+
+                  .multi-tabs-content-container {
+                     .pm-page-content-cards-wrapper {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+                        .pm-page-content-card {
+                           .pm-page-card-media-container {
+                              aspect-ratio: 1.16 / 1;
+                              width: 100%;
+                              background-color: red;
+                              overflow: hidden;
+                              border-radius: 10px;
+                              position: relative;
+
+                              .pm-page-card--img {
+                                 width: 100%;
+                                 position: absolute;
+                                 inset: 0;
+
+                                 img {
+                                    aspect-ratio: 1.16 / 1;
+                                    object-fit: cover;
+                                    width: 100%;
+                                    object-position: center;
+                                    height: 100%;
+                                 }
+                              }
+
+                              .pm-page-card-icons-wrapper {
+                                 position: relative;
+
+                                 .creator-content-card__stats {
+                                    display: flex;
+                                    gap: 6px;
+
+                                    .creator-content-stat-box {
+                                       width: 100%;
+
+                                       div {
+                                          svg {
+                                             path {
+                                                /* stroke: white; */
+                                             }
+                                          }
+                                       }
+
+                                       span {
+                                          color: white;
+                                       }
+                                    }
+                                 }
+                              }
+                           }
+
+                           .pm-page-card-body {
+                              h2 {}
+                           }
+
+                           .pm-page-card-footer {
+                              .profile-card {
+                                 .profile-card__main {
+                                    .profile-card__avatar-settings {
+                                       .profile-card__avatar {
+                                          img {}
+                                       }
+                                    }
+
+                                    .profile-card__info {
+                                       .profile-card__name-badge {
+                                          .profile-card__name {}
+
+                                          .profile-card__badge {
+                                             img {}
+                                          }
+                                       }
+
+                                       .profile-card__username {}
+                                    }
+                                 }
+                              }
+                           }
+                        }
                      }
                   }
                }
