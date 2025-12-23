@@ -2869,12 +2869,17 @@
                      .pm-page-content-cards-wrapper {
                         display: grid;
                         grid-template-columns: 1fr 1fr 1fr 1fr;
+                        gap: 10px;
 
                         .pm-page-content-card {
+                           gap: 10px;
+                           display: flex;
+                           flex-direction: column;
+                           padding-bottom: 10px;
+
                            .pm-page-card-media-container {
                               aspect-ratio: 1.16 / 1;
                               width: 100%;
-                              background-color: red;
                               overflow: hidden;
                               border-radius: 10px;
                               position: relative;
@@ -2895,24 +2900,48 @@
 
                               .pm-page-card-icons-wrapper {
                                  position: relative;
+                                 padding: 10px;
 
                                  .creator-content-card__stats {
                                     display: flex;
-                                    gap: 6px;
+                                    gap: 8px;
 
                                     .creator-content-stat-box {
                                        width: 100%;
+                                       padding: 4px 8px;
+                                       display: flex;
+                                       align-items: center;
+                                       justify-content: center;
+                                       border: 1px solid #c7c7c76b;
+                                       backdrop-filter: blur(5px);
+                                       gap: 4px;
+                                       border-radius: 10px;
 
                                        div {
-                                          svg {
-                                             path {
-                                                /* stroke: white; */
+                                          display: flex;
+
+                                          &.eye-icon {
+                                             svg {
+                                                path {
+                                                   stroke: white;
+                                                }
                                              }
+                                          }
+
+                                          svg {
+                                             width: 18px;
+                                             aspect-ratio: 1/1;
+
+                                             path {}
                                           }
                                        }
 
                                        span {
                                           color: white;
+                                          font-size: 11px;
+                                          line-height: 100%;
+                                          font-weight: 600;
+                                          letter-spacing: .5px;
                                        }
                                     }
                                  }
@@ -2920,14 +2949,32 @@
                            }
 
                            .pm-page-card-body {
-                              h2 {}
+                              h2 {
+                                 font-size: 20px;
+                                 line-height: 26px;
+                                 font-weight: 500;
+                              }
                            }
 
                            .pm-page-card-footer {
                               .profile-card {
+                                 padding: 0;
+                                 margin-top: 2px;
+
                                  .profile-card__main {
                                     .profile-card__avatar-settings {
                                        .profile-card__avatar {
+                                          width: 52px;
+
+                                          &::before {
+                                             content: '';
+                                             display: block;
+                                             position: absolute;
+                                             inset: 0;
+                                             border-radius: inherit;
+                                             border: 2px solid #FFFFFF7A;
+                                          }
+
                                           img {}
                                        }
                                     }
