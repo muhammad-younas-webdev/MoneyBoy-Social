@@ -3015,8 +3015,8 @@
    scrollbar-width: thin;
    scrollbar-color: #aaaaaa00 transparent;
    display: grid;
-   overflow: hidden;
 
+   /* overflow: hidden; */
    /* ----------- */
    .msg-page-container {
       display: flex;
