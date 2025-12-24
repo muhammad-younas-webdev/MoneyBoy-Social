@@ -3218,12 +3218,123 @@
       .msg-chats-layout {
          width: 100%;
          display: grid;
+         min-height: 100%;
 
          .msg-chats-rooms-container {
             display: grid;
+            min-height: 100%;
 
-            .msg-chat-room-container {
-               border-left: 1px solid #CBD5E1;
+            .msg-chat-room-layout {
+               display: grid;
+               min-height: 100%;
+
+               .msg-chat-room-container {
+                  border-left: 1px solid #CBD5E1;
+                  display: grid;
+                  grid-template-rows: auto 1fr auto;
+                  min-height: 100%;
+
+                  .chat-room-header-layout {
+                     .chat-room-header-container {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding-right: 10px;
+
+                        .chat-room-header-profile {
+                           .profile-card {
+                              .profile-card__main {
+                                 .profile-card__avatar-settings {
+                                    .profile-card__avatar {
+                                       img {}
+                                    }
+                                 }
+
+                                 .profile-card__info {
+                                    .profile-card__name-badge {
+                                       .profile-card__name {}
+
+                                       .profile-card__badge {
+                                          img {}
+                                       }
+                                    }
+
+                                    .profile-card__username {}
+                                 }
+                              }
+                           }
+                        }
+
+                        .chat-room-header-btns {
+                           display: flex;
+                           gap: 8px;
+                           align-items: center;
+
+                           .btn-txt-gradient {
+                              span {}
+                           }
+
+                           .rel-user-more-opts-wrapper {
+                              .rel-user-more-opts-trigger-icon {
+                                 svg {
+                                    path {}
+                                 }
+                              }
+
+                              .rel-users-more-opts-popup-wrapper {
+                                 .rel-users-more-opts-popup-container {
+                                    ul {
+                                       li {
+                                          .icon {
+                                             svg {
+                                                path {}
+                                             }
+                                          }
+
+                                          .share-icon {}
+
+                                          .mute-icon {}
+
+                                          .remove-icon {}
+
+                                          .block-icon {}
+
+                                          .report-icon {}
+
+                                          span {}
+                                       }
+                                    }
+                                 }
+                              }
+                           }
+                        }
+                     }
+                  }
+
+                  .chat-room-body-layout {
+                     background-color: rgb(249, 249, 255);
+                     min-height: 100%;
+                     overflow: auto;
+                     scrollbar-width: thin;
+                     scrollbar-color: #aaaaaa transparent;
+
+                     .chat-room-body-container {
+                        padding: 20px;
+
+                        h1 {
+                           margin: 10px 0;
+                        }
+                     }
+                  }
+
+                  .chat-room-footer-layout {
+                     background-color: rgb(255, 138, 255);
+                     padding: 20px;
+                     text-align: center;
+
+                     .chat-room-footer-container {}
+                  }
+               }
             }
          }
       }
