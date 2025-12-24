@@ -3012,14 +3012,12 @@
    max-height: calc(calc(100dvh - calc(calc(var(--header-height) + calc(2 * var(--spacing-md))))));
    min-height: calc(calc(100dvh - calc(calc(var(--header-height) + calc(2 * var(--spacing-md))))));
    height: calc(calc(100dvh - calc(calc(var(--header-height) + calc(2 * var(--spacing-md))))));
-   scrollbar-width: thin;
-   scrollbar-color: #aaaaaa00 transparent;
    display: grid;
 
-   /* overflow: hidden; */
    /* ----------- */
    .msg-page-container {
       display: flex;
+      min-height: 100%;
 
       .msg-profiles-layout {
          width: 280px;
@@ -3082,11 +3080,15 @@
          .msg-profiles-wrapper {
             display: grid;
             overflow: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #aaaaaa transparent;
+            scrollbar-gutter: stable right-edges;
 
             .msg-profiles-container {
                .msg-contact-box {
                   padding: 10px 12px;
                   border-left: 2px solid transparent;
+                  transition: var(--transition-fast);
 
                   &:not(:last-child) {
                      border-bottom: 1px solid #F9F9F9
@@ -3095,6 +3097,11 @@
                   &[data-active] {
                      background: #F2A4230F;
                      border-left-color: #E5741F
+                  }
+
+                  &:hover {
+                     cursor: pointer;
+                     background: #F2A4230F;
                   }
 
                   .contact-item {
