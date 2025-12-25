@@ -401,6 +401,272 @@
             }
         }
     }
+
+    .msg-page-wrapper {
+        max-height: calc(calc(100dvh - 185px));
+        min-height: calc(calc(100dvh - 185px));
+        height: calc(calc(100dvh - 185px));
+
+        .msg-page-container {
+            position: relative;
+
+            :has(.msg-chat-room-layout[data-active]) {
+                position: absolute;
+                inset: 0;
+
+                .msg-profiles-layout {
+                    width: 100%;
+                }
+
+                .msg-chats-layout {}
+            }
+
+            .msg-profiles-layout {
+                .msg-profiles-header {
+                    .msg-profiles-header-container {
+                        .msg-layout-title {
+                            h2 {}
+
+                            .msg-num-circle {
+                                span {}
+                            }
+                        }
+
+                        .msg-profiles-search-input {
+                            .label-input {
+                                .input-placeholder-icon {
+                                    svg {
+                                        path {}
+                                    }
+                                }
+
+                                input {}
+                            }
+                        }
+                    }
+                }
+
+                .msg-profiles-wrapper {
+                    .msg-profiles-container {
+                        .msg-contact-box {
+                            .contact-item {
+                                .contact-avatar-wrapper {
+                                    .contact-avatar {}
+
+                                    .contact-status-indicator {}
+                                }
+
+                                .contact-content {
+                                    .contact-header {
+                                        .contact-name {}
+
+                                        .contact-time {}
+                                    }
+
+                                    .contact-preview {
+                                        .contact-message {
+                                            p {}
+                                        }
+
+                                        .contact-unread-count {
+                                            span {}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .msg-chats-layout {
+                .msg-chats-rooms-container {
+                    .msg-chat-room-layout {
+                        .msg-chat-room-container {
+                            .chat-room-header-layout {
+                                .chat-room-header-container {
+                                    flex-wrap: wrap;
+                                    gap: 10px;
+
+                                    .chat-room-header-profile {
+                                        .profile-card {
+                                            .profile-card__main {
+                                                .profile-card__avatar-settings {
+                                                    .profile-card__avatar {
+                                                        img {}
+                                                    }
+                                                }
+
+                                                .profile-card__info {
+                                                    .profile-card__name-badge {
+                                                        .profile-card__name {}
+
+                                                        .profile-card__badge {
+                                                            img {}
+                                                        }
+                                                    }
+
+                                                    .profile-card__username {}
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .chat-room-header-btns {
+                                        margin-left: auto;
+
+                                        .btn-txt-gradient {
+                                            span {}
+                                        }
+
+                                        .rel-user-more-opts-wrapper {
+                                            .rel-user-more-opts-trigger-icon {
+                                                svg {
+                                                    path {}
+                                                }
+                                            }
+
+                                            .rel-users-more-opts-popup-wrapper {
+                                                .rel-users-more-opts-popup-container {
+                                                    ul {
+                                                        li {
+                                                            .icon {
+                                                                svg {
+                                                                    path {}
+                                                                }
+                                                            }
+
+                                                            .share-icon {}
+
+                                                            .mute-icon {}
+
+                                                            .remove-icon {}
+
+                                                            .block-icon {}
+
+                                                            .report-icon {}
+
+                                                            span {}
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .chat-room-body-layout {
+                                .chat-room-body-container {
+                                    .chat-date-divider {
+                                        span {}
+                                    }
+
+                                    .chat-msg-wrapper {
+                                        &.incoming-message {}
+
+                                        &.outcoming-message {
+                                            .chat-msg-profile {
+                                                img {}
+                                            }
+
+                                            .chat-msg-txt-wrapper {
+                                                .chat-msg-txt {
+                                                    p {}
+                                                }
+
+                                                .chat-msg-details {
+                                                    .chat-msg-time {
+                                                        span {}
+                                                    }
+
+                                                    .chat-msg-check-icon {
+                                                        svg {
+                                                            path {}
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .chat-msg-profile {
+                                            img {}
+                                        }
+
+                                        .chat-msg-txt-wrapper {
+                                            .chat-msg-image {
+                                                img {}
+                                            }
+
+                                            .chat-msg-txt {
+                                                p {}
+                                            }
+
+                                            .chat-msg-details {
+                                                .chat-msg-time {
+                                                    span {}
+                                                }
+
+                                                .chat-msg-check-icon {
+                                                    svg {
+                                                        path {}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .chat-msg-typing-anim-elem {}
+                                }
+                            }
+
+                            .chat-room-footer-layout {
+                                .chat-room-footer-container {
+                                    .chat-file-upload-btn {
+                                        label {
+                                            input {}
+
+                                            span {
+                                                svg {
+                                                    path {}
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .chat-msg-typing-input {
+                                        input {}
+                                    }
+
+                                    .chat-msg-action-btns {
+                                        .emojis-icon-btn {
+                                            svg {
+                                                rect {}
+
+                                                path {}
+                                            }
+                                        }
+
+                                        .voice-recorder-icon-btn {
+                                            svg {
+                                                rect {}
+
+                                                path {}
+                                            }
+                                        }
+
+                                        .send-msg-btn {
+                                            span {}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 992px) {

@@ -6,7 +6,7 @@
   const CONTACT_ATTR = "[msg-chat-contact]";
   const ROOM_ATTR = "[msg-chat-room]";
   const ACTIVE_ATTR = "data-active";
-  const DESKTOP_BREAKPOINT = 768;
+  const DESKTOP_BREAKPOINT = 993;
 
   let wasDesktop = window.innerWidth > DESKTOP_BREAKPOINT;
 

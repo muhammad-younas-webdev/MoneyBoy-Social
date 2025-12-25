@@ -2767,6 +2767,25 @@
                            backdrop-filter: blur(5px);
                            gap: 4px;
                            border-radius: 10px;
+                           cursor: pointer;
+
+                           &:nth-child(1) {
+                              &:hover {
+                                 svg {
+                                    path {
+                                       &:nth-child(1) {
+                                          stroke: #A77BFF;
+                                          fill: #A77BFF;
+                                       }
+
+                                       &:nth-child(2) {
+                                          stroke: #A77BFF;
+                                          fill: #fff;
+                                       }
+                                    }
+                                 }
+                              }
+                           }
 
                            &>div {
                               display: flex;
@@ -2774,9 +2793,16 @@
                               svg {
                                  width: 18px;
                                  height: 18px;
+                                 transition: var(--transition-fast);
+
+                                 &.duration-icon {
+                                    width: 14px;
+                                    height: 14px;
+                                 }
 
                                  path {
-                                    stroke: white;
+                                    transition: var(--transition-fast);
+                                    /* stroke: white; */
                                  }
                               }
                            }
@@ -2919,6 +2945,23 @@
                                        backdrop-filter: blur(5px);
                                        gap: 4px;
                                        border-radius: 10px;
+                                       cursor: pointer;
+
+                                       &:hover {
+                                          svg {
+                                             path {
+                                                &:nth-child(1) {
+                                                   stroke: #A77BFF;
+                                                   fill: #A77BFF;
+                                                }
+
+                                                &:nth-child(2) {
+                                                   stroke: #A77BFF;
+                                                   fill: #fff;
+                                                }
+                                             }
+                                          }
+                                       }
 
                                        div {
                                           display: flex;
@@ -2934,6 +2977,7 @@
                                           svg {
                                              width: 18px;
                                              aspect-ratio: 1/1;
+                                             transition: var(--transition-fast);
 
                                              path {}
                                           }
@@ -3020,6 +3064,16 @@
       display: flex;
       min-height: 100%;
 
+      &:not(:has(.msg-chat-room-layout[data-active])) {
+         .msg-profiles-layout {
+            width: 100%;
+         }
+
+         .msg-chats-layout {
+            display: none;
+         }
+      }
+
       .msg-profiles-layout {
          width: 280px;
          min-width: 280px;
@@ -3072,6 +3126,7 @@
 
                      input {
                         border-radius: 10px;
+                        z-index: 0;
                      }
                   }
                }
@@ -3114,6 +3169,7 @@
                      display: flex;
                      align-items: center;
                      gap: 8px;
+                     width: 100%;
 
                      .contact-avatar-wrapper {
                         position: relative;
@@ -3158,6 +3214,7 @@
                         display: flex;
                         flex-direction: column;
                         gap: 5px;
+                        width: 100%;
 
                         .contact-header {
                            display: flex;
@@ -3544,7 +3601,7 @@
 
                            input {
                               min-height: 56px;
-                              background-color: none;
+                              background: none;
                               border: none;
                               outline: none;
                            }
