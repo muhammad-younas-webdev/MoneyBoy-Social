@@ -36,3 +36,6 @@ import "./components/swipers.js";
 
 // Follow/Unfollow Button Toggle Functionality
 import "./components/follow-unfollow-btn-toggle.js";
+
+// Follow/Unfollow Button Toggle Functionality
+import "./components/chat-manager.js";
