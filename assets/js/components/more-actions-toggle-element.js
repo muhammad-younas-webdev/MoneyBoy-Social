@@ -245,31 +245,35 @@ const handleToggle = (e) => {
 function setupListeners(wrapper) {
   const triggerBtn = wrapper.querySelector(POPUP_TRIGGER_CLASS);
   const popupEl = wrapper.querySelector(POPUP_ELEMENT_CLASS);
-  if (!triggerBtn || !popupEl) return; // 1. Create the initial timeline
+  if (!triggerBtn || !popupEl) return;
 
   const tl = createTimeline(popupEl);
-  popupTimelines.set(wrapper, { tl: tl, isMobileState: isMobile() }); // 2. Add the main toggle listener
+  popupTimelines.set(wrapper, { tl: tl, isMobileState: isMobile() });
 
   triggerBtn.removeEventListener("click", handleToggle);
   triggerBtn.addEventListener("click", handleToggle);
 
-  // 3. Add listener to handle option clicks (including the new copy feature)
+  // 3. Updated listener to handle search-input exclusion
   popupEl.addEventListener("click", (e) => {
     const clickedOption = e.target.closest(CLOSING_ACTION_TAG);
 
     if (clickedOption) {
+      // 🎯 THE FIX: If the clicked LI is the search container, do NOT close the popup.
+      if (clickedOption.classList.contains("chat-msg-search")) {
+        // We let the event pass through so the input gets focus, but we stop the closing logic here.
+        return;
+      }
+
       e.stopPropagation();
 
-      // Check if this specific option has the copy attribute
       const linkToCopy = clickedOption.getAttribute(COPY_LINK_ATTR);
 
       if (linkToCopy) {
-        // Copy the link to clipboard
-        copyToClipboard(linkToCopy);
+        copyToClipboard(linkToCopy, clickedOption);
+        // Note: my previous version of copyToClipboard handles the closing delay
+      } else {
+        closePopup(wrapper);
       }
-
-      // Crucially, close the popup regardless of whether a link was copied
-      closePopup(wrapper);
     }
   });
 }

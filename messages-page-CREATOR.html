@@ -1258,23 +1258,33 @@
                                     <div class="rel-users-more-opts-popup-wrapper">
                                       <div class="rel-users-more-opts-popup-container">
                                         <ul>
-                                          <li>
-                                            <div class="icon share-icon">
-                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none">
-                                                <path
-                                                  d="M16.4405 8.90002C20.0405 9.21002 21.5105 11.06 21.5105 15.11V15.24C21.5105 19.71 19.7205 21.5 15.2505 21.5H8.74047C4.27047 21.5 2.48047 19.71 2.48047 15.24V15.11C2.48047 11.09 3.93047 9.24002 7.47047 8.91002"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path d="M12 15V3.62" stroke="none" stroke-width="1.5"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M15.3484 5.85L11.9984 2.5L8.64844 5.85" stroke="none"
-                                                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                              </svg>
+                                          <li class="chat-msg-search">
+                                            <div>
+                                              <div class="label-input">
+                                                <!-- Placeholder Icon -->
+                                                <div class="input-placeholder-icon">
+                                                  <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                    height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path
+                                                      d="M20 11C20 15.97 15.97 20 11 20C6.03 20 2 15.97 2 11C2 6.03 6.03 2 11 2"
+                                                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    </path>
+                                                    <path
+                                                      d="M18.9299 20.6898C19.4599 22.2898 20.6699 22.4498 21.5999 21.0498C22.4499 19.7698 21.8899 18.7198 20.3499 18.7198C19.2099 18.7098 18.5699 19.5998 18.9299 20.6898Z"
+                                                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    </path>
+                                                    <path d="M14 5H20" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round">
+                                                    </path>
+                                                    <path d="M14 8H17" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round">
+                                                    </path>
+                                                  </svg>
+                                                </div>
+                                                <!-- <label for="header-search-input">Search here</label> -->
+                                                <input type="text" placeholder="Search Message">
+                                              </div>
                                             </div>
-                                            <span>
-                                              Share @rubenkenter
-                                            </span>
                                           </li>
                                           <li>
                                             <div class="icon mute-icon">
@@ -1296,35 +1306,40 @@
                                                   stroke-linecap="round" stroke-linejoin="round" />
                                               </svg>
                                             </div>
-                                            <span> Mute </span>
+                                            <span>
+                                              Mute Conversation
+                                            </span>
                                           </li>
                                           <li>
-                                            <div class="icon remove-icon">
+                                            <div class="icon hide-icon">
                                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none">
-                                                <path
-                                                  d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path
-                                                  d="M3.41016 22C3.41016 18.13 7.26015 15 12.0002 15C12.9602 15 13.8902 15.13 14.7602 15.37"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path
-                                                  d="M22 18C22 18.32 21.96 18.63 21.88 18.93C21.79 19.33 21.63 19.72 21.42 20.06C20.73 21.22 19.46 22 18 22C16.97 22 16.04 21.61 15.34 20.97C15.04 20.71 14.78 20.4 14.58 20.06C14.21 19.46 14 18.75 14 18C14 16.92 14.43 15.93 15.13 15.21C15.86 14.46 16.88 14 18 14C19.18 14 20.25 14.51 20.97 15.33C21.61 16.04 22 16.98 22 18Z"
-                                                  stroke="none" stroke-width="1.5" stroke-miterlimit="10"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M19.0319 16.94L16.9219 19.05" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path d="M16.9414 16.96L19.0614 19.07" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+
+                                                <g>
+                                                  <path
+                                                    d="M17.8201 5.77047C16.0701 4.45047 14.0701 3.73047 12.0001 3.73047C8.47009 3.73047 5.18009 5.81047 2.89009 9.41047C1.99009 10.8205 1.99009 13.1905 2.89009 14.6005C3.68009 15.8405 4.60009 16.9105 5.60009 17.7705"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M14.5299 9.46992L9.46992 14.5299C8.81992 13.8799 8.41992 12.9899 8.41992 11.9999C8.41992 10.0199 10.0199 8.41992 11.9999 8.41992C12.9899 8.41992 13.8799 8.81992 14.5299 9.46992Z"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M8.41992 19.5297C9.55992 20.0097 10.7699 20.2697 11.9999 20.2697C15.5299 20.2697 18.8199 18.1897 21.1099 14.5897C22.0099 13.1797 22.0099 10.8097 21.1099 9.39969C20.7799 8.87969 20.4199 8.38969 20.0499 7.92969"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M15.5099 12.6992C15.2499 14.1092 14.0999 15.2592 12.6899 15.5192"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path d="M9.47 14.5293L2 21.9993" stroke="none" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                  <path d="M22 2L14.53 9.47" stroke="none" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                </g>
                                               </svg>
                                             </div>
-                                            <span>
-                                              Remove this follower
-                                            </span>
+                                            <span> Hide Conversation </span>
                                           </li>
                                           <li>
                                             <div class="icon block-icon">
@@ -1333,22 +1348,22 @@
                                                 <path
                                                   d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
                                                   stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-linejoin="round"></path>
                                                 <path
                                                   d="M3.41016 22C3.41016 18.13 7.26015 15 12.0002 15C12.9602 15 13.8902 15.13 14.7602 15.37"
                                                   stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-linejoin="round"></path>
                                                 <path
                                                   d="M22 18C22 18.32 21.96 18.63 21.88 18.93C21.79 19.33 21.63 19.72 21.42 20.06C20.73 21.22 19.46 22 18 22C16.97 22 16.04 21.61 15.34 20.97C15.04 20.71 14.78 20.4 14.58 20.06C14.21 19.46 14 18.75 14 18C14 16.92 14.43 15.93 15.13 15.21C15.86 14.46 16.88 14 18 14C19.18 14 20.25 14.51 20.97 15.33C21.61 16.04 22 16.98 22 18Z"
                                                   stroke="none" stroke-width="1.5" stroke-miterlimit="10"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                                 <path d="M20.5 15.5001L15.5 20.5001" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                                                </path>
                                               </svg>
                                             </div>
                                             <span>
-                                              Block @rubenkenter
+                                              Block Messages
                                             </span>
                                           </li>
                                           <li>
@@ -1365,7 +1380,46 @@
                                               </svg>
                                             </div>
                                             <span>
-                                              Report @rubenkenter
+                                              Report Conversation
+                                            </span>
+                                          </li>
+                                          <li>
+                                            <div class="icon delete-icon">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <g clip-path="url(#clip0_6001_200)">
+                                                  <mask id="mask0_6001_200" style="mask-type:luminance"
+                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                                    <path d="M24 0H0V24H24V0Z" fill="white" />
+                                                  </mask>
+                                                  <g mask="url(#mask0_6001_200)">
+                                                    <path
+                                                      d="M21 5.98047C17.67 5.65047 14.32 5.48047 10.98 5.48047C9 5.48047 7.02 5.58047 5.04 5.78047L3 5.98047"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path
+                                                      d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path
+                                                      d="M19 6L18.3358 18.5288C18.2234 20.4821 18.1314 22 15.2803 22H8.71971C5.86861 22 5.77664 20.4821 5.66423 18.5288L5 6"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path d="M10.3301 16.5H13.6601" stroke="none" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M9.5 12.5H14.5" stroke="none" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round" />
+                                                  </g>
+                                                </g>
+                                                <defs>
+                                                  <clipPath id="clip0_6001_200">
+                                                    <rect width="24" height="24" fill="white" />
+                                                  </clipPath>
+                                                </defs>
+                                              </svg>
+                                            </div>
+                                            <span>
+                                              Delete Conversation
                                             </span>
                                           </li>
                                         </ul>
@@ -1767,23 +1821,33 @@
                                     <div class="rel-users-more-opts-popup-wrapper">
                                       <div class="rel-users-more-opts-popup-container">
                                         <ul>
-                                          <li>
-                                            <div class="icon share-icon">
-                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none">
-                                                <path
-                                                  d="M16.4405 8.90002C20.0405 9.21002 21.5105 11.06 21.5105 15.11V15.24C21.5105 19.71 19.7205 21.5 15.2505 21.5H8.74047C4.27047 21.5 2.48047 19.71 2.48047 15.24V15.11C2.48047 11.09 3.93047 9.24002 7.47047 8.91002"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path d="M12 15V3.62" stroke="none" stroke-width="1.5"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M15.3484 5.85L11.9984 2.5L8.64844 5.85" stroke="none"
-                                                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                              </svg>
+                                          <li class="chat-msg-search">
+                                            <div>
+                                              <div class="label-input">
+                                                <!-- Placeholder Icon -->
+                                                <div class="input-placeholder-icon">
+                                                  <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                    height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path
+                                                      d="M20 11C20 15.97 15.97 20 11 20C6.03 20 2 15.97 2 11C2 6.03 6.03 2 11 2"
+                                                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    </path>
+                                                    <path
+                                                      d="M18.9299 20.6898C19.4599 22.2898 20.6699 22.4498 21.5999 21.0498C22.4499 19.7698 21.8899 18.7198 20.3499 18.7198C19.2099 18.7098 18.5699 19.5998 18.9299 20.6898Z"
+                                                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    </path>
+                                                    <path d="M14 5H20" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round">
+                                                    </path>
+                                                    <path d="M14 8H17" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round">
+                                                    </path>
+                                                  </svg>
+                                                </div>
+                                                <!-- <label for="header-search-input">Search here</label> -->
+                                                <input type="text" placeholder="Search Message">
+                                              </div>
                                             </div>
-                                            <span>
-                                              Share @rubenkenter
-                                            </span>
                                           </li>
                                           <li>
                                             <div class="icon mute-icon">
@@ -1805,35 +1869,40 @@
                                                   stroke-linecap="round" stroke-linejoin="round" />
                                               </svg>
                                             </div>
-                                            <span> Mute </span>
+                                            <span>
+                                              Mute Conversation
+                                            </span>
                                           </li>
                                           <li>
-                                            <div class="icon remove-icon">
+                                            <div class="icon hide-icon">
                                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none">
-                                                <path
-                                                  d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path
-                                                  d="M3.41016 22C3.41016 18.13 7.26015 15 12.0002 15C12.9602 15 13.8902 15.13 14.7602 15.37"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path
-                                                  d="M22 18C22 18.32 21.96 18.63 21.88 18.93C21.79 19.33 21.63 19.72 21.42 20.06C20.73 21.22 19.46 22 18 22C16.97 22 16.04 21.61 15.34 20.97C15.04 20.71 14.78 20.4 14.58 20.06C14.21 19.46 14 18.75 14 18C14 16.92 14.43 15.93 15.13 15.21C15.86 14.46 16.88 14 18 14C19.18 14 20.25 14.51 20.97 15.33C21.61 16.04 22 16.98 22 18Z"
-                                                  stroke="none" stroke-width="1.5" stroke-miterlimit="10"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M19.0319 16.94L16.9219 19.05" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path d="M16.9414 16.96L19.0614 19.07" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+
+                                                <g>
+                                                  <path
+                                                    d="M17.8201 5.77047C16.0701 4.45047 14.0701 3.73047 12.0001 3.73047C8.47009 3.73047 5.18009 5.81047 2.89009 9.41047C1.99009 10.8205 1.99009 13.1905 2.89009 14.6005C3.68009 15.8405 4.60009 16.9105 5.60009 17.7705"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M14.5299 9.46992L9.46992 14.5299C8.81992 13.8799 8.41992 12.9899 8.41992 11.9999C8.41992 10.0199 10.0199 8.41992 11.9999 8.41992C12.9899 8.41992 13.8799 8.81992 14.5299 9.46992Z"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M8.41992 19.5297C9.55992 20.0097 10.7699 20.2697 11.9999 20.2697C15.5299 20.2697 18.8199 18.1897 21.1099 14.5897C22.0099 13.1797 22.0099 10.8097 21.1099 9.39969C20.7799 8.87969 20.4199 8.38969 20.0499 7.92969"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M15.5099 12.6992C15.2499 14.1092 14.0999 15.2592 12.6899 15.5192"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path d="M9.47 14.5293L2 21.9993" stroke="none" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                  <path d="M22 2L14.53 9.47" stroke="none" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                </g>
                                               </svg>
                                             </div>
-                                            <span>
-                                              Remove this follower
-                                            </span>
+                                            <span> Hide Conversation </span>
                                           </li>
                                           <li>
                                             <div class="icon block-icon">
@@ -1842,22 +1911,22 @@
                                                 <path
                                                   d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
                                                   stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-linejoin="round"></path>
                                                 <path
                                                   d="M3.41016 22C3.41016 18.13 7.26015 15 12.0002 15C12.9602 15 13.8902 15.13 14.7602 15.37"
                                                   stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-linejoin="round"></path>
                                                 <path
                                                   d="M22 18C22 18.32 21.96 18.63 21.88 18.93C21.79 19.33 21.63 19.72 21.42 20.06C20.73 21.22 19.46 22 18 22C16.97 22 16.04 21.61 15.34 20.97C15.04 20.71 14.78 20.4 14.58 20.06C14.21 19.46 14 18.75 14 18C14 16.92 14.43 15.93 15.13 15.21C15.86 14.46 16.88 14 18 14C19.18 14 20.25 14.51 20.97 15.33C21.61 16.04 22 16.98 22 18Z"
                                                   stroke="none" stroke-width="1.5" stroke-miterlimit="10"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                                 <path d="M20.5 15.5001L15.5 20.5001" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                                                </path>
                                               </svg>
                                             </div>
                                             <span>
-                                              Block @rubenkenter
+                                              Block Messages
                                             </span>
                                           </li>
                                           <li>
@@ -1874,7 +1943,46 @@
                                               </svg>
                                             </div>
                                             <span>
-                                              Report @rubenkenter
+                                              Report Conversation
+                                            </span>
+                                          </li>
+                                          <li>
+                                            <div class="icon delete-icon">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <g clip-path="url(#clip0_6001_200)">
+                                                  <mask id="mask0_6001_200" style="mask-type:luminance"
+                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                                    <path d="M24 0H0V24H24V0Z" fill="white" />
+                                                  </mask>
+                                                  <g mask="url(#mask0_6001_200)">
+                                                    <path
+                                                      d="M21 5.98047C17.67 5.65047 14.32 5.48047 10.98 5.48047C9 5.48047 7.02 5.58047 5.04 5.78047L3 5.98047"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path
+                                                      d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path
+                                                      d="M19 6L18.3358 18.5288C18.2234 20.4821 18.1314 22 15.2803 22H8.71971C5.86861 22 5.77664 20.4821 5.66423 18.5288L5 6"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path d="M10.3301 16.5H13.6601" stroke="none" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M9.5 12.5H14.5" stroke="none" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round" />
+                                                  </g>
+                                                </g>
+                                                <defs>
+                                                  <clipPath id="clip0_6001_200">
+                                                    <rect width="24" height="24" fill="white" />
+                                                  </clipPath>
+                                                </defs>
+                                              </svg>
+                                            </div>
+                                            <span>
+                                              Delete Conversation
                                             </span>
                                           </li>
                                         </ul>
@@ -2276,23 +2384,33 @@
                                     <div class="rel-users-more-opts-popup-wrapper">
                                       <div class="rel-users-more-opts-popup-container">
                                         <ul>
-                                          <li>
-                                            <div class="icon share-icon">
-                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none">
-                                                <path
-                                                  d="M16.4405 8.90002C20.0405 9.21002 21.5105 11.06 21.5105 15.11V15.24C21.5105 19.71 19.7205 21.5 15.2505 21.5H8.74047C4.27047 21.5 2.48047 19.71 2.48047 15.24V15.11C2.48047 11.09 3.93047 9.24002 7.47047 8.91002"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path d="M12 15V3.62" stroke="none" stroke-width="1.5"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M15.3484 5.85L11.9984 2.5L8.64844 5.85" stroke="none"
-                                                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                              </svg>
+                                          <li class="chat-msg-search">
+                                            <div>
+                                              <div class="label-input">
+                                                <!-- Placeholder Icon -->
+                                                <div class="input-placeholder-icon">
+                                                  <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                    height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path
+                                                      d="M20 11C20 15.97 15.97 20 11 20C6.03 20 2 15.97 2 11C2 6.03 6.03 2 11 2"
+                                                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    </path>
+                                                    <path
+                                                      d="M18.9299 20.6898C19.4599 22.2898 20.6699 22.4498 21.5999 21.0498C22.4499 19.7698 21.8899 18.7198 20.3499 18.7198C19.2099 18.7098 18.5699 19.5998 18.9299 20.6898Z"
+                                                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    </path>
+                                                    <path d="M14 5H20" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round">
+                                                    </path>
+                                                    <path d="M14 8H17" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round">
+                                                    </path>
+                                                  </svg>
+                                                </div>
+                                                <!-- <label for="header-search-input">Search here</label> -->
+                                                <input type="text" placeholder="Search Message">
+                                              </div>
                                             </div>
-                                            <span>
-                                              Share @rubenkenter
-                                            </span>
                                           </li>
                                           <li>
                                             <div class="icon mute-icon">
@@ -2314,35 +2432,40 @@
                                                   stroke-linecap="round" stroke-linejoin="round" />
                                               </svg>
                                             </div>
-                                            <span> Mute </span>
+                                            <span>
+                                              Mute Conversation
+                                            </span>
                                           </li>
                                           <li>
-                                            <div class="icon remove-icon">
+                                            <div class="icon hide-icon">
                                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none">
-                                                <path
-                                                  d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path
-                                                  d="M3.41016 22C3.41016 18.13 7.26015 15 12.0002 15C12.9602 15 13.8902 15.13 14.7602 15.37"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path
-                                                  d="M22 18C22 18.32 21.96 18.63 21.88 18.93C21.79 19.33 21.63 19.72 21.42 20.06C20.73 21.22 19.46 22 18 22C16.97 22 16.04 21.61 15.34 20.97C15.04 20.71 14.78 20.4 14.58 20.06C14.21 19.46 14 18.75 14 18C14 16.92 14.43 15.93 15.13 15.21C15.86 14.46 16.88 14 18 14C19.18 14 20.25 14.51 20.97 15.33C21.61 16.04 22 16.98 22 18Z"
-                                                  stroke="none" stroke-width="1.5" stroke-miterlimit="10"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M19.0319 16.94L16.9219 19.05" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path d="M16.9414 16.96L19.0614 19.07" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+
+                                                <g>
+                                                  <path
+                                                    d="M17.8201 5.77047C16.0701 4.45047 14.0701 3.73047 12.0001 3.73047C8.47009 3.73047 5.18009 5.81047 2.89009 9.41047C1.99009 10.8205 1.99009 13.1905 2.89009 14.6005C3.68009 15.8405 4.60009 16.9105 5.60009 17.7705"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M14.5299 9.46992L9.46992 14.5299C8.81992 13.8799 8.41992 12.9899 8.41992 11.9999C8.41992 10.0199 10.0199 8.41992 11.9999 8.41992C12.9899 8.41992 13.8799 8.81992 14.5299 9.46992Z"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M8.41992 19.5297C9.55992 20.0097 10.7699 20.2697 11.9999 20.2697C15.5299 20.2697 18.8199 18.1897 21.1099 14.5897C22.0099 13.1797 22.0099 10.8097 21.1099 9.39969C20.7799 8.87969 20.4199 8.38969 20.0499 7.92969"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M15.5099 12.6992C15.2499 14.1092 14.0999 15.2592 12.6899 15.5192"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path d="M9.47 14.5293L2 21.9993" stroke="none" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                  <path d="M22 2L14.53 9.47" stroke="none" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                </g>
                                               </svg>
                                             </div>
-                                            <span>
-                                              Remove this follower
-                                            </span>
+                                            <span> Hide Conversation </span>
                                           </li>
                                           <li>
                                             <div class="icon block-icon">
@@ -2351,22 +2474,22 @@
                                                 <path
                                                   d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
                                                   stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-linejoin="round"></path>
                                                 <path
                                                   d="M3.41016 22C3.41016 18.13 7.26015 15 12.0002 15C12.9602 15 13.8902 15.13 14.7602 15.37"
                                                   stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-linejoin="round"></path>
                                                 <path
                                                   d="M22 18C22 18.32 21.96 18.63 21.88 18.93C21.79 19.33 21.63 19.72 21.42 20.06C20.73 21.22 19.46 22 18 22C16.97 22 16.04 21.61 15.34 20.97C15.04 20.71 14.78 20.4 14.58 20.06C14.21 19.46 14 18.75 14 18C14 16.92 14.43 15.93 15.13 15.21C15.86 14.46 16.88 14 18 14C19.18 14 20.25 14.51 20.97 15.33C21.61 16.04 22 16.98 22 18Z"
                                                   stroke="none" stroke-width="1.5" stroke-miterlimit="10"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                                 <path d="M20.5 15.5001L15.5 20.5001" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                                                </path>
                                               </svg>
                                             </div>
                                             <span>
-                                              Block @rubenkenter
+                                              Block Messages
                                             </span>
                                           </li>
                                           <li>
@@ -2383,7 +2506,46 @@
                                               </svg>
                                             </div>
                                             <span>
-                                              Report @rubenkenter
+                                              Report Conversation
+                                            </span>
+                                          </li>
+                                          <li>
+                                            <div class="icon delete-icon">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <g clip-path="url(#clip0_6001_200)">
+                                                  <mask id="mask0_6001_200" style="mask-type:luminance"
+                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                                    <path d="M24 0H0V24H24V0Z" fill="white" />
+                                                  </mask>
+                                                  <g mask="url(#mask0_6001_200)">
+                                                    <path
+                                                      d="M21 5.98047C17.67 5.65047 14.32 5.48047 10.98 5.48047C9 5.48047 7.02 5.58047 5.04 5.78047L3 5.98047"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path
+                                                      d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path
+                                                      d="M19 6L18.3358 18.5288C18.2234 20.4821 18.1314 22 15.2803 22H8.71971C5.86861 22 5.77664 20.4821 5.66423 18.5288L5 6"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path d="M10.3301 16.5H13.6601" stroke="none" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M9.5 12.5H14.5" stroke="none" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round" />
+                                                  </g>
+                                                </g>
+                                                <defs>
+                                                  <clipPath id="clip0_6001_200">
+                                                    <rect width="24" height="24" fill="white" />
+                                                  </clipPath>
+                                                </defs>
+                                              </svg>
+                                            </div>
+                                            <span>
+                                              Delete Conversation
                                             </span>
                                           </li>
                                         </ul>
@@ -2785,23 +2947,33 @@
                                     <div class="rel-users-more-opts-popup-wrapper">
                                       <div class="rel-users-more-opts-popup-container">
                                         <ul>
-                                          <li>
-                                            <div class="icon share-icon">
-                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none">
-                                                <path
-                                                  d="M16.4405 8.90002C20.0405 9.21002 21.5105 11.06 21.5105 15.11V15.24C21.5105 19.71 19.7205 21.5 15.2505 21.5H8.74047C4.27047 21.5 2.48047 19.71 2.48047 15.24V15.11C2.48047 11.09 3.93047 9.24002 7.47047 8.91002"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path d="M12 15V3.62" stroke="none" stroke-width="1.5"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M15.3484 5.85L11.9984 2.5L8.64844 5.85" stroke="none"
-                                                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                              </svg>
+                                          <li class="chat-msg-search">
+                                            <div>
+                                              <div class="label-input">
+                                                <!-- Placeholder Icon -->
+                                                <div class="input-placeholder-icon">
+                                                  <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                    height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path
+                                                      d="M20 11C20 15.97 15.97 20 11 20C6.03 20 2 15.97 2 11C2 6.03 6.03 2 11 2"
+                                                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    </path>
+                                                    <path
+                                                      d="M18.9299 20.6898C19.4599 22.2898 20.6699 22.4498 21.5999 21.0498C22.4499 19.7698 21.8899 18.7198 20.3499 18.7198C19.2099 18.7098 18.5699 19.5998 18.9299 20.6898Z"
+                                                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    </path>
+                                                    <path d="M14 5H20" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round">
+                                                    </path>
+                                                    <path d="M14 8H17" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round">
+                                                    </path>
+                                                  </svg>
+                                                </div>
+                                                <!-- <label for="header-search-input">Search here</label> -->
+                                                <input type="text" placeholder="Search Message">
+                                              </div>
                                             </div>
-                                            <span>
-                                              Share @rubenkenter
-                                            </span>
                                           </li>
                                           <li>
                                             <div class="icon mute-icon">
@@ -2823,35 +2995,40 @@
                                                   stroke-linecap="round" stroke-linejoin="round" />
                                               </svg>
                                             </div>
-                                            <span> Mute </span>
+                                            <span>
+                                              Mute Conversation
+                                            </span>
                                           </li>
                                           <li>
-                                            <div class="icon remove-icon">
+                                            <div class="icon hide-icon">
                                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none">
-                                                <path
-                                                  d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path
-                                                  d="M3.41016 22C3.41016 18.13 7.26015 15 12.0002 15C12.9602 15 13.8902 15.13 14.7602 15.37"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path
-                                                  d="M22 18C22 18.32 21.96 18.63 21.88 18.93C21.79 19.33 21.63 19.72 21.42 20.06C20.73 21.22 19.46 22 18 22C16.97 22 16.04 21.61 15.34 20.97C15.04 20.71 14.78 20.4 14.58 20.06C14.21 19.46 14 18.75 14 18C14 16.92 14.43 15.93 15.13 15.21C15.86 14.46 16.88 14 18 14C19.18 14 20.25 14.51 20.97 15.33C21.61 16.04 22 16.98 22 18Z"
-                                                  stroke="none" stroke-width="1.5" stroke-miterlimit="10"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M19.0319 16.94L16.9219 19.05" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path d="M16.9414 16.96L19.0614 19.07" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+
+                                                <g>
+                                                  <path
+                                                    d="M17.8201 5.77047C16.0701 4.45047 14.0701 3.73047 12.0001 3.73047C8.47009 3.73047 5.18009 5.81047 2.89009 9.41047C1.99009 10.8205 1.99009 13.1905 2.89009 14.6005C3.68009 15.8405 4.60009 16.9105 5.60009 17.7705"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M14.5299 9.46992L9.46992 14.5299C8.81992 13.8799 8.41992 12.9899 8.41992 11.9999C8.41992 10.0199 10.0199 8.41992 11.9999 8.41992C12.9899 8.41992 13.8799 8.81992 14.5299 9.46992Z"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M8.41992 19.5297C9.55992 20.0097 10.7699 20.2697 11.9999 20.2697C15.5299 20.2697 18.8199 18.1897 21.1099 14.5897C22.0099 13.1797 22.0099 10.8097 21.1099 9.39969C20.7799 8.87969 20.4199 8.38969 20.0499 7.92969"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M15.5099 12.6992C15.2499 14.1092 14.0999 15.2592 12.6899 15.5192"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path d="M9.47 14.5293L2 21.9993" stroke="none" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                  <path d="M22 2L14.53 9.47" stroke="none" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                </g>
                                               </svg>
                                             </div>
-                                            <span>
-                                              Remove this follower
-                                            </span>
+                                            <span> Hide Conversation </span>
                                           </li>
                                           <li>
                                             <div class="icon block-icon">
@@ -2860,22 +3037,22 @@
                                                 <path
                                                   d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
                                                   stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-linejoin="round"></path>
                                                 <path
                                                   d="M3.41016 22C3.41016 18.13 7.26015 15 12.0002 15C12.9602 15 13.8902 15.13 14.7602 15.37"
                                                   stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-linejoin="round"></path>
                                                 <path
                                                   d="M22 18C22 18.32 21.96 18.63 21.88 18.93C21.79 19.33 21.63 19.72 21.42 20.06C20.73 21.22 19.46 22 18 22C16.97 22 16.04 21.61 15.34 20.97C15.04 20.71 14.78 20.4 14.58 20.06C14.21 19.46 14 18.75 14 18C14 16.92 14.43 15.93 15.13 15.21C15.86 14.46 16.88 14 18 14C19.18 14 20.25 14.51 20.97 15.33C21.61 16.04 22 16.98 22 18Z"
                                                   stroke="none" stroke-width="1.5" stroke-miterlimit="10"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                                 <path d="M20.5 15.5001L15.5 20.5001" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                                                </path>
                                               </svg>
                                             </div>
                                             <span>
-                                              Block @rubenkenter
+                                              Block Messages
                                             </span>
                                           </li>
                                           <li>
@@ -2892,7 +3069,46 @@
                                               </svg>
                                             </div>
                                             <span>
-                                              Report @rubenkenter
+                                              Report Conversation
+                                            </span>
+                                          </li>
+                                          <li>
+                                            <div class="icon delete-icon">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <g clip-path="url(#clip0_6001_200)">
+                                                  <mask id="mask0_6001_200" style="mask-type:luminance"
+                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                                    <path d="M24 0H0V24H24V0Z" fill="white" />
+                                                  </mask>
+                                                  <g mask="url(#mask0_6001_200)">
+                                                    <path
+                                                      d="M21 5.98047C17.67 5.65047 14.32 5.48047 10.98 5.48047C9 5.48047 7.02 5.58047 5.04 5.78047L3 5.98047"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path
+                                                      d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path
+                                                      d="M19 6L18.3358 18.5288C18.2234 20.4821 18.1314 22 15.2803 22H8.71971C5.86861 22 5.77664 20.4821 5.66423 18.5288L5 6"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path d="M10.3301 16.5H13.6601" stroke="none" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M9.5 12.5H14.5" stroke="none" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round" />
+                                                  </g>
+                                                </g>
+                                                <defs>
+                                                  <clipPath id="clip0_6001_200">
+                                                    <rect width="24" height="24" fill="white" />
+                                                  </clipPath>
+                                                </defs>
+                                              </svg>
+                                            </div>
+                                            <span>
+                                              Delete Conversation
                                             </span>
                                           </li>
                                         </ul>
@@ -3294,23 +3510,33 @@
                                     <div class="rel-users-more-opts-popup-wrapper">
                                       <div class="rel-users-more-opts-popup-container">
                                         <ul>
-                                          <li>
-                                            <div class="icon share-icon">
-                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none">
-                                                <path
-                                                  d="M16.4405 8.90002C20.0405 9.21002 21.5105 11.06 21.5105 15.11V15.24C21.5105 19.71 19.7205 21.5 15.2505 21.5H8.74047C4.27047 21.5 2.48047 19.71 2.48047 15.24V15.11C2.48047 11.09 3.93047 9.24002 7.47047 8.91002"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path d="M12 15V3.62" stroke="none" stroke-width="1.5"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M15.3484 5.85L11.9984 2.5L8.64844 5.85" stroke="none"
-                                                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                              </svg>
+                                          <li class="chat-msg-search">
+                                            <div>
+                                              <div class="label-input">
+                                                <!-- Placeholder Icon -->
+                                                <div class="input-placeholder-icon">
+                                                  <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                    height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path
+                                                      d="M20 11C20 15.97 15.97 20 11 20C6.03 20 2 15.97 2 11C2 6.03 6.03 2 11 2"
+                                                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    </path>
+                                                    <path
+                                                      d="M18.9299 20.6898C19.4599 22.2898 20.6699 22.4498 21.5999 21.0498C22.4499 19.7698 21.8899 18.7198 20.3499 18.7198C19.2099 18.7098 18.5699 19.5998 18.9299 20.6898Z"
+                                                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    </path>
+                                                    <path d="M14 5H20" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round">
+                                                    </path>
+                                                    <path d="M14 8H17" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round">
+                                                    </path>
+                                                  </svg>
+                                                </div>
+                                                <!-- <label for="header-search-input">Search here</label> -->
+                                                <input type="text" placeholder="Search Message">
+                                              </div>
                                             </div>
-                                            <span>
-                                              Share @rubenkenter
-                                            </span>
                                           </li>
                                           <li>
                                             <div class="icon mute-icon">
@@ -3332,35 +3558,40 @@
                                                   stroke-linecap="round" stroke-linejoin="round" />
                                               </svg>
                                             </div>
-                                            <span> Mute </span>
+                                            <span>
+                                              Mute Conversation
+                                            </span>
                                           </li>
                                           <li>
-                                            <div class="icon remove-icon">
+                                            <div class="icon hide-icon">
                                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none">
-                                                <path
-                                                  d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path
-                                                  d="M3.41016 22C3.41016 18.13 7.26015 15 12.0002 15C12.9602 15 13.8902 15.13 14.7602 15.37"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path
-                                                  d="M22 18C22 18.32 21.96 18.63 21.88 18.93C21.79 19.33 21.63 19.72 21.42 20.06C20.73 21.22 19.46 22 18 22C16.97 22 16.04 21.61 15.34 20.97C15.04 20.71 14.78 20.4 14.58 20.06C14.21 19.46 14 18.75 14 18C14 16.92 14.43 15.93 15.13 15.21C15.86 14.46 16.88 14 18 14C19.18 14 20.25 14.51 20.97 15.33C21.61 16.04 22 16.98 22 18Z"
-                                                  stroke="none" stroke-width="1.5" stroke-miterlimit="10"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M19.0319 16.94L16.9219 19.05" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path d="M16.9414 16.96L19.0614 19.07" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+
+                                                <g>
+                                                  <path
+                                                    d="M17.8201 5.77047C16.0701 4.45047 14.0701 3.73047 12.0001 3.73047C8.47009 3.73047 5.18009 5.81047 2.89009 9.41047C1.99009 10.8205 1.99009 13.1905 2.89009 14.6005C3.68009 15.8405 4.60009 16.9105 5.60009 17.7705"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M14.5299 9.46992L9.46992 14.5299C8.81992 13.8799 8.41992 12.9899 8.41992 11.9999C8.41992 10.0199 10.0199 8.41992 11.9999 8.41992C12.9899 8.41992 13.8799 8.81992 14.5299 9.46992Z"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M8.41992 19.5297C9.55992 20.0097 10.7699 20.2697 11.9999 20.2697C15.5299 20.2697 18.8199 18.1897 21.1099 14.5897C22.0099 13.1797 22.0099 10.8097 21.1099 9.39969C20.7799 8.87969 20.4199 8.38969 20.0499 7.92969"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M15.5099 12.6992C15.2499 14.1092 14.0999 15.2592 12.6899 15.5192"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path d="M9.47 14.5293L2 21.9993" stroke="none" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                  <path d="M22 2L14.53 9.47" stroke="none" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                </g>
                                               </svg>
                                             </div>
-                                            <span>
-                                              Remove this follower
-                                            </span>
+                                            <span> Hide Conversation </span>
                                           </li>
                                           <li>
                                             <div class="icon block-icon">
@@ -3369,22 +3600,22 @@
                                                 <path
                                                   d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
                                                   stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-linejoin="round"></path>
                                                 <path
                                                   d="M3.41016 22C3.41016 18.13 7.26015 15 12.0002 15C12.9602 15 13.8902 15.13 14.7602 15.37"
                                                   stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-linejoin="round"></path>
                                                 <path
                                                   d="M22 18C22 18.32 21.96 18.63 21.88 18.93C21.79 19.33 21.63 19.72 21.42 20.06C20.73 21.22 19.46 22 18 22C16.97 22 16.04 21.61 15.34 20.97C15.04 20.71 14.78 20.4 14.58 20.06C14.21 19.46 14 18.75 14 18C14 16.92 14.43 15.93 15.13 15.21C15.86 14.46 16.88 14 18 14C19.18 14 20.25 14.51 20.97 15.33C21.61 16.04 22 16.98 22 18Z"
                                                   stroke="none" stroke-width="1.5" stroke-miterlimit="10"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                                 <path d="M20.5 15.5001L15.5 20.5001" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                                                </path>
                                               </svg>
                                             </div>
                                             <span>
-                                              Block @rubenkenter
+                                              Block Messages
                                             </span>
                                           </li>
                                           <li>
@@ -3401,7 +3632,46 @@
                                               </svg>
                                             </div>
                                             <span>
-                                              Report @rubenkenter
+                                              Report Conversation
+                                            </span>
+                                          </li>
+                                          <li>
+                                            <div class="icon delete-icon">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <g clip-path="url(#clip0_6001_200)">
+                                                  <mask id="mask0_6001_200" style="mask-type:luminance"
+                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                                    <path d="M24 0H0V24H24V0Z" fill="white" />
+                                                  </mask>
+                                                  <g mask="url(#mask0_6001_200)">
+                                                    <path
+                                                      d="M21 5.98047C17.67 5.65047 14.32 5.48047 10.98 5.48047C9 5.48047 7.02 5.58047 5.04 5.78047L3 5.98047"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path
+                                                      d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path
+                                                      d="M19 6L18.3358 18.5288C18.2234 20.4821 18.1314 22 15.2803 22H8.71971C5.86861 22 5.77664 20.4821 5.66423 18.5288L5 6"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path d="M10.3301 16.5H13.6601" stroke="none" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M9.5 12.5H14.5" stroke="none" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round" />
+                                                  </g>
+                                                </g>
+                                                <defs>
+                                                  <clipPath id="clip0_6001_200">
+                                                    <rect width="24" height="24" fill="white" />
+                                                  </clipPath>
+                                                </defs>
+                                              </svg>
+                                            </div>
+                                            <span>
+                                              Delete Conversation
                                             </span>
                                           </li>
                                         </ul>
@@ -3803,23 +4073,33 @@
                                     <div class="rel-users-more-opts-popup-wrapper">
                                       <div class="rel-users-more-opts-popup-container">
                                         <ul>
-                                          <li>
-                                            <div class="icon share-icon">
-                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none">
-                                                <path
-                                                  d="M16.4405 8.90002C20.0405 9.21002 21.5105 11.06 21.5105 15.11V15.24C21.5105 19.71 19.7205 21.5 15.2505 21.5H8.74047C4.27047 21.5 2.48047 19.71 2.48047 15.24V15.11C2.48047 11.09 3.93047 9.24002 7.47047 8.91002"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path d="M12 15V3.62" stroke="none" stroke-width="1.5"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M15.3484 5.85L11.9984 2.5L8.64844 5.85" stroke="none"
-                                                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                              </svg>
+                                          <li class="chat-msg-search">
+                                            <div>
+                                              <div class="label-input">
+                                                <!-- Placeholder Icon -->
+                                                <div class="input-placeholder-icon">
+                                                  <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                    height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path
+                                                      d="M20 11C20 15.97 15.97 20 11 20C6.03 20 2 15.97 2 11C2 6.03 6.03 2 11 2"
+                                                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    </path>
+                                                    <path
+                                                      d="M18.9299 20.6898C19.4599 22.2898 20.6699 22.4498 21.5999 21.0498C22.4499 19.7698 21.8899 18.7198 20.3499 18.7198C19.2099 18.7098 18.5699 19.5998 18.9299 20.6898Z"
+                                                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    </path>
+                                                    <path d="M14 5H20" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round">
+                                                    </path>
+                                                    <path d="M14 8H17" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round">
+                                                    </path>
+                                                  </svg>
+                                                </div>
+                                                <!-- <label for="header-search-input">Search here</label> -->
+                                                <input type="text" placeholder="Search Message">
+                                              </div>
                                             </div>
-                                            <span>
-                                              Share @rubenkenter
-                                            </span>
                                           </li>
                                           <li>
                                             <div class="icon mute-icon">
@@ -3841,35 +4121,40 @@
                                                   stroke-linecap="round" stroke-linejoin="round" />
                                               </svg>
                                             </div>
-                                            <span> Mute </span>
+                                            <span>
+                                              Mute Conversation
+                                            </span>
                                           </li>
                                           <li>
-                                            <div class="icon remove-icon">
+                                            <div class="icon hide-icon">
                                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none">
-                                                <path
-                                                  d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path
-                                                  d="M3.41016 22C3.41016 18.13 7.26015 15 12.0002 15C12.9602 15 13.8902 15.13 14.7602 15.37"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path
-                                                  d="M22 18C22 18.32 21.96 18.63 21.88 18.93C21.79 19.33 21.63 19.72 21.42 20.06C20.73 21.22 19.46 22 18 22C16.97 22 16.04 21.61 15.34 20.97C15.04 20.71 14.78 20.4 14.58 20.06C14.21 19.46 14 18.75 14 18C14 16.92 14.43 15.93 15.13 15.21C15.86 14.46 16.88 14 18 14C19.18 14 20.25 14.51 20.97 15.33C21.61 16.04 22 16.98 22 18Z"
-                                                  stroke="none" stroke-width="1.5" stroke-miterlimit="10"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M19.0319 16.94L16.9219 19.05" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path d="M16.9414 16.96L19.0614 19.07" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+
+                                                <g>
+                                                  <path
+                                                    d="M17.8201 5.77047C16.0701 4.45047 14.0701 3.73047 12.0001 3.73047C8.47009 3.73047 5.18009 5.81047 2.89009 9.41047C1.99009 10.8205 1.99009 13.1905 2.89009 14.6005C3.68009 15.8405 4.60009 16.9105 5.60009 17.7705"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M14.5299 9.46992L9.46992 14.5299C8.81992 13.8799 8.41992 12.9899 8.41992 11.9999C8.41992 10.0199 10.0199 8.41992 11.9999 8.41992C12.9899 8.41992 13.8799 8.81992 14.5299 9.46992Z"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M8.41992 19.5297C9.55992 20.0097 10.7699 20.2697 11.9999 20.2697C15.5299 20.2697 18.8199 18.1897 21.1099 14.5897C22.0099 13.1797 22.0099 10.8097 21.1099 9.39969C20.7799 8.87969 20.4199 8.38969 20.0499 7.92969"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M15.5099 12.6992C15.2499 14.1092 14.0999 15.2592 12.6899 15.5192"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path d="M9.47 14.5293L2 21.9993" stroke="none" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                  <path d="M22 2L14.53 9.47" stroke="none" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                </g>
                                               </svg>
                                             </div>
-                                            <span>
-                                              Remove this follower
-                                            </span>
+                                            <span> Hide Conversation </span>
                                           </li>
                                           <li>
                                             <div class="icon block-icon">
@@ -3878,22 +4163,22 @@
                                                 <path
                                                   d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
                                                   stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-linejoin="round"></path>
                                                 <path
                                                   d="M3.41016 22C3.41016 18.13 7.26015 15 12.0002 15C12.9602 15 13.8902 15.13 14.7602 15.37"
                                                   stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-linejoin="round"></path>
                                                 <path
                                                   d="M22 18C22 18.32 21.96 18.63 21.88 18.93C21.79 19.33 21.63 19.72 21.42 20.06C20.73 21.22 19.46 22 18 22C16.97 22 16.04 21.61 15.34 20.97C15.04 20.71 14.78 20.4 14.58 20.06C14.21 19.46 14 18.75 14 18C14 16.92 14.43 15.93 15.13 15.21C15.86 14.46 16.88 14 18 14C19.18 14 20.25 14.51 20.97 15.33C21.61 16.04 22 16.98 22 18Z"
                                                   stroke="none" stroke-width="1.5" stroke-miterlimit="10"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                                 <path d="M20.5 15.5001L15.5 20.5001" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                                                </path>
                                               </svg>
                                             </div>
                                             <span>
-                                              Block @rubenkenter
+                                              Block Messages
                                             </span>
                                           </li>
                                           <li>
@@ -3910,7 +4195,46 @@
                                               </svg>
                                             </div>
                                             <span>
-                                              Report @rubenkenter
+                                              Report Conversation
+                                            </span>
+                                          </li>
+                                          <li>
+                                            <div class="icon delete-icon">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <g clip-path="url(#clip0_6001_200)">
+                                                  <mask id="mask0_6001_200" style="mask-type:luminance"
+                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                                    <path d="M24 0H0V24H24V0Z" fill="white" />
+                                                  </mask>
+                                                  <g mask="url(#mask0_6001_200)">
+                                                    <path
+                                                      d="M21 5.98047C17.67 5.65047 14.32 5.48047 10.98 5.48047C9 5.48047 7.02 5.58047 5.04 5.78047L3 5.98047"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path
+                                                      d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path
+                                                      d="M19 6L18.3358 18.5288C18.2234 20.4821 18.1314 22 15.2803 22H8.71971C5.86861 22 5.77664 20.4821 5.66423 18.5288L5 6"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path d="M10.3301 16.5H13.6601" stroke="none" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M9.5 12.5H14.5" stroke="none" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round" />
+                                                  </g>
+                                                </g>
+                                                <defs>
+                                                  <clipPath id="clip0_6001_200">
+                                                    <rect width="24" height="24" fill="white" />
+                                                  </clipPath>
+                                                </defs>
+                                              </svg>
+                                            </div>
+                                            <span>
+                                              Delete Conversation
                                             </span>
                                           </li>
                                         </ul>
@@ -4312,23 +4636,33 @@
                                     <div class="rel-users-more-opts-popup-wrapper">
                                       <div class="rel-users-more-opts-popup-container">
                                         <ul>
-                                          <li>
-                                            <div class="icon share-icon">
-                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none">
-                                                <path
-                                                  d="M16.4405 8.90002C20.0405 9.21002 21.5105 11.06 21.5105 15.11V15.24C21.5105 19.71 19.7205 21.5 15.2505 21.5H8.74047C4.27047 21.5 2.48047 19.71 2.48047 15.24V15.11C2.48047 11.09 3.93047 9.24002 7.47047 8.91002"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path d="M12 15V3.62" stroke="none" stroke-width="1.5"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M15.3484 5.85L11.9984 2.5L8.64844 5.85" stroke="none"
-                                                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                              </svg>
+                                          <li class="chat-msg-search">
+                                            <div>
+                                              <div class="label-input">
+                                                <!-- Placeholder Icon -->
+                                                <div class="input-placeholder-icon">
+                                                  <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                    height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path
+                                                      d="M20 11C20 15.97 15.97 20 11 20C6.03 20 2 15.97 2 11C2 6.03 6.03 2 11 2"
+                                                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    </path>
+                                                    <path
+                                                      d="M18.9299 20.6898C19.4599 22.2898 20.6699 22.4498 21.5999 21.0498C22.4499 19.7698 21.8899 18.7198 20.3499 18.7198C19.2099 18.7098 18.5699 19.5998 18.9299 20.6898Z"
+                                                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    </path>
+                                                    <path d="M14 5H20" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round">
+                                                    </path>
+                                                    <path d="M14 8H17" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round">
+                                                    </path>
+                                                  </svg>
+                                                </div>
+                                                <!-- <label for="header-search-input">Search here</label> -->
+                                                <input type="text" placeholder="Search Message">
+                                              </div>
                                             </div>
-                                            <span>
-                                              Share @rubenkenter
-                                            </span>
                                           </li>
                                           <li>
                                             <div class="icon mute-icon">
@@ -4350,35 +4684,40 @@
                                                   stroke-linecap="round" stroke-linejoin="round" />
                                               </svg>
                                             </div>
-                                            <span> Mute </span>
+                                            <span>
+                                              Mute Conversation
+                                            </span>
                                           </li>
                                           <li>
-                                            <div class="icon remove-icon">
+                                            <div class="icon hide-icon">
                                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none">
-                                                <path
-                                                  d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path
-                                                  d="M3.41016 22C3.41016 18.13 7.26015 15 12.0002 15C12.9602 15 13.8902 15.13 14.7602 15.37"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path
-                                                  d="M22 18C22 18.32 21.96 18.63 21.88 18.93C21.79 19.33 21.63 19.72 21.42 20.06C20.73 21.22 19.46 22 18 22C16.97 22 16.04 21.61 15.34 20.97C15.04 20.71 14.78 20.4 14.58 20.06C14.21 19.46 14 18.75 14 18C14 16.92 14.43 15.93 15.13 15.21C15.86 14.46 16.88 14 18 14C19.18 14 20.25 14.51 20.97 15.33C21.61 16.04 22 16.98 22 18Z"
-                                                  stroke="none" stroke-width="1.5" stroke-miterlimit="10"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M19.0319 16.94L16.9219 19.05" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path d="M16.9414 16.96L19.0614 19.07" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+
+                                                <g>
+                                                  <path
+                                                    d="M17.8201 5.77047C16.0701 4.45047 14.0701 3.73047 12.0001 3.73047C8.47009 3.73047 5.18009 5.81047 2.89009 9.41047C1.99009 10.8205 1.99009 13.1905 2.89009 14.6005C3.68009 15.8405 4.60009 16.9105 5.60009 17.7705"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M14.5299 9.46992L9.46992 14.5299C8.81992 13.8799 8.41992 12.9899 8.41992 11.9999C8.41992 10.0199 10.0199 8.41992 11.9999 8.41992C12.9899 8.41992 13.8799 8.81992 14.5299 9.46992Z"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M8.41992 19.5297C9.55992 20.0097 10.7699 20.2697 11.9999 20.2697C15.5299 20.2697 18.8199 18.1897 21.1099 14.5897C22.0099 13.1797 22.0099 10.8097 21.1099 9.39969C20.7799 8.87969 20.4199 8.38969 20.0499 7.92969"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M15.5099 12.6992C15.2499 14.1092 14.0999 15.2592 12.6899 15.5192"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path d="M9.47 14.5293L2 21.9993" stroke="none" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                  <path d="M22 2L14.53 9.47" stroke="none" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                </g>
                                               </svg>
                                             </div>
-                                            <span>
-                                              Remove this follower
-                                            </span>
+                                            <span> Hide Conversation </span>
                                           </li>
                                           <li>
                                             <div class="icon block-icon">
@@ -4387,22 +4726,22 @@
                                                 <path
                                                   d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
                                                   stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-linejoin="round"></path>
                                                 <path
                                                   d="M3.41016 22C3.41016 18.13 7.26015 15 12.0002 15C12.9602 15 13.8902 15.13 14.7602 15.37"
                                                   stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-linejoin="round"></path>
                                                 <path
                                                   d="M22 18C22 18.32 21.96 18.63 21.88 18.93C21.79 19.33 21.63 19.72 21.42 20.06C20.73 21.22 19.46 22 18 22C16.97 22 16.04 21.61 15.34 20.97C15.04 20.71 14.78 20.4 14.58 20.06C14.21 19.46 14 18.75 14 18C14 16.92 14.43 15.93 15.13 15.21C15.86 14.46 16.88 14 18 14C19.18 14 20.25 14.51 20.97 15.33C21.61 16.04 22 16.98 22 18Z"
                                                   stroke="none" stroke-width="1.5" stroke-miterlimit="10"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                                 <path d="M20.5 15.5001L15.5 20.5001" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                                                </path>
                                               </svg>
                                             </div>
                                             <span>
-                                              Block @rubenkenter
+                                              Block Messages
                                             </span>
                                           </li>
                                           <li>
@@ -4419,7 +4758,46 @@
                                               </svg>
                                             </div>
                                             <span>
-                                              Report @rubenkenter
+                                              Report Conversation
+                                            </span>
+                                          </li>
+                                          <li>
+                                            <div class="icon delete-icon">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <g clip-path="url(#clip0_6001_200)">
+                                                  <mask id="mask0_6001_200" style="mask-type:luminance"
+                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                                    <path d="M24 0H0V24H24V0Z" fill="white" />
+                                                  </mask>
+                                                  <g mask="url(#mask0_6001_200)">
+                                                    <path
+                                                      d="M21 5.98047C17.67 5.65047 14.32 5.48047 10.98 5.48047C9 5.48047 7.02 5.58047 5.04 5.78047L3 5.98047"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path
+                                                      d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path
+                                                      d="M19 6L18.3358 18.5288C18.2234 20.4821 18.1314 22 15.2803 22H8.71971C5.86861 22 5.77664 20.4821 5.66423 18.5288L5 6"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path d="M10.3301 16.5H13.6601" stroke="none" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M9.5 12.5H14.5" stroke="none" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round" />
+                                                  </g>
+                                                </g>
+                                                <defs>
+                                                  <clipPath id="clip0_6001_200">
+                                                    <rect width="24" height="24" fill="white" />
+                                                  </clipPath>
+                                                </defs>
+                                              </svg>
+                                            </div>
+                                            <span>
+                                              Delete Conversation
                                             </span>
                                           </li>
                                         </ul>
@@ -4821,23 +5199,33 @@
                                     <div class="rel-users-more-opts-popup-wrapper">
                                       <div class="rel-users-more-opts-popup-container">
                                         <ul>
-                                          <li>
-                                            <div class="icon share-icon">
-                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none">
-                                                <path
-                                                  d="M16.4405 8.90002C20.0405 9.21002 21.5105 11.06 21.5105 15.11V15.24C21.5105 19.71 19.7205 21.5 15.2505 21.5H8.74047C4.27047 21.5 2.48047 19.71 2.48047 15.24V15.11C2.48047 11.09 3.93047 9.24002 7.47047 8.91002"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path d="M12 15V3.62" stroke="none" stroke-width="1.5"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M15.3484 5.85L11.9984 2.5L8.64844 5.85" stroke="none"
-                                                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                              </svg>
+                                          <li class="chat-msg-search">
+                                            <div>
+                                              <div class="label-input">
+                                                <!-- Placeholder Icon -->
+                                                <div class="input-placeholder-icon">
+                                                  <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                    height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path
+                                                      d="M20 11C20 15.97 15.97 20 11 20C6.03 20 2 15.97 2 11C2 6.03 6.03 2 11 2"
+                                                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    </path>
+                                                    <path
+                                                      d="M18.9299 20.6898C19.4599 22.2898 20.6699 22.4498 21.5999 21.0498C22.4499 19.7698 21.8899 18.7198 20.3499 18.7198C19.2099 18.7098 18.5699 19.5998 18.9299 20.6898Z"
+                                                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    </path>
+                                                    <path d="M14 5H20" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round">
+                                                    </path>
+                                                    <path d="M14 8H17" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round">
+                                                    </path>
+                                                  </svg>
+                                                </div>
+                                                <!-- <label for="header-search-input">Search here</label> -->
+                                                <input type="text" placeholder="Search Message">
+                                              </div>
                                             </div>
-                                            <span>
-                                              Share @rubenkenter
-                                            </span>
                                           </li>
                                           <li>
                                             <div class="icon mute-icon">
@@ -4859,35 +5247,40 @@
                                                   stroke-linecap="round" stroke-linejoin="round" />
                                               </svg>
                                             </div>
-                                            <span> Mute </span>
+                                            <span>
+                                              Mute Conversation
+                                            </span>
                                           </li>
                                           <li>
-                                            <div class="icon remove-icon">
+                                            <div class="icon hide-icon">
                                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none">
-                                                <path
-                                                  d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path
-                                                  d="M3.41016 22C3.41016 18.13 7.26015 15 12.0002 15C12.9602 15 13.8902 15.13 14.7602 15.37"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path
-                                                  d="M22 18C22 18.32 21.96 18.63 21.88 18.93C21.79 19.33 21.63 19.72 21.42 20.06C20.73 21.22 19.46 22 18 22C16.97 22 16.04 21.61 15.34 20.97C15.04 20.71 14.78 20.4 14.58 20.06C14.21 19.46 14 18.75 14 18C14 16.92 14.43 15.93 15.13 15.21C15.86 14.46 16.88 14 18 14C19.18 14 20.25 14.51 20.97 15.33C21.61 16.04 22 16.98 22 18Z"
-                                                  stroke="none" stroke-width="1.5" stroke-miterlimit="10"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M19.0319 16.94L16.9219 19.05" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path d="M16.9414 16.96L19.0614 19.07" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+
+                                                <g>
+                                                  <path
+                                                    d="M17.8201 5.77047C16.0701 4.45047 14.0701 3.73047 12.0001 3.73047C8.47009 3.73047 5.18009 5.81047 2.89009 9.41047C1.99009 10.8205 1.99009 13.1905 2.89009 14.6005C3.68009 15.8405 4.60009 16.9105 5.60009 17.7705"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M14.5299 9.46992L9.46992 14.5299C8.81992 13.8799 8.41992 12.9899 8.41992 11.9999C8.41992 10.0199 10.0199 8.41992 11.9999 8.41992C12.9899 8.41992 13.8799 8.81992 14.5299 9.46992Z"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M8.41992 19.5297C9.55992 20.0097 10.7699 20.2697 11.9999 20.2697C15.5299 20.2697 18.8199 18.1897 21.1099 14.5897C22.0099 13.1797 22.0099 10.8097 21.1099 9.39969C20.7799 8.87969 20.4199 8.38969 20.0499 7.92969"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M15.5099 12.6992C15.2499 14.1092 14.0999 15.2592 12.6899 15.5192"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path d="M9.47 14.5293L2 21.9993" stroke="none" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                  <path d="M22 2L14.53 9.47" stroke="none" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                </g>
                                               </svg>
                                             </div>
-                                            <span>
-                                              Remove this follower
-                                            </span>
+                                            <span> Hide Conversation </span>
                                           </li>
                                           <li>
                                             <div class="icon block-icon">
@@ -4896,22 +5289,22 @@
                                                 <path
                                                   d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
                                                   stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-linejoin="round"></path>
                                                 <path
                                                   d="M3.41016 22C3.41016 18.13 7.26015 15 12.0002 15C12.9602 15 13.8902 15.13 14.7602 15.37"
                                                   stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-linejoin="round"></path>
                                                 <path
                                                   d="M22 18C22 18.32 21.96 18.63 21.88 18.93C21.79 19.33 21.63 19.72 21.42 20.06C20.73 21.22 19.46 22 18 22C16.97 22 16.04 21.61 15.34 20.97C15.04 20.71 14.78 20.4 14.58 20.06C14.21 19.46 14 18.75 14 18C14 16.92 14.43 15.93 15.13 15.21C15.86 14.46 16.88 14 18 14C19.18 14 20.25 14.51 20.97 15.33C21.61 16.04 22 16.98 22 18Z"
                                                   stroke="none" stroke-width="1.5" stroke-miterlimit="10"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                                 <path d="M20.5 15.5001L15.5 20.5001" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                                                </path>
                                               </svg>
                                             </div>
                                             <span>
-                                              Block @rubenkenter
+                                              Block Messages
                                             </span>
                                           </li>
                                           <li>
@@ -4928,7 +5321,46 @@
                                               </svg>
                                             </div>
                                             <span>
-                                              Report @rubenkenter
+                                              Report Conversation
+                                            </span>
+                                          </li>
+                                          <li>
+                                            <div class="icon delete-icon">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <g clip-path="url(#clip0_6001_200)">
+                                                  <mask id="mask0_6001_200" style="mask-type:luminance"
+                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                                    <path d="M24 0H0V24H24V0Z" fill="white" />
+                                                  </mask>
+                                                  <g mask="url(#mask0_6001_200)">
+                                                    <path
+                                                      d="M21 5.98047C17.67 5.65047 14.32 5.48047 10.98 5.48047C9 5.48047 7.02 5.58047 5.04 5.78047L3 5.98047"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path
+                                                      d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path
+                                                      d="M19 6L18.3358 18.5288C18.2234 20.4821 18.1314 22 15.2803 22H8.71971C5.86861 22 5.77664 20.4821 5.66423 18.5288L5 6"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path d="M10.3301 16.5H13.6601" stroke="none" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M9.5 12.5H14.5" stroke="none" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round" />
+                                                  </g>
+                                                </g>
+                                                <defs>
+                                                  <clipPath id="clip0_6001_200">
+                                                    <rect width="24" height="24" fill="white" />
+                                                  </clipPath>
+                                                </defs>
+                                              </svg>
+                                            </div>
+                                            <span>
+                                              Delete Conversation
                                             </span>
                                           </li>
                                         </ul>
@@ -5330,23 +5762,33 @@
                                     <div class="rel-users-more-opts-popup-wrapper">
                                       <div class="rel-users-more-opts-popup-container">
                                         <ul>
-                                          <li>
-                                            <div class="icon share-icon">
-                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none">
-                                                <path
-                                                  d="M16.4405 8.90002C20.0405 9.21002 21.5105 11.06 21.5105 15.11V15.24C21.5105 19.71 19.7205 21.5 15.2505 21.5H8.74047C4.27047 21.5 2.48047 19.71 2.48047 15.24V15.11C2.48047 11.09 3.93047 9.24002 7.47047 8.91002"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path d="M12 15V3.62" stroke="none" stroke-width="1.5"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M15.3484 5.85L11.9984 2.5L8.64844 5.85" stroke="none"
-                                                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                              </svg>
+                                          <li class="chat-msg-search">
+                                            <div>
+                                              <div class="label-input">
+                                                <!-- Placeholder Icon -->
+                                                <div class="input-placeholder-icon">
+                                                  <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                    height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path
+                                                      d="M20 11C20 15.97 15.97 20 11 20C6.03 20 2 15.97 2 11C2 6.03 6.03 2 11 2"
+                                                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    </path>
+                                                    <path
+                                                      d="M18.9299 20.6898C19.4599 22.2898 20.6699 22.4498 21.5999 21.0498C22.4499 19.7698 21.8899 18.7198 20.3499 18.7198C19.2099 18.7098 18.5699 19.5998 18.9299 20.6898Z"
+                                                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    </path>
+                                                    <path d="M14 5H20" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round">
+                                                    </path>
+                                                    <path d="M14 8H17" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round">
+                                                    </path>
+                                                  </svg>
+                                                </div>
+                                                <!-- <label for="header-search-input">Search here</label> -->
+                                                <input type="text" placeholder="Search Message">
+                                              </div>
                                             </div>
-                                            <span>
-                                              Share @rubenkenter
-                                            </span>
                                           </li>
                                           <li>
                                             <div class="icon mute-icon">
@@ -5368,35 +5810,40 @@
                                                   stroke-linecap="round" stroke-linejoin="round" />
                                               </svg>
                                             </div>
-                                            <span> Mute </span>
+                                            <span>
+                                              Mute Conversation
+                                            </span>
                                           </li>
                                           <li>
-                                            <div class="icon remove-icon">
+                                            <div class="icon hide-icon">
                                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none">
-                                                <path
-                                                  d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path
-                                                  d="M3.41016 22C3.41016 18.13 7.26015 15 12.0002 15C12.9602 15 13.8902 15.13 14.7602 15.37"
-                                                  stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path
-                                                  d="M22 18C22 18.32 21.96 18.63 21.88 18.93C21.79 19.33 21.63 19.72 21.42 20.06C20.73 21.22 19.46 22 18 22C16.97 22 16.04 21.61 15.34 20.97C15.04 20.71 14.78 20.4 14.58 20.06C14.21 19.46 14 18.75 14 18C14 16.92 14.43 15.93 15.13 15.21C15.86 14.46 16.88 14 18 14C19.18 14 20.25 14.51 20.97 15.33C21.61 16.04 22 16.98 22 18Z"
-                                                  stroke="none" stroke-width="1.5" stroke-miterlimit="10"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M19.0319 16.94L16.9219 19.05" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
-                                                <path d="M16.9414 16.96L19.0614 19.07" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+
+                                                <g>
+                                                  <path
+                                                    d="M17.8201 5.77047C16.0701 4.45047 14.0701 3.73047 12.0001 3.73047C8.47009 3.73047 5.18009 5.81047 2.89009 9.41047C1.99009 10.8205 1.99009 13.1905 2.89009 14.6005C3.68009 15.8405 4.60009 16.9105 5.60009 17.7705"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M14.5299 9.46992L9.46992 14.5299C8.81992 13.8799 8.41992 12.9899 8.41992 11.9999C8.41992 10.0199 10.0199 8.41992 11.9999 8.41992C12.9899 8.41992 13.8799 8.81992 14.5299 9.46992Z"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M8.41992 19.5297C9.55992 20.0097 10.7699 20.2697 11.9999 20.2697C15.5299 20.2697 18.8199 18.1897 21.1099 14.5897C22.0099 13.1797 22.0099 10.8097 21.1099 9.39969C20.7799 8.87969 20.4199 8.38969 20.0499 7.92969"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path
+                                                    d="M15.5099 12.6992C15.2499 14.1092 14.0999 15.2592 12.6899 15.5192"
+                                                    stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                  <path d="M9.47 14.5293L2 21.9993" stroke="none" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                  <path d="M22 2L14.53 9.47" stroke="none" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                </g>
                                               </svg>
                                             </div>
-                                            <span>
-                                              Remove this follower
-                                            </span>
+                                            <span> Hide Conversation </span>
                                           </li>
                                           <li>
                                             <div class="icon block-icon">
@@ -5405,22 +5852,22 @@
                                                 <path
                                                   d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
                                                   stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-linejoin="round"></path>
                                                 <path
                                                   d="M3.41016 22C3.41016 18.13 7.26015 15 12.0002 15C12.9602 15 13.8902 15.13 14.7602 15.37"
                                                   stroke="none" stroke-width="1.5" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-linejoin="round"></path>
                                                 <path
                                                   d="M22 18C22 18.32 21.96 18.63 21.88 18.93C21.79 19.33 21.63 19.72 21.42 20.06C20.73 21.22 19.46 22 18 22C16.97 22 16.04 21.61 15.34 20.97C15.04 20.71 14.78 20.4 14.58 20.06C14.21 19.46 14 18.75 14 18C14 16.92 14.43 15.93 15.13 15.21C15.86 14.46 16.88 14 18 14C19.18 14 20.25 14.51 20.97 15.33C21.61 16.04 22 16.98 22 18Z"
                                                   stroke="none" stroke-width="1.5" stroke-miterlimit="10"
-                                                  stroke-linecap="round" stroke-linejoin="round" />
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                                 <path d="M20.5 15.5001L15.5 20.5001" stroke="none" stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round"
-                                                  stroke-linejoin="round" />
+                                                  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                                                </path>
                                               </svg>
                                             </div>
                                             <span>
-                                              Block @rubenkenter
+                                              Block Messages
                                             </span>
                                           </li>
                                           <li>
@@ -5437,7 +5884,46 @@
                                               </svg>
                                             </div>
                                             <span>
-                                              Report @rubenkenter
+                                              Report Conversation
+                                            </span>
+                                          </li>
+                                          <li>
+                                            <div class="icon delete-icon">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <g clip-path="url(#clip0_6001_200)">
+                                                  <mask id="mask0_6001_200" style="mask-type:luminance"
+                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                                    <path d="M24 0H0V24H24V0Z" fill="white" />
+                                                  </mask>
+                                                  <g mask="url(#mask0_6001_200)">
+                                                    <path
+                                                      d="M21 5.98047C17.67 5.65047 14.32 5.48047 10.98 5.48047C9 5.48047 7.02 5.58047 5.04 5.78047L3 5.98047"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path
+                                                      d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path
+                                                      d="M19 6L18.3358 18.5288C18.2234 20.4821 18.1314 22 15.2803 22H8.71971C5.86861 22 5.77664 20.4821 5.66423 18.5288L5 6"
+                                                      stroke="none" stroke-width="1.5" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                    <path d="M10.3301 16.5H13.6601" stroke="none" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M9.5 12.5H14.5" stroke="none" stroke-width="1.5"
+                                                      stroke-linecap="round" stroke-linejoin="round" />
+                                                  </g>
+                                                </g>
+                                                <defs>
+                                                  <clipPath id="clip0_6001_200">
+                                                    <rect width="24" height="24" fill="white" />
+                                                  </clipPath>
+                                                </defs>
+                                              </svg>
+                                            </div>
+                                            <span>
+                                              Delete Conversation
                                             </span>
                                           </li>
                                         </ul>

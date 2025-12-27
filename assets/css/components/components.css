@@ -3360,6 +3360,16 @@
                                  .rel-users-more-opts-popup-container {
                                     ul {
                                        li {
+                                          &.chat-msg-search {
+                                             &>div {
+                                                width: 100%;
+
+                                                .label-input {
+                                                   border-radius: 10px;
+                                                }
+                                             }
+                                          }
+
                                           .icon {
                                              svg {
                                                 path {}

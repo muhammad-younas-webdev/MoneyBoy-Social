@@ -1862,6 +1862,33 @@
                                 }
                             }
 
+                            &.hide-icon {
+                                svg path {
+
+                                    &:nth-child(3),
+                                    &:nth-child(1) {
+                                        fill: black;
+                                    }
+
+                                    &:nth-child(2) {
+                                        fill: rgb(255, 255, 255);
+                                    }
+                                }
+                            }
+
+                            &.delete-icon {
+                                svg path {
+                                    &:nth-child(3) {
+                                        fill: black;
+                                    }
+
+                                    &:nth-child(4),
+                                    &:nth-child(5) {
+                                        stroke: white;
+                                    }
+                                }
+                            }
+
                             &.report-icon {
                                 svg path {
                                     fill: #000000;
