@@ -2787,6 +2787,16 @@
                               }
                            }
 
+                           &:nth-child(2) {
+                              &:hover {
+                                 svg {
+                                    path {
+                                       fill: #FECE26;
+                                    }
+                                 }
+                              }
+                           }
+
                            &>div {
                               display: flex;
 
@@ -2872,6 +2882,10 @@
                            max-width: max-content;
                            padding: 5px 6px;
 
+                           &:hover {
+                              border-color: #020202;
+                           }
+
                            span {
                               min-width: max-content;
                               font-size: 12px;
@@ -2947,17 +2961,29 @@
                                        border-radius: 10px;
                                        cursor: pointer;
 
-                                       &:hover {
-                                          svg {
-                                             path {
-                                                &:nth-child(1) {
-                                                   stroke: #A77BFF;
-                                                   fill: #A77BFF;
-                                                }
+                                       &:nth-child(1) {
+                                          &:hover {
+                                             svg {
+                                                path {
+                                                   &:nth-child(1) {
+                                                      stroke: #A77BFF;
+                                                      fill: #A77BFF;
+                                                   }
 
-                                                &:nth-child(2) {
-                                                   stroke: #A77BFF;
-                                                   fill: #fff;
+                                                   &:nth-child(2) {
+                                                      stroke: #A77BFF;
+                                                      fill: #fff;
+                                                   }
+                                                }
+                                             }
+                                          }
+                                       }
+
+                                       &:nth-child(2) {
+                                          &:hover {
+                                             svg {
+                                                path {
+                                                   fill: #FECE26;
                                                 }
                                              }
                                           }
@@ -2979,7 +3005,9 @@
                                              aspect-ratio: 1/1;
                                              transition: var(--transition-fast);
 
-                                             path {}
+                                             path {
+                                                transition: var(--transition-fast);
+                                             }
                                           }
                                        }
 
@@ -3584,7 +3612,12 @@
                         display: grid;
                         grid-template-columns: max-content 1fr max-content;
                         align-items: center;
-                        padding: 0 8px;
+                        transition: var(--transition-fast);
+                        padding: 0px 8px 0px 8px;
+
+                        &:has(.chat-msg-typing-input input:focus) {
+                           border-color: #000000;
+                        }
 
                         .chat-file-upload-btn {
                            display: flex;
@@ -3614,6 +3647,7 @@
                               background: none;
                               border: none;
                               outline: none;
+                              padding-left: 8px;
                            }
                         }
 
@@ -3628,16 +3662,38 @@
                               aspect-ratio: 1/1;
                               min-width: max-content;
                               cursor: pointer;
+                              transition: var(--transition-fast);
+
+                              &:active {
+                                 transform: scale(.9);
+                              }
+
+                              &:hover {
+                                 svg {
+                                    fill: black;
+
+                                    rect {
+                                       stroke: #000000;
+                                    }
+
+                                    path {
+                                       stroke: #FECE26;
+                                    }
+                                 }
+                              }
 
                               svg {
                                  width: 36px;
                                  aspect-ratio: 1/1;
+                                 transition: var(--transition-fast);
 
                                  rect {
                                     stroke: #727272;
+                                    transition: var(--transition-fast);
                                  }
 
                                  path {
+                                    transition: var(--transition-fast);
                                     stroke: #727272;
                                  }
                               }
