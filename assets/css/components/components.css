@@ -3711,3 +3711,153 @@
       }
    }
 }
+
+/* Notification Page */
+.noti-page-container {
+   &.card {}
+
+   .noti-page-header {
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .noti-page-title {
+         display: flex;
+         align-items: center;
+         gap: 5px;
+
+         h2 {
+            font-size: 27px;
+            line-height: 130%;
+            font-weight: 500;
+            letter-spacing: .15px;
+         }
+
+         .noti-num-circle {
+            color: #E5741F;
+            background-color: #fff6e8;
+            padding: 6px 8px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            span {
+               font-size: 10px;
+               line-height: 100%;
+            }
+         }
+      }
+   }
+
+   .noti-list-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      .noti-item {
+         padding: 11px 12px 7px;
+         border-left: 2px solid transparent;
+         transition: var(--transition-fast);
+         display: flex;
+         gap: 10px;
+         align-items: start;
+
+         &:not(:last-child) {
+            border-bottom: 1px solid #ebebeb;
+         }
+
+         &:hover {
+            background: #F2A4230F;
+         }
+
+         .noti-item--icon {
+            position: relative;
+
+            img {
+               display: block;
+               max-width: 42px;
+               min-width: 42px;
+               width: 42px;
+               aspect-ratio: 1 / 1;
+               border-radius: 14px;
+               object-fit: cover;
+            }
+         }
+
+         .noti-details-container {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            .noti-title-time-wrapper {
+               display: flex;
+               gap: 10px;
+               align-items: center;
+
+               .noti-title {
+                  display: flex;
+
+                  h4 {
+                     font-size: 14px;
+                     font-weight: 400;
+                     color: #444444;
+                     letter-spacing: 0.35px;
+                  }
+               }
+
+               .noti-time {
+                  display: flex;
+                  margin-right: 4px;
+
+                  span {
+                     font-size: 12px;
+                     color: #7C7C7C;
+                  }
+               }
+
+               .noti-more-actions {
+                  display: flex;
+
+                  .rel-user-more-opts-wrapper {
+                     &[data-more-actions-toggle-element] {}
+
+                     .rel-user-more-opts-trigger-icon {}
+
+                     .rel-users-more-opts-popup-wrapper {
+                        .rel-users-more-opts-popup-container {
+                           ul {
+                              li {
+                                 .icon {
+                                    &.share-icon {}
+
+                                    &.mute-icon {}
+
+                                    &.remove-icon {}
+
+                                    &.block-icon {}
+
+                                    &.report-icon {}
+                                 }
+
+                                 span {}
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+
+            .noti-desc {
+               display: flex;
+
+               p {
+                  font-size: 13px;
+                  color: #505050;
+               }
+            }
+         }
+      }
+   }
+}
