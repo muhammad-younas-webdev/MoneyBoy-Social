@@ -2920,6 +2920,16 @@
                            flex-direction: column;
                            padding-bottom: 10px;
 
+                           &:hover {
+                              .pm-page-card-media-container {
+                                 .pm-page-card--img {
+                                    img {
+                                       transform: scale(1.05);
+                                    }
+                                 }
+                              }
+                           }
+
                            .pm-page-card-media-container {
                               aspect-ratio: 1.16 / 1;
                               width: 100%;
@@ -2938,6 +2948,7 @@
                                     width: 100%;
                                     object-position: center;
                                     height: 100%;
+                                    transition: var(--transition-fast);
                                  }
                               }
 
