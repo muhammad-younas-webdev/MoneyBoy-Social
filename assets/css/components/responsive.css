@@ -2706,6 +2706,8 @@
                         .multi-tabs-layout-container {
                             .pm-multi-tabs-buttons-wrapper {
                                 .multi-tabs-action-buttons {
+                                    justify-content: space-evenly;
+
                                     .multi-tab-switch-btn {
                                         span {}
                                     }
