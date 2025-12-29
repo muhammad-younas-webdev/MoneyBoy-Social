@@ -2875,8 +2875,9 @@
 
                      .multi-tabs-action-buttons {
                         display: flex;
-                        flex-wrap: wrap;
-                        gap: 2px;
+                        /* flex-wrap: wrap; */
+                        overflow: auto;
+                        gap: 4px;
 
                         .multi-tab-switch-btn {
                            max-width: max-content;
